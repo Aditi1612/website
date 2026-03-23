@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Notice – CellaChrom</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    .notice-page { padding: 80px 0; max-width: 860px; margin: 0 auto; }
+    .notice-list { list-style: none; }
+    .notice-item { border-bottom: 1px solid var(--border); padding: 24px 0; display: grid; grid-template-columns: auto 1fr auto; gap: 20px; align-items: center; transition: background 0.2s; cursor: pointer; }
+    .notice-item:first-child { border-top: 2px solid var(--teal); }
+    .notice-badge { font-size: 0.75rem; font-weight: 700; background: rgba(41,199,197,0.1); color: var(--teal-dark); padding: 3px 10px; border-radius: 100px; white-space: nowrap; }
+    .notice-badge.pin { background: var(--teal); color: #fff; }
+    .notice-title { font-weight: 500; font-size: 0.97rem; color: var(--text); transition: color 0.2s; }
+    .notice-item:hover .notice-title { color: var(--teal-dark); }
+    .notice-date { font-size: 0.82rem; color: var(--text-light); white-space: nowrap; }
+  </style>
+</head>
+<body>
+  <header id="site-header">
+    <div class="header-inner">
+      <a class="logo" href="index.html"><span class="logo-cella">Cella</span><span class="logo-chrom">Chrom</span></a>
+      <nav class="main-nav">
+        <ul>
+          <li><a href="index.html">Home</a></li><li><a href="company.html">Company</a></li>
+          <li class="has-dropdown"><a href="products.html">Products <span class="arrow">&#9660;</span></a><ul class="dropdown"><li><a href="chiral-columns.html">Chiral Columns</a></li><li><a href="general-columns.html">General Columns</a></li><li><a href="guard-columns.html">Guard Columns</a></li><li><a href="registech-products.html">Registech Products</a></li></ul></li>
+          <li class="has-dropdown"><a href="services.html">Services <span class="arrow">&#9660;</span></a><ul class="dropdown"><li><a href="screening-services.html">Screening Services</a></li><li><a href="technical-support.html">Technical Support</a></li><li><a href="column-rental.html">Column Rental</a></li></ul></li>
+          <li><a href="notice.html" class="active">Notice</a></li><li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+      <button class="hamburger" id="hamburger"><span></span><span></span><span></span></button>
+    </div>
+    <nav class="mobile-nav" id="mobile-nav">
+      <ul>
+        <li><a href="index.html">Home</a></li><li><a href="company.html">Company</a></li>
+        <li class="mobile-dropdown"><button class="mobile-toggle">Products <span class="arrow">&#9660;</span></button><ul class="mobile-submenu"><li><a href="chiral-columns.html">Chiral Columns</a></li><li><a href="general-columns.html">General Columns</a></li><li><a href="guard-columns.html">Guard Columns</a></li><li><a href="registech-products.html">Registech Products</a></li></ul></li>
+        <li class="mobile-dropdown"><button class="mobile-toggle">Services <span class="arrow">&#9660;</span></button><ul class="mobile-submenu"><li><a href="screening-services.html">Screening Services</a></li><li><a href="technical-support.html">Technical Support</a></li><li><a href="column-rental.html">Column Rental</a></li></ul></li>
+        <li><a href="notice.html">Notice</a></li><li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section class="page-hero">
+    <div class="container">
+      <div class="breadcrumb"><a href="index.html">Home</a><span>/</span><span class="current">Notice</span></div>
+      <h1>Notice</h1>
+      <p>Announcements, new product launches, and updates from CellaChrom.</p>
+    </div>
+  </section>
+
+  <section style="padding: 80px 0;">
+    <div class="container notice-page">
+      <ul class="notice-list">
+        <li class="notice-item">
+          <span class="notice-badge pin">&#9679; Notice</span>
+          <span class="notice-title">CelluloSil® OD Series Now Available — Expanding Our Cellulose-Based CSP Portfolio</span>
+          <span class="notice-date">2024.03.15</span>
+        </li>
+        <li class="notice-item">
+          <span class="notice-badge">Product</span>
+          <span class="notice-title">New: CelluloSil® OD-3 (3 µm) for High-Throughput Chiral Screening by SFC</span>
+          <span class="notice-date">2024.02.28</span>
+        </li>
+        <li class="notice-item">
+          <span class="notice-badge">Service</span>
+          <span class="notice-title">Column Rental Program Expanded — Now Includes CrownSil® and RegisShell® Lines</span>
+          <span class="notice-date">2024.01.10</span>
+        </li>
+        <li class="notice-item">
+          <span class="notice-badge">Product</span>
+          <span class="notice-title">CrownSil® Crown Acid Chiral Column — Exclusive 18-Crown-6 CSP with Methyl Group Launched</span>
+          <span class="notice-date">2023.09.01</span>
+        </li>
+        <li class="notice-item">
+          <span class="notice-badge">Notice</span>
+          <span class="notice-title">CellaChrom® Authorized Distribution Agreement with Regis Technologies, USA</span>
+          <span class="notice-date">2023.06.20</span>
+        </li>
+        <li class="notice-item">
+          <span class="notice-badge">Product</span>
+          <span class="notice-title">CellaChrom® AD-3 (3 µm) Released — Optimized for SFC and Fast HPLC Applications</span>
+          <span class="notice-date">2023.03.05</span>
+        </li>
+        <li class="notice-item">
+          <span class="notice-badge">Notice</span>
+          <span class="notice-title">CellaChrom® 3rd Generation Launch — New Amylose-Based Chiral Column Brand</span>
+          <span class="notice-date">2022.07.01</span>
+        </li>
+        <li class="notice-item">
+          <span class="notice-badge">Service</span>
+          <span class="notice-title">Chiral Screening Service Now Includes SFC Conditions by Default</span>
+          <span class="notice-date">2022.04.12</span>
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div class="footer-brand">
+        <a class="logo footer-logo" href="index.html"><span class="logo-cella">Cella</span><span class="logo-chrom">Chrom</span></a>
+        <p>CellaChrom™ is an HPLC column brand of<br><strong>CellionBioMed Inc.</strong></p>
+        <p class="footer-addr">#A-407 Daedeok Biz Center,<br>Techno 4 Ro 17, Yuseong-Gu,<br>34013, Daejeon, Korea</p>
+      </div>
+      <div class="footer-nav-group"><h4>Products</h4><ul><li><a href="chiral-columns.html">Chiral Columns</a></li><li><a href="general-columns.html">General Columns</a></li><li><a href="guard-columns.html">Guard Columns</a></li><li><a href="registech-products.html">Registech Products</a></li></ul></div>
+      <div class="footer-nav-group"><h4>Services</h4><ul><li><a href="screening-services.html">Screening Services</a></li><li><a href="technical-support.html">Technical Support</a></li><li><a href="column-rental.html">Column Rental</a></li></ul></div>
+      <div class="footer-nav-group"><h4>Company</h4><ul><li><a href="company.html">About Us</a></li><li><a href="notice.html">Notice</a></li><li><a href="contact.html">Contact</a></li></ul></div>
+    </div>
+    <div class="footer-bottom"><p>&copy; 2024 CellionBioMed Inc. All rights reserved.</p></div>
+  </footer>
+  <script src="main.js"></script>
+</body>
+</html>

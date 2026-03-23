@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact – CellaChrom</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    .contact-page { padding: 80px 0; }
+    .contact-layout { display: grid; grid-template-columns: 1fr 1.4fr; gap: 60px; align-items: start; }
+    .contact-info h2 { margin-bottom: 16px; }
+    .contact-info > p { color: var(--text-light); line-height: 1.7; margin-bottom: 32px; font-size: 0.95rem; }
+    .contact-detail { display: flex; gap: 16px; margin-bottom: 28px; align-items: flex-start; }
+    .contact-icon { width: 44px; height: 44px; background: rgba(41,199,197,0.1); border-radius: 10px; display: flex; align-items: center; justify-content: center; color: var(--teal); font-size: 1.2rem; flex-shrink: 0; }
+    .contact-detail h4 { font-size: 0.85rem; color: var(--text-light); font-weight: 500; margin-bottom: 4px; }
+    .contact-detail p { font-size: 0.93rem; color: var(--text); font-weight: 500; line-height: 1.5; }
+    .contact-form-box { background: var(--light-bg); border-radius: 16px; padding: 40px; }
+    .contact-form-box h3 { margin-bottom: 24px; }
+    .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-bottom: 16px; }
+    .form-group { margin-bottom: 16px; }
+    .form-group label { display: block; font-size: 0.85rem; font-weight: 600; color: var(--text); margin-bottom: 6px; }
+    .form-group input, .form-group select, .form-group textarea {
+      width: 100%; padding: 12px 14px; border: 1.5px solid var(--border); border-radius: 7px;
+      font-family: inherit; font-size: 0.92rem; color: var(--text); background: #fff;
+      transition: border-color 0.2s, box-shadow 0.2s; outline: none;
+    }
+    .form-group input:focus, .form-group select:focus, .form-group textarea:focus {
+      border-color: var(--teal); box-shadow: 0 0 0 3px rgba(41,199,197,0.12);
+    }
+    .form-group textarea { resize: vertical; min-height: 120px; }
+    .form-submit { width: 100%; padding: 14px; background: var(--teal); color: #fff; border: none; border-radius: 7px; font-size: 0.95rem; font-weight: 600; cursor: pointer; transition: background 0.2s, transform 0.2s; }
+    .form-submit:hover { background: var(--teal-dark); transform: translateY(-1px); }
+    @media (max-width: 767px) {
+      .contact-layout { grid-template-columns: 1fr; }
+      .form-row { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+  <header id="site-header">
+    <div class="header-inner">
+      <a class="logo" href="index.html"><span class="logo-cella">Cella</span><span class="logo-chrom">Chrom</span></a>
+      <nav class="main-nav">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="company.html">Company</a></li>
+          <li class="has-dropdown"><a href="products.html">Products <span class="arrow">&#9660;</span></a><ul class="dropdown"><li><a href="chiral-columns.html">Chiral Columns</a></li><li><a href="general-columns.html">General Columns</a></li><li><a href="guard-columns.html">Guard Columns</a></li><li><a href="registech-products.html">Registech Products</a></li></ul></li>
+          <li class="has-dropdown"><a href="services.html">Services <span class="arrow">&#9660;</span></a><ul class="dropdown"><li><a href="screening-services.html">Screening Services</a></li><li><a href="technical-support.html">Technical Support</a></li><li><a href="column-rental.html">Column Rental</a></li></ul></li>
+          <li><a href="notice.html">Notice</a></li>
+          <li><a href="contact.html" class="active">Contact</a></li>
+        </ul>
+      </nav>
+      <button class="hamburger" id="hamburger"><span></span><span></span><span></span></button>
+    </div>
+    <nav class="mobile-nav" id="mobile-nav">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="company.html">Company</a></li>
+        <li class="mobile-dropdown"><button class="mobile-toggle">Products <span class="arrow">&#9660;</span></button><ul class="mobile-submenu"><li><a href="chiral-columns.html">Chiral Columns</a></li><li><a href="general-columns.html">General Columns</a></li><li><a href="guard-columns.html">Guard Columns</a></li><li><a href="registech-products.html">Registech Products</a></li></ul></li>
+        <li class="mobile-dropdown"><button class="mobile-toggle">Services <span class="arrow">&#9660;</span></button><ul class="mobile-submenu"><li><a href="screening-services.html">Screening Services</a></li><li><a href="technical-support.html">Technical Support</a></li><li><a href="column-rental.html">Column Rental</a></li></ul></li>
+        <li><a href="notice.html">Notice</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section class="page-hero">
+    <div class="container">
+      <div class="breadcrumb"><a href="index.html">Home</a><span>/</span><span class="current">Contact</span></div>
+      <h1>Get in Touch</h1>
+      <p>Whether you have a product inquiry, need technical assistance, or want to discuss custom solutions — our team is ready to help.</p>
+    </div>
+  </section>
+
+  <section class="contact-page">
+    <div class="container">
+      <div class="contact-layout">
+
+        <div class="contact-info">
+          <span class="section-eyebrow">Contact Information</span>
+          <h2>We'd Love to Hear From You</h2>
+          <p>Reach out with any questions about our products, services, pricing, or technical specifications. Our application scientists and sales team are available to assist you.</p>
+
+          <div class="contact-detail">
+            <div class="contact-icon">&#9679;</div>
+            <div>
+              <h4>Company</h4>
+              <p>CellionBioMed Inc. (CellaChrom™)</p>
+            </div>
+          </div>
+
+          <div class="contact-detail">
+            <div class="contact-icon">&#9679;</div>
+            <div>
+              <h4>Address</h4>
+              <p>#A-407 Daedeok Biz Center<br>Techno 4 Ro 17, Yuseong-Gu<br>34013, Daejeon, Korea</p>
+            </div>
+          </div>
+
+          <div class="contact-detail">
+            <div class="contact-icon">&#9679;</div>
+            <div>
+              <h4>Business Hours</h4>
+              <p>Monday – Friday<br>9:00 AM – 6:00 PM (KST)</p>
+            </div>
+          </div>
+
+          <div class="contact-detail">
+            <div class="contact-icon">&#9679;</div>
+            <div>
+              <h4>Inquiries</h4>
+              <p>Product &amp; Pricing · Technical Support<br>Screening Services · Column Rental</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="contact-form-box">
+          <h3>Send Us a Message</h3>
+          <form>
+            <div class="form-row">
+              <div class="form-group">
+                <label for="fname">First Name *</label>
+                <input type="text" id="fname" placeholder="John" required />
+              </div>
+              <div class="form-group">
+                <label for="lname">Last Name *</label>
+                <input type="text" id="lname" placeholder="Smith" required />
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="email">Email Address *</label>
+              <input type="email" id="email" placeholder="john@example.com" required />
+            </div>
+            <div class="form-group">
+              <label for="org">Organization / Company</label>
+              <input type="text" id="org" placeholder="University / Company name" />
+            </div>
+            <div class="form-group">
+              <label for="subject">Inquiry Type *</label>
+              <select id="subject" required>
+                <option value="">Select an inquiry type</option>
+                <option>Product Information &amp; Pricing</option>
+                <option>Chiral Screening Service</option>
+                <option>Technical Support</option>
+                <option>Column Rental</option>
+                <option>Order Status</option>
+                <option>Other</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="message">Message *</label>
+              <textarea id="message" placeholder="Please describe your inquiry, including compound class, application, or any relevant details..." required></textarea>
+            </div>
+            <button type="submit" class="form-submit">Send Message</button>
+          </form>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div class="footer-brand">
+        <a class="logo footer-logo" href="index.html"><span class="logo-cella">Cella</span><span class="logo-chrom">Chrom</span></a>
+        <p>CellaChrom™ is an HPLC column brand of<br><strong>CellionBioMed Inc.</strong></p>
+        <p class="footer-addr">#A-407 Daedeok Biz Center,<br>Techno 4 Ro 17, Yuseong-Gu,<br>34013, Daejeon, Korea</p>
+      </div>
+      <div class="footer-nav-group"><h4>Products</h4><ul><li><a href="chiral-columns.html">Chiral Columns</a></li><li><a href="general-columns.html">General Columns</a></li><li><a href="guard-columns.html">Guard Columns</a></li><li><a href="registech-products.html">Registech Products</a></li></ul></div>
+      <div class="footer-nav-group"><h4>Services</h4><ul><li><a href="screening-services.html">Screening Services</a></li><li><a href="technical-support.html">Technical Support</a></li><li><a href="column-rental.html">Column Rental</a></li></ul></div>
+      <div class="footer-nav-group"><h4>Company</h4><ul><li><a href="company.html">About Us</a></li><li><a href="notice.html">Notice</a></li><li><a href="contact.html">Contact</a></li></ul></div>
+    </div>
+    <div class="footer-bottom"><p>&copy; 2024 CellionBioMed Inc. All rights reserved.</p></div>
+  </footer>
+  <script src="main.js"></script>
+</body>
+</html>
