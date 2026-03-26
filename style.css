@@ -267,7 +267,7 @@ h4 { font-size: 1.05rem; font-weight: 600; }
   box-shadow: 0 12px 32px rgba(0,0,0,0.4);
 }
 
-.has-dropdown.open .dropdown { display: block; }
+.has-dropdown.open .dropdown { display: flex; flex-direction: column; }
 
 .dropdown li a {
   display: block;
