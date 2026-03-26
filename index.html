@@ -78,13 +78,13 @@
 
   <!-- ===== HERO ===== -->
   <section class="hero">
-    <div class="hero-overlay"></div>
+    <canvas id="hero-canvas"></canvas>
     <div class="hero-content">
       <p class="hero-eyebrow">CellaChrom™ by CellionBioMed Inc.</p>
-      <h1>Advanced HPLC Column Solutions<br>for Chiral &amp; Achiral Separation</h1>
-      <p class="hero-sub">The most innovative Korean HPLC column brand — delivering cutting-edge chromatography products for research and industry worldwide.</p>
+      <h1><span id="typing-text">Advanced Chiral HPLC Columns</span></h1>
+      <p class="hero-sub">Korea's most innovative HPLC column brand — delivering cutting-edge chromatography products for research and industry worldwide.</p>
       <div class="hero-btns">
-        <a href="products.html" class="btn btn-primary">Explore Products</a>
+        <a href="chiral-columns.html" class="btn btn-primary">Explore Products</a>
         <a href="contact.html" class="btn btn-outline">Contact Us</a>
       </div>
     </div>
@@ -130,80 +130,96 @@
         <p class="section-sub">Our column portfolio covers the full range of chiral and achiral separation requirements — from polysaccharide-based chiral columns to guard and general-purpose columns.</p>
       </div>
 
-      <div class="product-cards">
+      <!-- Tab Navigation -->
+      <div class="tab-nav">
+        <button class="tab-btn active" data-tab="tab-chiral">Chiral Columns</button>
+        <button class="tab-btn" data-tab="tab-general">General Columns</button>
+        <button class="tab-btn" data-tab="tab-guard">Guard Columns</button>
+        <button class="tab-btn" data-tab="tab-registech">Registech Products</button>
+      </div>
 
-        <div class="product-card">
-          <div class="product-card-icon teal">
-            <svg viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <rect x="20" y="5" width="20" height="50" rx="3" stroke="currentColor" stroke-width="2.5" fill="none"/>
-              <line x1="20" y1="18" x2="40" y2="18" stroke="currentColor" stroke-width="2"/>
-              <line x1="20" y1="28" x2="40" y2="28" stroke="currentColor" stroke-width="2"/>
-              <line x1="20" y1="38" x2="40" y2="38" stroke="currentColor" stroke-width="2"/>
-              <circle cx="30" cy="23" r="3" fill="currentColor"/>
-              <circle cx="30" cy="33" r="3" fill="currentColor"/>
-            </svg>
+      <!-- Tab Panels -->
+      <div id="tab-chiral" class="tab-panel">
+        <div class="product-cards">
+          <div class="product-card reveal">
+            <div class="product-card-icon teal"><svg viewBox="0 0 60 60" fill="none"><rect x="20" y="5" width="20" height="50" rx="3" stroke="currentColor" stroke-width="2.5" fill="none"/><line x1="20" y1="18" x2="40" y2="18" stroke="currentColor" stroke-width="2"/><line x1="20" y1="28" x2="40" y2="28" stroke="currentColor" stroke-width="2"/><line x1="20" y1="38" x2="40" y2="38" stroke="currentColor" stroke-width="2"/><circle cx="30" cy="23" r="3" fill="currentColor"/><circle cx="30" cy="33" r="3" fill="currentColor"/></svg></div>
+            <h3>CellaChrom<sup>®</sup></h3>
+            <p>Amylose-based polysaccharide CSP — 3rd generation (2022). Compatible with CHIRALCEL AD conditions. Broad enantiomeric selectivity.</p>
+            <ul class="product-highlights"><li>Amylose tris-(3,5-dimethylphenylcarbamate)</li><li>Normal phase &amp; reversed phase</li><li>5 µm and 3 µm particle sizes</li></ul>
+            <a href="chiral-columns.html" class="card-link">View Specs &rarr;</a>
           </div>
-          <h3>Chiral Columns</h3>
-          <p>Polysaccharide-based and crown acid-based chiral stationary phases for enantiomeric separation. Includes CellaChrom®, CrownSil®, and CelluloSil® lines.</p>
-          <ul class="product-highlights">
-            <li>CellaChrom® — amylose-based (compatible with CHIRALCEL AD)</li>
-            <li>CrownSil® — advanced 18-crown-6 acid CSP</li>
-            <li>CelluloSil® — cellulose-based chiral columns</li>
-          </ul>
-          <a href="chiral-columns.html" class="card-link">View Products &rarr;</a>
-        </div>
-
-        <div class="product-card">
-          <div class="product-card-icon blue">
-            <svg viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <rect x="18" y="5" width="24" height="50" rx="3" stroke="currentColor" stroke-width="2.5" fill="none"/>
-              <line x1="18" y1="20" x2="42" y2="20" stroke="currentColor" stroke-width="2"/>
-              <line x1="18" y1="35" x2="42" y2="35" stroke="currentColor" stroke-width="2"/>
-              <rect x="23" y="24" width="14" height="8" rx="1" fill="currentColor" opacity="0.3" stroke="currentColor" stroke-width="1.5"/>
-            </svg>
+          <div class="product-card reveal">
+            <div class="product-card-icon teal"><svg viewBox="0 0 60 60" fill="none"><circle cx="30" cy="30" r="20" stroke="currentColor" stroke-width="2.5" fill="none"/><circle cx="30" cy="30" r="10" stroke="currentColor" stroke-width="2" fill="none"/><line x1="30" y1="10" x2="30" y2="20" stroke="currentColor" stroke-width="2"/><line x1="30" y1="40" x2="30" y2="50" stroke="currentColor" stroke-width="2"/></svg></div>
+            <h3>CrownSil<sup>®</sup></h3>
+            <p>Exclusive 18-crown-6 acid CSP with methyl functional group (2023). Unique selectivity for nitrogen-containing compounds — only from CellaChrom.</p>
+            <ul class="product-highlights"><li>Primary amines, amides, aminoalcohols</li><li>Reversed phase (acidic mobile phase)</li><li>(+) and (−) configurations available</li></ul>
+            <a href="chiral-columns.html" class="card-link">View Specs &rarr;</a>
           </div>
-          <h3>General (Achiral) Columns</h3>
-          <p>High-performance reversed-phase and normal-phase HPLC columns for routine and challenging achiral separations across a wide range of applications.</p>
-          <ul class="product-highlights">
-            <li>C18, C8, phenyl, and other bonded phases</li>
-            <li>High-purity silica base material</li>
-            <li>Available in multiple particle sizes</li>
-          </ul>
-          <a href="general-columns.html" class="card-link">View Products &rarr;</a>
-        </div>
-
-        <div class="product-card">
-          <div class="product-card-icon teal">
-            <svg viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <rect x="22" y="5" width="16" height="15" rx="2" stroke="currentColor" stroke-width="2.5" fill="none"/>
-              <rect x="18" y="20" width="24" height="35" rx="3" stroke="currentColor" stroke-width="2.5" fill="none"/>
-              <line x1="18" y1="32" x2="42" y2="32" stroke="currentColor" stroke-width="2"/>
-            </svg>
+          <div class="product-card reveal">
+            <div class="product-card-icon blue"><svg viewBox="0 0 60 60" fill="none"><rect x="18" y="5" width="24" height="50" rx="3" stroke="currentColor" stroke-width="2.5" fill="none"/><line x1="18" y1="20" x2="42" y2="20" stroke="currentColor" stroke-width="2"/><line x1="18" y1="35" x2="42" y2="35" stroke="currentColor" stroke-width="2"/><rect x="23" y="24" width="14" height="8" rx="1" fill="currentColor" opacity="0.3" stroke="currentColor" stroke-width="1.5"/></svg></div>
+            <h3>CelluloSil<sup>®</sup></h3>
+            <p>Cellulose-based polysaccharide CSP (2024). Complementary selectivity to amylose columns — ideal second column in screening strategies.</p>
+            <ul class="product-highlights"><li>Cellulose tris-(3,5-dimethylphenylcarbamate)</li><li>Normal phase &amp; reversed phase</li><li>SFC-optimized 3 µm available</li></ul>
+            <a href="chiral-columns.html" class="card-link">View Specs &rarr;</a>
           </div>
-          <h3>Guard Columns</h3>
-          <p>Protect your analytical columns from sample matrix interferences. Our guard columns extend analytical column lifetime and maintain peak performance.</p>
-          <ul class="product-highlights">
-            <li>Compatible guard column options for all main columns</li>
-            <li>Easy cartridge replacement system</li>
-            <li>Maintains chromatographic integrity</li>
-          </ul>
-          <a href="guard-columns.html" class="card-link">View Products &rarr;</a>
         </div>
+      </div>
 
-        <div class="product-card">
-          <div class="product-card-icon blue">
-            <div class="icon-text">R</div>
+      <div id="tab-general" class="tab-panel">
+        <div class="product-cards">
+          <div class="product-card reveal">
+            <div class="product-card-icon blue"><svg viewBox="0 0 60 60" fill="none"><rect x="18" y="5" width="24" height="50" rx="3" stroke="currentColor" stroke-width="2.5" fill="none"/><line x1="18" y1="22" x2="42" y2="22" stroke="currentColor" stroke-width="2"/><line x1="18" y1="38" x2="42" y2="38" stroke="currentColor" stroke-width="2"/></svg></div>
+            <h3>Hector C18</h3>
+            <p>High-performance reversed-phase C18 column with superior peak shape and broad pH stability. The workhorse for routine and demanding RP-HPLC.</p>
+            <ul class="product-highlights"><li>Broad pH range 2–8</li><li>5 µm and 3 µm particle sizes</li><li>4.6 mm and 2.1 mm ID (LC-MS)</li></ul>
+            <a href="general-columns.html" class="card-link">View Specs &rarr;</a>
           </div>
-          <h3>Registech Products</h3>
-          <p>Premium Registech-branded HPLC columns and accessories, distributed exclusively through CellaChrom for the highest quality separations.</p>
-          <ul class="product-highlights">
-            <li>Whelk-O® Pirkle-type chiral columns</li>
-            <li>RegisPack® and RegisShell® columns</li>
-            <li>Core-shell particle technology</li>
-          </ul>
-          <a href="registech-products.html" class="card-link">View Products &rarr;</a>
+          <div class="product-card reveal">
+            <div class="product-card-icon teal"><div class="icon-text" style="color:var(--teal)">C8</div></div>
+            <h3>Hector C8</h3>
+            <p>Medium-polarity reversed-phase column for polar analytes that are over-retained on C18. Ideal when shorter retention time is preferred.</p>
+            <ul class="product-highlights"><li>Suitable for polar analytes</li><li>Consistent batch-to-batch reproducibility</li><li>High-purity silica base</li></ul>
+            <a href="general-columns.html" class="card-link">View Specs &rarr;</a>
+          </div>
         </div>
+      </div>
 
+      <div id="tab-guard" class="tab-panel">
+        <div class="product-cards">
+          <div class="product-card reveal">
+            <div class="product-card-icon teal"><svg viewBox="0 0 60 60" fill="none"><rect x="22" y="5" width="16" height="15" rx="2" stroke="currentColor" stroke-width="2.5" fill="none"/><rect x="18" y="20" width="24" height="35" rx="3" stroke="currentColor" stroke-width="2.5" fill="none"/><line x1="18" y1="32" x2="42" y2="32" stroke="currentColor" stroke-width="2"/></svg></div>
+            <h3>Chiral Guard Columns</h3>
+            <p>Matched guard columns for CellaChrom®, CrownSil®, and CelluloSil® analytical columns. Same stationary phase — zero impact on selectivity.</p>
+            <ul class="product-highlights"><li>Cartridge-style easy replacement</li><li>4.0 × 10 mm standard dimensions</li><li>Available for all chiral lines</li></ul>
+            <a href="guard-columns.html" class="card-link">View Products &rarr;</a>
+          </div>
+          <div class="product-card reveal">
+            <div class="product-card-icon blue"><svg viewBox="0 0 60 60" fill="none"><rect x="22" y="5" width="16" height="15" rx="2" stroke="currentColor" stroke-width="2.5" fill="none"/><rect x="18" y="20" width="24" height="35" rx="3" stroke="currentColor" stroke-width="2.5" fill="none"/></svg></div>
+            <h3>Achiral Guard Columns</h3>
+            <p>Guard columns for Hector C18 and C8 analytical columns. Protect your investment and maintain peak shape across thousands of injections.</p>
+            <ul class="product-highlights"><li>Matched C18 and C8 phases</li><li>Quick-change cartridge system</li><li>Extend analytical column lifetime</li></ul>
+            <a href="guard-columns.html" class="card-link">View Products &rarr;</a>
+          </div>
+        </div>
+      </div>
+
+      <div id="tab-registech" class="tab-panel">
+        <div class="product-cards">
+          <div class="product-card reveal">
+            <div class="product-card-icon teal"><div class="icon-text">W</div></div>
+            <h3>Whelk-O<sup>®</sup></h3>
+            <p>Pirkle-type (brush-type) chiral stationary phase from Regis Technologies. Complementary selectivity to polysaccharide columns for π-acidic/basic compounds.</p>
+            <ul class="product-highlights"><li>(S,S) and (R,R) configurations</li><li>NP, RP, and SFC compatible</li><li>3.5 µm for higher efficiency</li></ul>
+            <a href="registech-products.html" class="card-link">View Specs &rarr;</a>
+          </div>
+          <div class="product-card reveal">
+            <div class="product-card-icon blue"><div class="icon-text" style="color:var(--blue-accent)">RS</div></div>
+            <h3>RegisShell<sup>®</sup></h3>
+            <p>Core-shell (superficially porous) particle technology for ultra-high efficiency in both chiral and achiral applications with lower backpressure.</p>
+            <ul class="product-highlights"><li>2.7 µm core-shell particles</li><li>Whelk-O 1 and C18 phases</li><li>Excellent for fast method development</li></ul>
+            <a href="registech-products.html" class="card-link">View Specs &rarr;</a>
+          </div>
+        </div>
       </div>
     </div>
   </section>
@@ -327,15 +343,15 @@
         <p>Our proprietary crown acid-based CSP — featuring a unique methyl functional group — is available exclusively from CellaChrom, offering unmatched selectivity for nitrogen-containing compounds such as amines, amides, and aminoalcohols.</p>
         <div class="why-stats">
           <div class="stat">
-            <span class="stat-num">3<sup>rd</sup></span>
+            <span class="stat-num"><span class="count-up" data-count="3">0</span><sup>rd</sup></span>
             <span class="stat-label">Generation<br>Technology</span>
           </div>
           <div class="stat">
-            <span class="stat-num">20+</span>
+            <span class="stat-num"><span class="count-up" data-count="20">0</span>+</span>
             <span class="stat-label">Years of<br>Innovation</span>
           </div>
           <div class="stat">
-            <span class="stat-num">6</span>
+            <span class="stat-num"><span class="count-up" data-count="6">0</span></span>
             <span class="stat-label">Column<br>Brands</span>
           </div>
         </div>
