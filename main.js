@@ -2,19 +2,41 @@
    CellaChrom – Dynamic JS
    ========================================================= */
 
-// ── Desktop Dropdowns (click-toggle) ──────────────────────
-document.querySelectorAll('.has-dropdown > a').forEach(link => {
-  link.addEventListener('click', e => {
+// ── Desktop Dropdowns (hover on desktop, click on touch) ──
+const closeTimers = new WeakMap();
+
+document.querySelectorAll('.has-dropdown').forEach(li => {
+  const isTouchDevice = () => window.matchMedia('(hover: none)').matches;
+
+  // Hover — desktop only
+  li.addEventListener('mouseenter', () => {
+    if (isTouchDevice()) return;
+    clearTimeout(closeTimers.get(li));
+    document.querySelectorAll('.has-dropdown').forEach(d => {
+      if (d !== li) d.classList.remove('open');
+    });
+    li.classList.add('open');
+  });
+
+  li.addEventListener('mouseleave', () => {
+    if (isTouchDevice()) return;
+    closeTimers.set(li, setTimeout(() => li.classList.remove('open'), 150));
+  });
+
+  // Click — touch devices / keyboard nav
+  li.querySelector('a').addEventListener('click', e => {
+    if (!isTouchDevice()) {
+      // On desktop let the link navigate; dropdown already shown on hover
+      return;
+    }
     e.preventDefault();
-    const li = link.parentElement;
     const isOpen = li.classList.contains('open');
-    // close all
     document.querySelectorAll('.has-dropdown').forEach(d => d.classList.remove('open'));
     if (!isOpen) li.classList.add('open');
   });
 });
 
-// close dropdowns when clicking outside
+// Close on outside click
 document.addEventListener('click', e => {
   if (!e.target.closest('.has-dropdown')) {
     document.querySelectorAll('.has-dropdown').forEach(d => d.classList.remove('open'));
