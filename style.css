@@ -253,8 +253,9 @@ h4 { font-size: 1.05rem; font-weight: 600; }
 }
 
 /* Dropdown */
-.dropdown {
+.main-nav .dropdown {
   display: none;
+  flex-direction: column;
   position: absolute;
   top: calc(100% + 8px);
   left: 50%;
@@ -265,9 +266,10 @@ h4 { font-size: 1.05rem; font-weight: 600; }
   min-width: 200px;
   padding: 8px 0;
   box-shadow: 0 12px 32px rgba(0,0,0,0.4);
+  gap: 0;
 }
 
-.has-dropdown.open .dropdown { display: flex; flex-direction: column; }
+.has-dropdown.open .dropdown { display: flex; }
 
 .dropdown li a {
   display: block;
