@@ -2,6 +2,25 @@
    CellaChrom – Dynamic JS
    ========================================================= */
 
+// ── Desktop Dropdowns (click-toggle) ──────────────────────
+document.querySelectorAll('.has-dropdown > a').forEach(link => {
+  link.addEventListener('click', e => {
+    e.preventDefault();
+    const li = link.parentElement;
+    const isOpen = li.classList.contains('open');
+    // close all
+    document.querySelectorAll('.has-dropdown').forEach(d => d.classList.remove('open'));
+    if (!isOpen) li.classList.add('open');
+  });
+});
+
+// close dropdowns when clicking outside
+document.addEventListener('click', e => {
+  if (!e.target.closest('.has-dropdown')) {
+    document.querySelectorAll('.has-dropdown').forEach(d => d.classList.remove('open'));
+  }
+});
+
 // ── Mobile Navigation ──────────────────────────────────────
 const hamburger = document.getElementById('hamburger');
 const mobileNav = document.getElementById('mobile-nav');
