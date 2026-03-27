@@ -192,11 +192,17 @@ h4 { font-size: 1.05rem; font-weight: 600; }
   position: fixed;
   top: 0; left: 0; right: 0;
   z-index: 1000;
-  background: rgba(14, 26, 26, 0.92);
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
-  border-bottom: 1px solid rgba(41, 199, 197, 0.2);
-  transition: background 0.3s;
+  background: transparent;
+  border-bottom: 1px solid rgba(255,255,255,0.08);
+  transition: background 0.4s ease, border-color 0.4s ease, box-shadow 0.4s ease;
+}
+
+#site-header.scrolled {
+  background: rgba(255,255,255,0.97);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-bottom: 1px solid rgba(0,0,0,0.07);
+  box-shadow: 0 2px 24px rgba(0,0,0,0.08);
 }
 
 .header-inner {
@@ -204,24 +210,42 @@ h4 { font-size: 1.05rem; font-weight: 600; }
   align-items: center;
   justify-content: space-between;
   height: 90px;
-  max-width: 1200px;
+  max-width: 1280px;
   margin: 0 auto;
-  padding: 0 24px;
+  padding: 0 30px;
 }
 
 /* Logo */
 .logo {
-  font-size: 1.6rem;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 1.55rem;
   font-weight: 700;
-  letter-spacing: -0.5px;
+  letter-spacing: -0.3px;
+  text-decoration: none;
 }
-.logo-cella { color: #fff; }
+.logo::before {
+  content: '';
+  display: block;
+  width: 26px;
+  height: 30px;
+  flex-shrink: 0;
+  background: url('data:image/svg+xml,<svg width="26" height="30" viewBox="0 0 26 30" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="6" y="7" width="14" height="16" rx="2.5" stroke="%2329c7c5" stroke-width="1.9" fill="none"/><path d="M4 7 Q13 4.5 22 7" stroke="%2329c7c5" stroke-width="1.9" stroke-linecap="round" fill="none"/><path d="M4 23 Q13 25.5 22 23" stroke="%2329c7c5" stroke-width="1.9" stroke-linecap="round" fill="none"/><rect x="6" y="12" width="14" height="2.5" rx="0.8" fill="%2329c7c5" opacity="0.35"/><rect x="6" y="17" width="14" height="3" rx="0.8" fill="%2329c7c5" opacity="0.8"/></svg>') center/contain no-repeat;
+  transition: opacity 0.3s;
+}
+.logo-cella {
+  color: #fff;
+  transition: color 0.4s;
+}
 .logo-chrom { color: var(--teal); }
+
+#site-header.scrolled .logo-cella { color: #1a1a1a; }
 
 /* Desktop Nav */
 .main-nav > ul {
   display: flex;
-  gap: 8px;
+  gap: 0;
   align-items: center;
 }
 
@@ -231,19 +255,33 @@ h4 { font-size: 1.05rem; font-weight: 600; }
 
 .main-nav > ul > li > a {
   display: block;
-  color: rgba(255,255,255,0.85);
-  font-size: 0.95rem;
+  position: relative;
+  color: rgba(255,255,255,0.92);
+  font-size: 1rem;
   font-weight: 500;
-  padding: 8px 16px;
-  border-radius: 4px;
-  transition: color 0.2s, background 0.2s;
+  padding: 8px 20px;
+  transition: color 0.3s;
+}
+.main-nav > ul > li > a::after {
+  content: '';
+  position: absolute;
+  bottom: 0; left: 20px; right: 20px;
+  height: 2px;
+  background: var(--teal);
+  transform: scaleX(0);
+  transition: transform 0.25s ease;
+  transform-origin: center;
 }
 
-.main-nav > ul > li > a:hover,
-.main-nav > ul > li > a.active {
-  color: var(--teal);
-  background: rgba(41, 199, 197, 0.08);
-}
+.main-nav > ul > li > a:hover { color: var(--teal); }
+.main-nav > ul > li > a:hover::after { transform: scaleX(1); }
+.main-nav > ul > li > a.active { color: var(--teal); }
+.main-nav > ul > li > a.active::after { transform: scaleX(1); }
+
+/* Nav adapts on scroll */
+#site-header.scrolled .main-nav > ul > li > a { color: #333; }
+#site-header.scrolled .main-nav > ul > li > a:hover { color: var(--teal); }
+#site-header.scrolled .main-nav > ul > li > a.active { color: var(--teal); }
 
 .main-nav .arrow {
   font-size: 0.55rem;
@@ -352,6 +390,20 @@ h4 { font-size: 1.05rem; font-weight: 600; }
   transform: scale(1);
 }
 
+/* Dropdown adapts when header is scrolled (white bg) */
+#site-header.scrolled .dropdown {
+  background: rgba(255,255,255,0.98);
+  border-color: rgba(0,0,0,0.09);
+  box-shadow: 0 16px 40px rgba(0,0,0,0.12);
+  backdrop-filter: none;
+}
+#site-header.scrolled .dropdown::before {
+  background: rgba(255,255,255,0.98);
+  border-color: rgba(0,0,0,0.09);
+}
+#site-header.scrolled .dropdown li a { color: #444; }
+#site-header.scrolled .dropdown li a:hover { color: var(--teal); background: rgba(41,199,197,0.06); }
+
 /* Hamburger */
 .hamburger {
   display: none;
@@ -367,8 +419,9 @@ h4 { font-size: 1.05rem; font-weight: 600; }
   height: 2px;
   background: #fff;
   border-radius: 2px;
-  transition: all 0.3s;
+  transition: all 0.3s, background 0.4s;
 }
+#site-header.scrolled .hamburger span { background: #333; }
 
 /* Mobile Nav */
 .mobile-nav {

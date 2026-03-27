@@ -69,18 +69,13 @@ document.querySelectorAll('.mobile-toggle').forEach(btn => {
   });
 });
 
-// ── Sticky header ──────────────────────────────────────────
+// ── Sticky header (transparent → white on scroll) ──────────
 const header = document.getElementById('site-header');
-let lastScroll = 0;
 
 window.addEventListener('scroll', () => {
-  const y = window.scrollY;
   if (header) {
-    header.style.background = y > 60
-      ? 'rgba(14,26,26,0.98)'
-      : 'rgba(14,26,26,0.92)';
+    header.classList.toggle('scrolled', window.scrollY > 60);
   }
-  lastScroll = y;
 }, { passive: true });
 
 // ── Scroll Reveal ──────────────────────────────────────────
