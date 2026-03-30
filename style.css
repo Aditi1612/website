@@ -552,39 +552,45 @@ h4 { font-size: 1.05rem; font-weight: 600; }
 /* Hero brand display */
 .hero-brand-display {
  margin-bottom: 36px;
- text-align: center;
  line-height: 1;
+ display: flex;
+ flex-direction: column;
+ align-items: center;
+ gap: 16px;
 }
-.hero-brand-text {
- display: inline;
- font-family: 'Orbitron', sans-serif;
- font-size: clamp(2.8rem, 7vw, 6.5rem);
- font-weight: 900;
- letter-spacing: 6px;
+.hero-brand-lockup {
+ display: inline-flex;
+ align-items: flex-start;
+ gap: 14px;
+ font-family: 'Oswald', 'Orbitron', sans-serif;
+ font-weight: 600;
+ line-height: 0.9;
+ letter-spacing: 0.14em;
  text-transform: uppercase;
- background: linear-gradient(90deg,
- #29c7c5 0%,
- #22d4d2 15%,
- #00e5ff 30%,
- #29c7c5 45%,
- #00c8ff 60%,
- #4a90e2 75%,
- #5b6cf7 90%,
- #7b5cf7 100%);
- -webkit-background-clip: text;
- -webkit-text-fill-color: transparent;
- background-clip: text;
+ filter: drop-shadow(0 0 22px rgba(41,199,197,0.2));
 }
-.hero-brand-reg {
- font-family: 'Orbitron', sans-serif;
- font-size: 0.35em;
- vertical-align: super;
- -webkit-text-fill-color: rgba(255,255,255,0.55);
- color: rgba(255,255,255,0.55);
+.hero-brand-main,
+.hero-brand-region,
+.hero-brand-mark {
+ background: linear-gradient(90deg, #27bc47 0%, #22c963 28%, #20d6a4 62%, #32c8d7 100%);
+ -webkit-background-clip: text;
+ background-clip: text;
+ color: transparent;
+}
+.hero-brand-main {
+ font-size: clamp(2.1rem, 4.3vw, 3.5rem);
+}
+.hero-brand-region {
+ font-size: clamp(1.82rem, 3.4vw, 2.9rem);
+}
+.hero-brand-mark {
+ font-size: clamp(0.42rem, 0.8vw, 0.72rem);
+ line-height: 1;
+ letter-spacing: 0.08em;
+ transform: translate(-0.38em, 0.12em);
 }
 .hero-brand-badge {
  display: inline-block;
- margin-top: 18px;
  padding: 7px 18px;
  border: 1px solid rgba(41,199,197,0.45);
  border-radius: 4px;
@@ -809,20 +815,32 @@ h4 { font-size: 1.05rem; font-weight: 600; }
  text-transform: uppercase;
 }
 
-.home-reference-theme .hero-brand-text {
- display: inline-block;
- background: none;
- color: #16384d;
- -webkit-text-fill-color: #16384d;
- text-shadow: 0 10px 26px rgba(255,255,255,0.42);
- letter-spacing: 0.16em;
- line-height: 0.92;
+.home-reference-theme .hero-brand-lockup {
+ display: inline-flex;
+ gap: 10px;
+ letter-spacing: 0.12em;
 }
 
-.home-reference-theme .hero-brand-reg {
- -webkit-text-fill-color: rgba(24, 70, 94, 0.28);
- color: rgba(24, 70, 94, 0.28);
- margin-left: 4px;
+.home-reference-theme .hero-brand-main,
+.home-reference-theme .hero-brand-region,
+.home-reference-theme .hero-brand-mark {
+ background: linear-gradient(90deg, #26bf4c 0%, #22ce69 28%, #2fd8ac 62%, #39cce0 100%);
+ -webkit-background-clip: text;
+ background-clip: text;
+ text-shadow: 0 10px 26px rgba(255,255,255,0.32);
+}
+
+.home-reference-theme .hero-brand-main {
+ font-size: clamp(1.6rem, 3vw, 2.8rem);
+}
+
+.home-reference-theme .hero-brand-region {
+ font-size: clamp(1.35rem, 2.5vw, 2.3rem);
+}
+
+.home-reference-theme .hero-brand-mark {
+ font-size: clamp(0.3rem, 0.5vw, 0.52rem);
+ transform: translate(-0.24em, 0.07em);
 }
 
 .home-reference-theme .hero-brand-badge {
@@ -1023,27 +1041,32 @@ h4 { font-size: 1.05rem; font-weight: 600; }
  letter-spacing: 0.22em;
 }
 
-.home-reference-theme .hero-brand-text {
- color: #ffffff;
- -webkit-text-fill-color: transparent;
- background: linear-gradient(90deg, #ffffff 0%, #9eece3 38%, #4ad9ea 72%, #d7ffff 100%);
- -webkit-background-clip: text;
- background-clip: text;
- text-shadow: 0 0 28px rgba(108, 240, 229, 0.2);
- display: inline-block;
- max-width: 100%;
- font-size: clamp(1.78rem, 3vw, 3.35rem);
- letter-spacing: 0.015em;
- line-height: 0.94;
+.home-reference-theme .hero-brand-lockup {
+ gap: 12px;
+ letter-spacing: 0.12em;
  white-space: nowrap;
 }
 
-.home-reference-theme .hero-brand-reg {
- -webkit-text-fill-color: rgba(255,255,255,0.42);
- color: rgba(255,255,255,0.42);
- font-size: 0.18em;
- vertical-align: top;
- margin-left: 1px;
+.home-reference-theme .hero-brand-main,
+.home-reference-theme .hero-brand-region,
+.home-reference-theme .hero-brand-mark {
+ background: linear-gradient(90deg, #2ec34f 0%, #2bd46e 26%, #3de0c1 62%, #4ad9ea 100%);
+ -webkit-background-clip: text;
+ background-clip: text;
+ text-shadow: 0 0 28px rgba(108, 240, 229, 0.18);
+}
+
+.home-reference-theme .hero-brand-main {
+ font-size: clamp(1.75rem, 2.8vw, 3rem);
+}
+
+.home-reference-theme .hero-brand-region {
+ font-size: clamp(1.5rem, 2.35vw, 2.45rem);
+}
+
+.home-reference-theme .hero-brand-mark {
+ font-size: clamp(0.34rem, 0.55vw, 0.58rem);
+ transform: translate(-0.28em, 0.08em);
 }
 
 .home-reference-theme .hero-brand-badge {
@@ -2039,10 +2062,23 @@ h4 { font-size: 1.05rem; font-weight: 600; }
  border-radius: 24px;
  }
 
- .home-reference-theme .hero-brand-text {
+ .home-reference-theme .hero-brand-lockup {
+ gap: 8px;
  max-width: 100%;
- font-size: clamp(1.45rem, 7vw, 2.25rem);
- letter-spacing: 0.01em;
+ letter-spacing: 0.08em;
+ }
+
+ .home-reference-theme .hero-brand-main {
+ font-size: clamp(1.24rem, 7vw, 2rem);
+ }
+
+ .home-reference-theme .hero-brand-region {
+ font-size: clamp(1.08rem, 5.7vw, 1.72rem);
+ }
+
+ .home-reference-theme .hero-brand-mark {
+ font-size: clamp(0.28rem, 1.4vw, 0.44rem);
+ transform: translate(-0.18em, 0.05em);
  }
 
  .home-reference-theme .hero-brand-display::before {
