@@ -202,70 +202,165 @@ document.querySelectorAll('.faq-item').forEach(item => {
   });
 });
 
-// ── Hero Particles ─────────────────────────────────────────
+// ── Hero Background (soft scientific motion) ──────────────
+const hero = document.querySelector('.hero');
 const canvas = document.getElementById('hero-canvas');
-if (canvas) {
+if (hero && canvas) {
+  document.body.classList.add('home-reference-theme');
+
   const ctx = canvas.getContext('2d');
-  let particles = [];
-
-  const resize = () => {
-    canvas.width = canvas.offsetWidth;
-    canvas.height = canvas.offsetHeight;
-  };
-  resize();
-  window.addEventListener('resize', resize, { passive: true });
-
+  const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
   const rand = (a, b) => Math.random() * (b - a) + a;
 
-  const initParticles = () => {
-    const count = Math.floor(canvas.width / 14);
-    particles = Array.from({ length: count }, () => ({
-      x: rand(0, canvas.width),
-      y: rand(0, canvas.height),
-      r: rand(1, 2.5),
-      vx: rand(-0.3, 0.3),
-      vy: rand(-0.3, 0.3),
-      a: rand(0.1, 0.5),
-    }));
+  let width = 0;
+  let height = 0;
+  let blobs = [];
+  let rings = [];
+  let dust = [];
+  let rafId = 0;
+
+  const setCanvasSize = () => {
+    width = hero.offsetWidth;
+    height = hero.offsetHeight;
+
+    const dpr = Math.min(window.devicePixelRatio || 1, 2);
+    canvas.width = Math.round(width * dpr);
+    canvas.height = Math.round(height * dpr);
+    canvas.style.width = `${width}px`;
+    canvas.style.height = `${height}px`;
+    ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
   };
-  initParticles();
 
-  const draw = () => {
-    ctx.clearRect(0, 0, canvas.width, canvas.height);
+  const buildScene = () => {
+    const compact = width < 768;
+    const area = width * height;
+    const orbCount = compact ? 6 : 9;
+    const ringCount = compact ? 5 : 8;
+    const dustCount = Math.max(compact ? 22 : 40, Math.floor(area / 36000));
 
-    // draw connections
-    for (let i = 0; i < particles.length; i++) {
-      for (let j = i + 1; j < particles.length; j++) {
-        const dx = particles[i].x - particles[j].x;
-        const dy = particles[i].y - particles[j].y;
-        const dist = Math.sqrt(dx * dx + dy * dy);
-        if (dist < 120) {
-          ctx.beginPath();
-          ctx.strokeStyle = `rgba(41,199,197,${0.12 * (1 - dist / 120)})`;
-          ctx.lineWidth = 0.8;
-          ctx.moveTo(particles[i].x, particles[i].y);
-          ctx.lineTo(particles[j].x, particles[j].y);
-          ctx.stroke();
-        }
-      }
-    }
-
-    // draw dots
-    particles.forEach(p => {
-      p.x += p.vx;
-      p.y += p.vy;
-      if (p.x < 0 || p.x > canvas.width) p.vx *= -1;
-      if (p.y < 0 || p.y > canvas.height) p.vy *= -1;
-
-      ctx.beginPath();
-      ctx.arc(p.x, p.y, p.r, 0, Math.PI * 2);
-      ctx.fillStyle = `rgba(41,199,197,${p.a})`;
-      ctx.fill();
+    blobs = Array.from({ length: orbCount }, (_, index) => {
+      const largeOrb = index < 3;
+      return {
+        x: rand(width * 0.08, width * 0.92),
+        y: rand(height * 0.06, height * 0.9),
+        radius: rand(largeOrb ? 120 : 70, largeOrb ? 220 : 130),
+        offsetX: rand(18, 42),
+        offsetY: rand(14, 34),
+        speed: rand(0.18, 0.48),
+        phase: rand(0, Math.PI * 2),
+        hue: index % 2 === 0 ? [84, 191, 230] : [255, 255, 255],
+        alpha: largeOrb ? rand(0.18, 0.28) : rand(0.12, 0.2),
+      };
     });
 
-    requestAnimationFrame(draw);
+    rings = Array.from({ length: ringCount }, (_, index) => ({
+      x: rand(width * 0.04, width * 0.96),
+      y: rand(height * 0.08, height * 0.95),
+      radius: rand(compact ? 44 : 56, compact ? 110 : 160),
+      stretchX: rand(0.72, 1.22),
+      stretchY: rand(0.72, 1.22),
+      lineWidth: rand(0.9, 1.8),
+      alpha: rand(0.08, 0.2),
+      speed: rand(0.12, 0.28),
+      phase: rand(0, Math.PI * 2),
+      tint: index % 3 === 0 ? '84, 191, 230' : '255, 255, 255',
+    }));
+
+    dust = Array.from({ length: dustCount }, () => ({
+      x: rand(0, width),
+      y: rand(0, height),
+      radius: rand(1, 2.6),
+      alpha: rand(0.18, 0.45),
+      speedX: rand(-0.05, 0.05),
+      speedY: rand(-0.04, 0.04),
+    }));
   };
-  draw();
+
+  const drawBlob = (blob, time) => {
+    const x = blob.x + Math.cos(time * blob.speed + blob.phase) * blob.offsetX;
+    const y = blob.y + Math.sin(time * (blob.speed * 0.9) + blob.phase) * blob.offsetY;
+    const gradient = ctx.createRadialGradient(
+      x - blob.radius * 0.32,
+      y - blob.radius * 0.3,
+      blob.radius * 0.12,
+      x,
+      y,
+      blob.radius
+    );
+
+    gradient.addColorStop(0, `rgba(${blob.hue.join(',')}, ${blob.alpha})`);
+    gradient.addColorStop(0.58, `rgba(${blob.hue.join(',')}, ${blob.alpha * 0.42})`);
+    gradient.addColorStop(1, `rgba(${blob.hue.join(',')}, 0)`);
+
+    ctx.fillStyle = gradient;
+    ctx.beginPath();
+    ctx.arc(x, y, blob.radius, 0, Math.PI * 2);
+    ctx.fill();
+  };
+
+  const drawRing = (ring, time) => {
+    const x = ring.x + Math.sin(time * ring.speed + ring.phase) * 10;
+    const y = ring.y + Math.cos(time * ring.speed + ring.phase) * 8;
+
+    ctx.save();
+    ctx.translate(x, y);
+    ctx.rotate(Math.sin(time * ring.speed + ring.phase) * 0.22);
+    ctx.scale(ring.stretchX, ring.stretchY);
+    ctx.strokeStyle = `rgba(${ring.tint}, ${ring.alpha})`;
+    ctx.lineWidth = ring.lineWidth;
+    ctx.setLineDash([ring.radius * 0.18, ring.radius * 0.11]);
+    ctx.beginPath();
+    ctx.arc(0, 0, ring.radius, 0, Math.PI * 2);
+    ctx.stroke();
+    ctx.restore();
+  };
+
+  const drawDust = () => {
+    dust.forEach(point => {
+      point.x += point.speedX;
+      point.y += point.speedY;
+
+      if (point.x < -8) point.x = width + 8;
+      if (point.x > width + 8) point.x = -8;
+      if (point.y < -8) point.y = height + 8;
+      if (point.y > height + 8) point.y = -8;
+
+      ctx.beginPath();
+      ctx.arc(point.x, point.y, point.radius, 0, Math.PI * 2);
+      ctx.fillStyle = `rgba(104, 141, 166, ${point.alpha})`;
+      ctx.fill();
+    });
+  };
+
+  const paint = now => {
+    const time = now * 0.00035;
+    ctx.clearRect(0, 0, width, height);
+
+    blobs.forEach(blob => drawBlob(blob, time));
+    rings.forEach(ring => drawRing(ring, time));
+    drawDust();
+
+    if (!reducedMotion.matches) {
+      rafId = requestAnimationFrame(paint);
+    }
+  };
+
+  const renderScene = () => {
+    cancelAnimationFrame(rafId);
+    setCanvasSize();
+    buildScene();
+
+    if (reducedMotion.matches) {
+      paint(0);
+      return;
+    }
+
+    rafId = requestAnimationFrame(paint);
+  };
+
+  renderScene();
+  window.addEventListener('resize', renderScene, { passive: true });
+  reducedMotion.addEventListener('change', renderScene);
 }
 
 // ── Typing effect for hero subtitle ───────────────────────
