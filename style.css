@@ -965,6 +965,7 @@ h4 { font-size: 1.05rem; font-weight: 600; }
   backdrop-filter: blur(16px);
   -webkit-backdrop-filter: blur(16px);
   text-align: left;
+  overflow: hidden;
 }
 
 .home-reference-theme .hero-content::before {
@@ -976,6 +977,7 @@ h4 { font-size: 1.05rem; font-weight: 600; }
   align-items: flex-start;
   gap: 12px;
   margin-bottom: 20px;
+  width: 100%;
 }
 
 .home-reference-theme .hero-brand-display::before {
@@ -995,12 +997,18 @@ h4 { font-size: 1.05rem; font-weight: 600; }
   -webkit-background-clip: text;
   background-clip: text;
   text-shadow: 0 0 28px rgba(108, 240, 229, 0.2);
-  letter-spacing: 0.12em;
+  display: inline-block;
+  max-width: calc(100% - 22px);
+  font-size: clamp(2.4rem, 4.2vw, 4.7rem);
+  letter-spacing: 0.08em;
+  line-height: 0.96;
 }
 
 .home-reference-theme .hero-brand-reg {
   -webkit-text-fill-color: rgba(255,255,255,0.42);
   color: rgba(255,255,255,0.42);
+  font-size: 0.28em;
+  vertical-align: top;
 }
 
 .home-reference-theme .hero-brand-badge {
@@ -1948,7 +1956,9 @@ h4 { font-size: 1.05rem; font-weight: 600; }
   }
 
   .home-reference-theme .hero-brand-text {
-    letter-spacing: 0.08em;
+    max-width: calc(100% - 18px);
+    font-size: clamp(2rem, 10vw, 3.2rem);
+    letter-spacing: 0.04em;
   }
 
   .home-reference-theme .hero-brand-display::before {
