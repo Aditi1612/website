@@ -1042,9 +1042,10 @@ h4 { font-size: 1.05rem; font-weight: 600; }
 }
 
 .home-reference-theme .hero-brand-lockup {
- gap: 12px;
- letter-spacing: 0.12em;
+ gap: 10px;
+ letter-spacing: 0.09em;
  white-space: nowrap;
+ max-width: 100%;
 }
 
 .home-reference-theme .hero-brand-main,
@@ -1057,16 +1058,16 @@ h4 { font-size: 1.05rem; font-weight: 600; }
 }
 
 .home-reference-theme .hero-brand-main {
- font-size: clamp(1.75rem, 2.8vw, 3rem);
+ font-size: clamp(1.62rem, 2.45vw, 2.72rem);
 }
 
 .home-reference-theme .hero-brand-region {
- font-size: clamp(1.5rem, 2.35vw, 2.45rem);
+ font-size: clamp(1.36rem, 2.05vw, 2.18rem);
 }
 
 .home-reference-theme .hero-brand-mark {
- font-size: clamp(0.34rem, 0.55vw, 0.58rem);
- transform: translate(-0.28em, 0.08em);
+ font-size: clamp(0.3rem, 0.48vw, 0.5rem);
+ transform: translate(-0.2em, 0.06em);
 }
 
 .home-reference-theme .hero-brand-badge {
