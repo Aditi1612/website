@@ -731,41 +731,100 @@ h4 { font-size: 1.05rem; font-weight: 600; }
 }
 
 .home-reference-theme #hero-canvas {
-  opacity: 0.92;
+  opacity: 0.72;
 }
 
 .home-reference-theme .hero-content {
-  max-width: 880px;
+  max-width: 960px;
+  padding: 48px 56px;
+  border: 1px solid rgba(102, 149, 182, 0.18);
+  border-radius: 30px;
+  background: linear-gradient(135deg, rgba(255,255,255,0.72) 0%, rgba(255,255,255,0.36) 100%);
+  box-shadow: 0 28px 70px rgba(33, 67, 92, 0.12);
+  backdrop-filter: blur(22px);
+  -webkit-backdrop-filter: blur(22px);
+}
+
+.home-reference-theme .hero-content::before {
+  content: '';
+  position: absolute;
+  inset: 18px;
+  border-radius: 22px;
+  border: 1px solid rgba(255,255,255,0.42);
+  pointer-events: none;
+}
+
+.home-reference-theme .hero-brand-display {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 14px;
+  margin-bottom: 26px;
+}
+
+.home-reference-theme .hero-brand-display::before {
+  content: 'KOREAN CHROMATOGRAPHY SOLUTIONS';
+  display: inline-block;
+  padding: 8px 14px;
+  border-radius: 999px;
+  border: 1px solid rgba(84, 191, 230, 0.25);
+  background: rgba(255,255,255,0.58);
+  color: rgba(28, 63, 87, 0.62);
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.28em;
+  text-transform: uppercase;
 }
 
 .home-reference-theme .hero-brand-text {
-  background: linear-gradient(90deg, #18465e 0%, #2c87a7 36%, #54bfe6 72%, #eef8ff 100%);
-  -webkit-text-fill-color: transparent;
-  text-shadow: 0 16px 32px rgba(255,255,255,0.45);
+  display: inline-block;
+  background: none;
+  color: #16384d;
+  -webkit-text-fill-color: #16384d;
+  text-shadow: 0 10px 26px rgba(255,255,255,0.42);
+  letter-spacing: 0.16em;
+  line-height: 0.92;
 }
 
 .home-reference-theme .hero-brand-reg {
-  -webkit-text-fill-color: rgba(24, 70, 94, 0.38);
-  color: rgba(24, 70, 94, 0.38);
+  -webkit-text-fill-color: rgba(24, 70, 94, 0.28);
+  color: rgba(24, 70, 94, 0.28);
+  margin-left: 4px;
 }
 
 .home-reference-theme .hero-brand-badge {
-  color: rgba(24, 54, 75, 0.62);
-  border-color: rgba(84, 191, 230, 0.28);
-  background: rgba(255,255,255,0.42);
-  box-shadow: 0 12px 28px rgba(50, 84, 110, 0.08);
+  color: rgba(24, 54, 75, 0.7);
+  border-color: rgba(84, 191, 230, 0.22);
+  background: rgba(247,251,255,0.82);
+  box-shadow: 0 10px 24px rgba(50, 84, 110, 0.06);
+  letter-spacing: 0.18em;
 }
 
 .home-reference-theme .hero h1 {
   color: #16384d;
+  max-width: 12ch;
+  margin: 0 auto 18px;
+  font-size: clamp(2.2rem, 4.8vw, 4.4rem);
+  line-height: 1.05;
 }
 
 .home-reference-theme .hero-sub {
   color: rgba(22, 56, 77, 0.72);
+  max-width: 700px;
+  font-size: 1.02rem;
+  margin-bottom: 32px;
 }
 
 .home-reference-theme #typing-text::after {
   color: #2c87a7;
+}
+
+.home-reference-theme .btn-primary {
+  box-shadow: 0 16px 34px rgba(41, 199, 197, 0.24);
+}
+
+.home-reference-theme .btn-primary:hover {
+  box-shadow: 0 18px 38px rgba(41, 199, 197, 0.3);
 }
 
 .home-reference-theme .btn-outline {
@@ -1445,8 +1504,19 @@ h4 { font-size: 1.05rem; font-weight: 600; }
     padding-top: 140px;
   }
 
+  .home-reference-theme .hero-content {
+    padding: 34px 22px;
+    border-radius: 24px;
+  }
+
   .home-reference-theme .hero-brand-text {
-    letter-spacing: 3px;
+    letter-spacing: 0.08em;
+  }
+
+  .home-reference-theme .hero-brand-display::before {
+    font-size: 0.58rem;
+    letter-spacing: 0.18em;
+    padding: 7px 10px;
   }
 
   .home-reference-theme .hero-sub {
