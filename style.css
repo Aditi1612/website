@@ -629,6 +629,167 @@ h4 { font-size: 1.05rem; font-weight: 600; }
   50% { opacity: 0.3; top: 18px; }
 }
 
+/* Homepage hero theme inspired by cellachrom.co.kr */
+.home-reference-theme {
+  background: #f5f8fb;
+}
+
+.home-reference-theme #site-header {
+  background: rgba(245, 248, 251, 0.45);
+  border-bottom: 1px solid rgba(28, 63, 87, 0.08);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+}
+
+.home-reference-theme #site-header.scrolled {
+  background: rgba(255,255,255,0.92);
+  border-bottom: 1px solid rgba(21, 48, 66, 0.08);
+  box-shadow: 0 8px 30px rgba(31, 54, 74, 0.08);
+}
+
+.home-reference-theme .header-inner .logo img {
+  filter: drop-shadow(0 10px 24px rgba(84, 191, 230, 0.2));
+}
+
+.home-reference-theme .header-inner .logo:hover img {
+  filter: drop-shadow(0 14px 30px rgba(84, 191, 230, 0.28));
+}
+
+.home-reference-theme .main-nav > ul > li > a {
+  color: rgba(20, 49, 69, 0.82);
+}
+
+.home-reference-theme .main-nav > ul > li > a:hover,
+.home-reference-theme .main-nav > ul > li > a.active {
+  color: #207d9b;
+}
+
+.home-reference-theme #site-header.scrolled .main-nav > ul > li > a {
+  color: rgba(20, 49, 69, 0.82);
+}
+
+.home-reference-theme #site-header.scrolled .main-nav > ul > li > a:hover,
+.home-reference-theme #site-header.scrolled .main-nav > ul > li > a.active {
+  color: #207d9b;
+}
+
+.home-reference-theme .main-nav .arrow {
+  opacity: 0.45;
+}
+
+.home-reference-theme .dropdown,
+.home-reference-theme #site-header.scrolled .dropdown {
+  background: rgba(255,255,255,0.88);
+  border-color: rgba(27, 66, 93, 0.08);
+  box-shadow: 0 18px 40px rgba(24, 53, 74, 0.12);
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+}
+
+.home-reference-theme .dropdown::before,
+.home-reference-theme #site-header.scrolled .dropdown::before {
+  background: rgba(255,255,255,0.88);
+  border-color: rgba(27, 66, 93, 0.08);
+}
+
+.home-reference-theme .dropdown li a,
+.home-reference-theme #site-header.scrolled .dropdown li a {
+  color: rgba(20, 49, 69, 0.75);
+}
+
+.home-reference-theme .dropdown li a:hover,
+.home-reference-theme #site-header.scrolled .dropdown li a:hover {
+  color: #207d9b;
+  background: rgba(84, 191, 230, 0.08);
+}
+
+.home-reference-theme .hamburger span,
+.home-reference-theme #site-header.scrolled .hamburger span {
+  background: #1c3f57;
+}
+
+.home-reference-theme .hero {
+  background: linear-gradient(180deg, #fbfdff 0%, #eef5fb 48%, #e3edf7 100%);
+}
+
+.home-reference-theme .hero::before {
+  background:
+    radial-gradient(circle at 18% 22%, rgba(255,255,255,0.95) 0%, rgba(255,255,255,0) 34%),
+    radial-gradient(circle at 78% 20%, rgba(84,191,230,0.22) 0%, rgba(84,191,230,0) 30%),
+    radial-gradient(circle at 62% 72%, rgba(146,210,239,0.2) 0%, rgba(146,210,239,0) 34%),
+    linear-gradient(145deg, rgba(255,255,255,0.55) 0%, rgba(255,255,255,0.14) 44%, rgba(218,231,242,0.4) 100%);
+}
+
+.home-reference-theme .hero::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(circle at 22% 34%, rgba(255,255,255,0.34) 0%, rgba(255,255,255,0) 18%),
+    radial-gradient(circle at 82% 68%, rgba(255,255,255,0.26) 0%, rgba(255,255,255,0) 21%);
+  pointer-events: none;
+}
+
+.home-reference-theme #hero-canvas {
+  opacity: 0.92;
+}
+
+.home-reference-theme .hero-content {
+  max-width: 880px;
+}
+
+.home-reference-theme .hero-brand-text {
+  background: linear-gradient(90deg, #18465e 0%, #2c87a7 36%, #54bfe6 72%, #eef8ff 100%);
+  -webkit-text-fill-color: transparent;
+  text-shadow: 0 16px 32px rgba(255,255,255,0.45);
+}
+
+.home-reference-theme .hero-brand-reg {
+  -webkit-text-fill-color: rgba(24, 70, 94, 0.38);
+  color: rgba(24, 70, 94, 0.38);
+}
+
+.home-reference-theme .hero-brand-badge {
+  color: rgba(24, 54, 75, 0.62);
+  border-color: rgba(84, 191, 230, 0.28);
+  background: rgba(255,255,255,0.42);
+  box-shadow: 0 12px 28px rgba(50, 84, 110, 0.08);
+}
+
+.home-reference-theme .hero h1 {
+  color: #16384d;
+}
+
+.home-reference-theme .hero-sub {
+  color: rgba(22, 56, 77, 0.72);
+}
+
+.home-reference-theme #typing-text::after {
+  color: #2c87a7;
+}
+
+.home-reference-theme .btn-outline {
+  color: #16384d;
+  border-color: rgba(28, 63, 87, 0.2);
+  background: rgba(255,255,255,0.4);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+}
+
+.home-reference-theme .btn-outline:hover {
+  color: #207d9b;
+  border-color: rgba(84, 191, 230, 0.55);
+  background: rgba(255,255,255,0.7);
+}
+
+.home-reference-theme .hero-scroll-hint span {
+  border-color: rgba(28, 63, 87, 0.22);
+}
+
+.home-reference-theme .hero-scroll-hint span::after {
+  background: #2c87a7;
+}
+
 /* =========================================================
    BUTTONS
    ========================================================= */
@@ -1279,6 +1440,18 @@ h4 { font-size: 1.05rem; font-weight: 600; }
 
 @media (max-width: 767px) {
   .hero h1 { font-size: 2rem; }
+
+  .home-reference-theme .hero {
+    padding-top: 140px;
+  }
+
+  .home-reference-theme .hero-brand-text {
+    letter-spacing: 3px;
+  }
+
+  .home-reference-theme .hero-sub {
+    font-size: 1rem;
+  }
 
   .about-strip-grid {
     grid-template-columns: 1fr;
