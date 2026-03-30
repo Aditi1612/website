@@ -1,122 +1,127 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Guard Columns ??CellaChrom</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@300;400;500;600;700&family=Orbitron:wght@700;900&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="style.css?v=4" />
-  <style>
-    .products-page { padding: 80px 0; }
-    .spec-table { width: 100%; border-collapse: collapse; font-size: 0.88rem; margin-top: 28px; }
-    .spec-table th { background: var(--dark); color: #fff; padding: 12px 16px; text-align: left; font-weight: 600; font-size: 0.82rem; }
-    .spec-table td { padding: 11px 16px; border-bottom: 1px solid var(--border); color: var(--text-light); }
-    .spec-table tr:hover td { background: var(--teal-light); }
-    .guard-intro { display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: start; margin-bottom: 60px; }
-    .guard-intro-text h2 { margin-bottom: 16px; }
-    .guard-intro-text p { color: var(--text-light); line-height: 1.8; margin-bottom: 14px; font-size: 0.95rem; }
-    .benefits-box { background: var(--light-bg); border-radius: 12px; padding: 32px; }
-    .benefits-box h3 { margin-bottom: 20px; }
-    .benefit-item { display: flex; gap: 12px; margin-bottom: 16px; }
-    .benefit-icon { color: var(--teal); font-weight: 700; font-size: 1.1rem; flex-shrink: 0; margin-top: 1px; }
-    .benefit-item p { font-size: 0.9rem; color: var(--text-light); line-height: 1.5; }
-    .benefit-item strong { color: var(--text); display: block; margin-bottom: 3px; }
-    @media (max-width: 767px) { .guard-intro { grid-template-columns: 1fr; } }
-  </style>
+ <meta charset="UTF-8" />
+ <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+ <meta name="referrer" content="strict-origin-when-cross-origin" />
+ <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; img-src 'self' data: https:; font-src 'self' https://fonts.gstatic.com data:; connect-src 'self'; frame-src https://maps.google.com https://www.google.com https://maps.googleusercontent.com; object-src 'none'; base-uri 'self'; form-action 'self'; upgrade-insecure-requests" />
+ <title>Guard Columns - CellaChrom</title>
+ <link rel="preconnect" href="https://fonts.googleapis.com" />
+ <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@300;400;500;600;700&family=Orbitron:wght@700;900&family=Oswald:wght@500;600;700&display=swap" rel="stylesheet" />
+ <link rel="stylesheet" href="style.css?v=4" />
+ <style>
+ .products-page { padding: 80px 0; }
+ .spec-table { width: 100%; border-collapse: collapse; font-size: 0.88rem; margin-top: 28px; }
+ .spec-table th { background: var(--dark); color: #fff; padding: 12px 16px; text-align: left; font-weight: 600; font-size: 0.82rem; }
+ .spec-table td { padding: 11px 16px; border-bottom: 1px solid var(--border); color: var(--text-light); }
+ .spec-table tr:hover td { background: var(--teal-light); }
+ .guard-intro { display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: start; margin-bottom: 60px; }
+ .guard-intro-text h2 { margin-bottom: 16px; }
+ .guard-intro-text p { color: var(--text-light); line-height: 1.8; margin-bottom: 14px; font-size: 0.95rem; }
+ .benefits-box { background: var(--light-bg); border-radius: 12px; padding: 32px; }
+ .benefits-box h3 { margin-bottom: 20px; }
+ .benefit-item { display: flex; gap: 12px; margin-bottom: 16px; }
+ .benefit-icon { color: var(--teal); font-weight: 700; font-size: 1.1rem; flex-shrink: 0; margin-top: 1px; }
+ .benefit-item p { font-size: 0.9rem; color: var(--text-light); line-height: 1.5; }
+ .benefit-item strong { color: var(--text); display: block; margin-bottom: 3px; }
+ @media (max-width: 767px) { .guard-intro { grid-template-columns: 1fr; } }
+ </style>
 </head>
 <body>
-  <header id="site-header">
-    <div class="header-inner">
-      <a class="logo" href="index.html"><img src="images/Logo (CellaChrom).png" alt="CellaChrom"></a>
-      <nav class="main-nav">
-        <ul>
-          <li><a href="index.html">Home</a></li><li><a href="company.html">About Us</a></li>
-          <li class="has-dropdown"><a href="chiral-columns.html" class="active">Products <span class="arrow">&#9660;</span></a><ul class="dropdown"><li><a href="chiral-columns.html">Chiral Columns</a></li><li><a href="general-columns.html">General Columns</a></li><li><a href="guard-columns.html">Guard Columns</a></li><li><a href="registech-products.html">Registech Products</a></li></ul></li>
-          <li class="has-dropdown"><a href="screening-services.html">Services <span class="arrow">&#9660;</span></a><ul class="dropdown"><li><a href="screening-screening-services.html">Screening Services</a></li><li><a href="technical-support.html">Technical Support</a></li><li><a href="column-rental.html">Column Rental</a></li></ul></li>
-          <li><a href="notice.html">News &amp; Events</a></li><li><a href="contact.html">Contact</a></li>
-        </ul>
-      </nav>
-      <button class="hamburger" id="hamburger"><span></span><span></span><span></span></button>
-    </div>
-    <nav class="mobile-nav" id="mobile-nav">
-      <ul>
-        <li><a href="index.html">Home</a></li><li><a href="company.html">About Us</a></li>
-        <li class="mobile-dropdown"><button class="mobile-toggle">Products <span class="arrow">&#9660;</span></button><ul class="mobile-submenu"><li><a href="chiral-columns.html">Chiral Columns</a></li><li><a href="general-columns.html">General Columns</a></li><li><a href="guard-columns.html">Guard Columns</a></li><li><a href="registech-products.html">Registech Products</a></li></ul></li>
-        <li class="mobile-dropdown"><button class="mobile-toggle">Services <span class="arrow">&#9660;</span></button><ul class="mobile-submenu"><li><a href="screening-screening-services.html">Screening Services</a></li><li><a href="technical-support.html">Technical Support</a></li><li><a href="column-rental.html">Column Rental</a></li></ul></li>
-        <li><a href="notice.html">News &amp; Events</a></li><li><a href="contact.html">Contact</a></li>
-      </ul>
-    </nav>
-  </header>
+ <header id="site-header">
+ <div class="header-inner">
+ <a class="logo" href="index.html" aria-label="Cellachrom India home"><span class="logo-wordmark" aria-hidden="true"><span class="logo-main">CELLACHROM</span><sup class="logo-mark">TM</sup><span class="logo-region">INDIA</span></span></a>
+ <nav class="main-nav">
+ <ul>
+ <li><a href="index.html">Home</a></li><li><a href="company.html">About Us</a></li>
+ <li class="has-dropdown"><a href="chiral-columns.html" class="active">Products <span class="arrow">&#9660;</span></a><ul class="dropdown"><li><a href="chiral-columns.html">Chiral Columns</a></li><li><a href="general-columns.html">General Columns</a></li><li><a href="guard-columns.html">Guard Columns</a></li><li><a href="registech-products.html">Registech Products</a></li></ul></li>
+ <li class="has-dropdown"><a href="screening-services.html">Services <span class="arrow">&#9660;</span></a><ul class="dropdown"><li><a href="screening-screening-services.html">Screening Services</a></li><li><a href="technical-support.html">Technical Support</a></li><li><a href="column-rental.html">Column Rental</a></li></ul></li>
+ <li><a href="notice.html">News &amp; Events</a></li><li><a href="contact.html">Contact</a></li>
+ </ul>
+ </nav>
+ <button class="hamburger" id="hamburger"><span></span><span></span><span></span></button>
+ </div>
+ <nav class="mobile-nav" id="mobile-nav">
+ <ul>
+ <li><a href="index.html">Home</a></li><li><a href="company.html">About Us</a></li>
+ <li class="mobile-dropdown"><button class="mobile-toggle">Products <span class="arrow">&#9660;</span></button><ul class="mobile-submenu"><li><a href="chiral-columns.html">Chiral Columns</a></li><li><a href="general-columns.html">General Columns</a></li><li><a href="guard-columns.html">Guard Columns</a></li><li><a href="registech-products.html">Registech Products</a></li></ul></li>
+ <li class="mobile-dropdown"><button class="mobile-toggle">Services <span class="arrow">&#9660;</span></button><ul class="mobile-submenu"><li><a href="screening-screening-services.html">Screening Services</a></li><li><a href="technical-support.html">Technical Support</a></li><li><a href="column-rental.html">Column Rental</a></li></ul></li>
+ <li><a href="notice.html">News &amp; Events</a></li><li><a href="contact.html">Contact</a></li>
+ </ul>
+ </nav>
+ </header>
 
-  <section class="page-hero">
-    <div class="container">
-      <div class="breadcrumb"><a href="index.html">Home</a><span>/</span><a href="chiral-columns.html">Products</a><span>/</span><span class="current">Guard Columns</span></div>
-      <h1>Guard Columns</h1>
-      <p>Protect your analytical columns and extend their lifetime with our matched guard column systems.</p>
-    </div>
-  </section>
+ <section class="page-hero">
+ <div class="container">
+ <div class="breadcrumb"><a href="index.html">Home</a><span>/</span><a href="chiral-columns.html">Products</a><span>/</span><span class="current">Guard Columns</span></div>
+ <h1>Guard Columns</h1>
+ <p>Protect your analytical columns and extend their lifetime with our matched guard column systems.</p>
+ </div>
+ </section>
 
-  <section class="products-page">
-    <div class="container">
-      <div class="guard-intro">
-        <div class="guard-intro-text">
-          <span class="section-eyebrow">Protection &amp; Performance</span>
-          <h2>Guard Columns for Every CellaChrom Line</h2>
-          <p>Guard columns are an essential investment for any HPLC system. By trapping particulates, strongly retained matrix components, and column-damaging contaminants before they reach your analytical column, guard columns preserve peak shape, extend column lifetime, and protect your data quality.</p>
-          <p>CellaChrom guard columns are packed with the same stationary phase as our analytical columns, ensuring no change in selectivity or retention when used together. They are available in a cartridge-style format for quick and easy replacement without disturbing the analytical column connection.</p>
-        </div>
-        <div class="benefits-box">
-          <h3>Why Use a Guard Column?</h3>
-          <div class="benefit-item"><div class="benefit-icon">??/div><p><strong>Extend Column Lifetime</strong>Dramatically increases the number of injections before analytical column replacement is needed.</p></div>
-          <div class="benefit-item"><div class="benefit-icon">??/div><p><strong>Maintain Peak Shape</strong>Prevents buildup of strongly retained matrix components that cause peak broadening or tailing.</p></div>
-          <div class="benefit-item"><div class="benefit-icon">??/div><p><strong>Same Selectivity</strong>Matched stationary phase ensures no change in chromatographic selectivity.</p></div>
-          <div class="benefit-item"><div class="benefit-icon">??/div><p><strong>Easy Cartridge Replacement</strong>Quick-change cartridge system minimizes downtime between replacements.</p></div>
-        </div>
-      </div>
+ <section class="products-page">
+ <div class="container">
+ <div class="guard-intro">
+ <div class="guard-intro-text">
+ <span class="section-eyebrow">Protection &amp; Performance</span>
+ <h2>Guard Columns for Every CellaChrom Line</h2>
+ <p>Guard columns are an essential investment for any HPLC system. By trapping particulates, strongly retained matrix components, and column-damaging contaminants before they reach your analytical column, guard columns preserve peak shape, extend column lifetime, and protect your data quality.</p>
+ <p>CellaChrom guard columns are packed with the same stationary phase as our analytical columns, ensuring no change in selectivity or retention when used together. They are available in a cartridge-style format for quick and easy replacement without disturbing the analytical column connection.</p>
+ </div>
+ <div class="benefits-box">
+ <h3>Why Use a Guard Column?</h3>
+ <div class="benefit-item"><div class="benefit-icon">&#10003;</div><p><strong>Extend Column Lifetime</strong>Dramatically increases the number of injections before analytical column replacement is needed.</p></div>
+ <div class="benefit-item"><div class="benefit-icon">&#10003;</div><p><strong>Maintain Peak Shape</strong>Prevents buildup of strongly retained matrix components that cause peak broadening or tailing.</p></div>
+ <div class="benefit-item"><div class="benefit-icon">&#10003;</div><p><strong>Same Selectivity</strong>Matched stationary phase ensures no change in chromatographic selectivity.</p></div>
+ <div class="benefit-item"><div class="benefit-icon">&#10003;</div><p><strong>Easy Cartridge Replacement</strong>Quick-change cartridge system minimizes downtime between replacements.</p></div>
+ </div>
+ </div>
 
-      <h2 style="margin-bottom: 8px;">Guard Column Products</h2>
-      <p style="color:var(--text-light); font-size:0.92rem;">Available for all CellaChrom analytical column lines. Please specify the analytical column when ordering.</p>
+ <h2 style="margin-bottom: 8px;">Guard Column Products</h2>
+ <p style="color:var(--text-light); font-size:0.92rem;">Available for all CellaChrom analytical column lines. Please specify the analytical column when ordering.</p>
 
-      <table class="spec-table">
-        <thead>
-          <tr><th>Guard Column</th><th>Matches Analytical Column</th><th>Dimensions (mm)</th><th>Particle Size</th></tr>
-        </thead>
-        <tbody>
-          <tr><td>CellaChrom® AD Guard</td><td>CellaChrom® AD-H / AD-3</td><td>4.0 × 10</td><td>5 µm / 3 µm</td></tr>
-          <tr><td>CelluloSil® OD Guard</td><td>CelluloSil® OD-H / OD-3</td><td>4.0 × 10</td><td>5 µm / 3 µm</td></tr>
-          <tr><td>CrownSil® Guard</td><td>CrownSil® (+) / (??</td><td>4.0 × 10</td><td>5 µm</td></tr>
-          <tr><td>Hector C18 Guard</td><td>Hector C18 (all sizes)</td><td>4.0 × 10</td><td>5 µm / 3 µm</td></tr>
-          <tr><td>Hector C8 Guard</td><td>Hector C8 (all sizes)</td><td>4.0 × 10</td><td>5 µm</td></tr>
-        </tbody>
-      </table>
+ <table class="spec-table">
+ <thead>
+ <tr><th>Guard Column</th><th>Matches Analytical Column</th><th>Dimensions (mm)</th><th>Particle Size</th></tr>
+ </thead>
+ <tbody>
+ <tr><td>CellaChrom® AD Guard</td><td>CellaChrom® AD-H / AD-3</td><td>4.0 × 10</td><td>5 µm / 3 µm</td></tr>
+ <tr><td>CelluloSil® OD Guard</td><td>CelluloSil® OD-H / OD-3</td><td>4.0 × 10</td><td>5 µm / 3 µm</td></tr>
+ <tr><td>CrownSil® Guard</td><td>CrownSil® (+) / (-)</td><td>4.0 × 10</td><td>5 µm</td></tr>
+ <tr><td>Hector C18 Guard</td><td>Hector C18 (all sizes)</td><td>4.0 × 10</td><td>5 µm / 3 µm</td></tr>
+ <tr><td>Hector C8 Guard</td><td>Hector C8 (all sizes)</td><td>4.0 × 10</td><td>5 µm</td></tr>
+ </tbody>
+ </table>
 
-      <div style="text-align:center; margin-top:48px;">
-        <a href="contact.html" class="btn btn-primary">Order Guard Columns</a>
-      </div>
-    </div>
-  </section>
+ <div style="text-align:center; margin-top:48px;">
+ <a href="contact.html" class="btn btn-primary">Order Guard Columns</a>
+ </div>
+ </div>
+ </section>
 
-  <footer class="site-footer">
-    <div class="container footer-grid">
-      <div class="footer-brand">
-        <a class="logo footer-logo" href="index.html"><img src="images/Logo (CellaChrom).png" alt="CellaChrom"></a>
-        <p>Cellachrom India — official representative of<br><strong>Cellion Biomed Inc., Korea</strong></p>
-        <p class="footer-addr">P.NO.9, BUILDING NO.9, SY.NO.64,<br>MIND SPACE, JUBILEE HILLS,<br>HYDERABAD-500033</p>
-        <p style="margin-top:10px;"><a href="https://wa.me/918590960238" target="_blank" rel="noopener" style="color:var(--teal);">&#128172; WhatsApp: +91-8590960238</a></p>
-        <p style="margin-top:6px;"><a href="catalogue.pdf" style="color:var(--teal);">&#8681; Download Catalogue (PDF)</a></p>
-      </div>
-      <div class="footer-nav-group"><h4>Products</h4><ul><li><a href="chiral-columns.html">Chiral Columns</a></li><li><a href="general-columns.html">General Columns</a></li><li><a href="guard-columns.html">Guard Columns</a></li><li><a href="registech-products.html">Achiral Columns</a></li></ul></div>
-      <div class="footer-nav-group"><h4>Services</h4><ul><li><a href="screening-screening-services.html">Screening Services</a></li><li><a href="technical-support.html">Technical Support</a></li><li><a href="column-rental.html">Column Rental</a></li></ul></div>
-      <div class="footer-nav-group"><h4>Company</h4><ul><li><a href="company.html">About Us</a></li><li><a href="notice.html">News &amp; Events</a></li><li><a href="contact.html">Contact</a></li></ul></div>
-    </div>
-    <div class="footer-bottom"><p>&copy; 2025 Cellachrom India. All rights reserved.</p></div>
-  </footer>
-  <script src="main.js"></script>
+ <footer class="site-footer">
+ <div class="container footer-grid">
+ <div class="footer-brand">
+ <a class="logo footer-logo" href="index.html" aria-label="Cellachrom India home"><span class="logo-wordmark" aria-hidden="true"><span class="logo-main">CELLACHROM</span><sup class="logo-mark">TM</sup><span class="logo-region">INDIA</span></span></a>
+ <p>Cellachrom India - official representative of<br><strong>Cellion Biomed Inc., Korea</strong></p>
+ <p class="footer-addr">P.NO.9, BUILDING NO.9, SY.NO.64,<br>MIND SPACE, JUBILEE HILLS,<br>HYDERABAD-500033</p>
+ <p style="margin-top:10px;"><a href="https://wa.me/918590960238" target="_blank" rel="noopener" style="color:var(--teal);">&#128172; WhatsApp: +91-8590960238</a></p>
+ <p style="margin-top:6px;"><a href="catalogue.pdf" style="color:var(--teal);">&#8681; Download Catalogue (PDF)</a></p>
+ </div>
+ <div class="footer-nav-group"><h4>Products</h4><ul><li><a href="chiral-columns.html">Chiral Columns</a></li><li><a href="general-columns.html">General Columns</a></li><li><a href="guard-columns.html">Guard Columns</a></li><li><a href="registech-products.html">Achiral Columns</a></li></ul></div>
+ <div class="footer-nav-group"><h4>Services</h4><ul><li><a href="screening-screening-services.html">Screening Services</a></li><li><a href="technical-support.html">Technical Support</a></li><li><a href="column-rental.html">Column Rental</a></li></ul></div>
+ <div class="footer-nav-group"><h4>Company</h4><ul><li><a href="company.html">About Us</a></li><li><a href="notice.html">News &amp; Events</a></li><li><a href="contact.html">Contact</a></li></ul></div>
+ </div>
+ <div class="footer-bottom"><p>&copy; 2025 Cellachrom India. All rights reserved.</p></div>
+ </footer>
+ <script src="main.js"></script>
 
-  <a class="whatsapp-float" href="https://wa.me/918590960238" target="_blank" rel="noopener">
-    <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
-    WhatsApp
-  </a>
+ <a class="whatsapp-float" href="https://wa.me/918590960238" target="_blank" rel="noopener">
+ <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+ WhatsApp
+ </a>
 </body>
 </html>
+
+
+

@@ -1,123 +1,128 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Notice ??CellaChrom</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@300;400;500;600;700&family=Orbitron:wght@700;900&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="style.css?v=4" />
-  <style>
-    .notice-page { padding: 80px 0; max-width: 860px; margin: 0 auto; }
-    .notice-list { list-style: none; }
-    .notice-item { border-bottom: 1px solid var(--border); padding: 24px 0; display: grid; grid-template-columns: auto 1fr auto; gap: 20px; align-items: center; transition: background 0.2s; cursor: pointer; }
-    .notice-item:first-child { border-top: 2px solid var(--teal); }
-    .notice-badge { font-size: 0.75rem; font-weight: 700; background: rgba(41,199,197,0.1); color: var(--teal-dark); padding: 3px 10px; border-radius: 100px; white-space: nowrap; }
-    .notice-badge.pin { background: var(--teal); color: #fff; }
-    .notice-title { font-weight: 500; font-size: 0.97rem; color: var(--text); transition: color 0.2s; }
-    .notice-item:hover .notice-title { color: var(--teal-dark); }
-    .notice-date { font-size: 0.82rem; color: var(--text-light); white-space: nowrap; }
-  </style>
+ <meta charset="UTF-8" />
+ <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+ <meta name="referrer" content="strict-origin-when-cross-origin" />
+ <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; img-src 'self' data: https:; font-src 'self' https://fonts.gstatic.com data:; connect-src 'self'; frame-src https://maps.google.com https://www.google.com https://maps.googleusercontent.com; object-src 'none'; base-uri 'self'; form-action 'self'; upgrade-insecure-requests" />
+ <title>Notice - CellaChrom</title>
+ <link rel="preconnect" href="https://fonts.googleapis.com" />
+ <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@300;400;500;600;700&family=Orbitron:wght@700;900&family=Oswald:wght@500;600;700&display=swap" rel="stylesheet" />
+ <link rel="stylesheet" href="style.css?v=4" />
+ <style>
+ .notice-page { padding: 80px 0; max-width: 860px; margin: 0 auto; }
+ .notice-list { list-style: none; }
+ .notice-item { border-bottom: 1px solid var(--border); padding: 24px 0; display: grid; grid-template-columns: auto 1fr auto; gap: 20px; align-items: center; transition: background 0.2s; cursor: pointer; }
+ .notice-item:first-child { border-top: 2px solid var(--teal); }
+ .notice-badge { font-size: 0.75rem; font-weight: 700; background: rgba(41,199,197,0.1); color: var(--teal-dark); padding: 3px 10px; border-radius: 100px; white-space: nowrap; }
+ .notice-badge.pin { background: var(--teal); color: #fff; }
+ .notice-title { font-weight: 500; font-size: 0.97rem; color: var(--text); transition: color 0.2s; }
+ .notice-item:hover .notice-title { color: var(--teal-dark); }
+ .notice-date { font-size: 0.82rem; color: var(--text-light); white-space: nowrap; }
+ </style>
 </head>
 <body>
-  <header id="site-header">
-    <div class="header-inner">
-      <a class="logo" href="index.html"><img src="images/Logo (CellaChrom).png" alt="CellaChrom"></a>
-      <nav class="main-nav">
-        <ul>
-          <li><a href="index.html">Home</a></li><li><a href="company.html">About Us</a></li>
-          <li class="has-dropdown"><a href="chiral-columns.html">Products <span class="arrow">&#9660;</span></a><ul class="dropdown"><li><a href="chiral-columns.html">Chiral Columns</a></li><li><a href="general-columns.html">General Columns</a></li><li><a href="guard-columns.html">Guard Columns</a></li><li><a href="registech-products.html">Registech Products</a></li></ul></li>
-          <li class="has-dropdown"><a href="screening-services.html">Services <span class="arrow">&#9660;</span></a><ul class="dropdown"><li><a href="screening-screening-services.html">Screening Services</a></li><li><a href="technical-support.html">Technical Support</a></li><li><a href="column-rental.html">Column Rental</a></li></ul></li>
-          <li><a href="notice.html" class="active">News &amp; Events</a></li><li><a href="contact.html">Contact</a></li>
-        </ul>
-      </nav>
-      <button class="hamburger" id="hamburger"><span></span><span></span><span></span></button>
-    </div>
-    <nav class="mobile-nav" id="mobile-nav">
-      <ul>
-        <li><a href="index.html">Home</a></li><li><a href="company.html">About Us</a></li>
-        <li class="mobile-dropdown"><button class="mobile-toggle">Products <span class="arrow">&#9660;</span></button><ul class="mobile-submenu"><li><a href="chiral-columns.html">Chiral Columns</a></li><li><a href="general-columns.html">General Columns</a></li><li><a href="guard-columns.html">Guard Columns</a></li><li><a href="registech-products.html">Registech Products</a></li></ul></li>
-        <li class="mobile-dropdown"><button class="mobile-toggle">Services <span class="arrow">&#9660;</span></button><ul class="mobile-submenu"><li><a href="screening-screening-services.html">Screening Services</a></li><li><a href="technical-support.html">Technical Support</a></li><li><a href="column-rental.html">Column Rental</a></li></ul></li>
-        <li><a href="notice.html">News &amp; Events</a></li><li><a href="contact.html">Contact</a></li>
-      </ul>
-    </nav>
-  </header>
+ <header id="site-header">
+ <div class="header-inner">
+ <a class="logo" href="index.html" aria-label="Cellachrom India home"><span class="logo-wordmark" aria-hidden="true"><span class="logo-main">CELLACHROM</span><sup class="logo-mark">TM</sup><span class="logo-region">INDIA</span></span></a>
+ <nav class="main-nav">
+ <ul>
+ <li><a href="index.html">Home</a></li><li><a href="company.html">About Us</a></li>
+ <li class="has-dropdown"><a href="chiral-columns.html">Products <span class="arrow">&#9660;</span></a><ul class="dropdown"><li><a href="chiral-columns.html">Chiral Columns</a></li><li><a href="general-columns.html">General Columns</a></li><li><a href="guard-columns.html">Guard Columns</a></li><li><a href="registech-products.html">Registech Products</a></li></ul></li>
+ <li class="has-dropdown"><a href="screening-services.html">Services <span class="arrow">&#9660;</span></a><ul class="dropdown"><li><a href="screening-screening-services.html">Screening Services</a></li><li><a href="technical-support.html">Technical Support</a></li><li><a href="column-rental.html">Column Rental</a></li></ul></li>
+ <li><a href="notice.html" class="active">News &amp; Events</a></li><li><a href="contact.html">Contact</a></li>
+ </ul>
+ </nav>
+ <button class="hamburger" id="hamburger"><span></span><span></span><span></span></button>
+ </div>
+ <nav class="mobile-nav" id="mobile-nav">
+ <ul>
+ <li><a href="index.html">Home</a></li><li><a href="company.html">About Us</a></li>
+ <li class="mobile-dropdown"><button class="mobile-toggle">Products <span class="arrow">&#9660;</span></button><ul class="mobile-submenu"><li><a href="chiral-columns.html">Chiral Columns</a></li><li><a href="general-columns.html">General Columns</a></li><li><a href="guard-columns.html">Guard Columns</a></li><li><a href="registech-products.html">Registech Products</a></li></ul></li>
+ <li class="mobile-dropdown"><button class="mobile-toggle">Services <span class="arrow">&#9660;</span></button><ul class="mobile-submenu"><li><a href="screening-screening-services.html">Screening Services</a></li><li><a href="technical-support.html">Technical Support</a></li><li><a href="column-rental.html">Column Rental</a></li></ul></li>
+ <li><a href="notice.html">News &amp; Events</a></li><li><a href="contact.html">Contact</a></li>
+ </ul>
+ </nav>
+ </header>
 
-  <section class="page-hero">
-    <div class="container">
-      <div class="breadcrumb"><a href="index.html">Home</a><span>/</span><span class="current">Notice</span></div>
-      <h1>Notice</h1>
-      <p>Announcements, new product launches, and updates from CellaChrom.</p>
-    </div>
-  </section>
+ <section class="page-hero">
+ <div class="container">
+ <div class="breadcrumb"><a href="index.html">Home</a><span>/</span><span class="current">Notice</span></div>
+ <h1>Notice</h1>
+ <p>Announcements, new product launches, and updates from CellaChrom.</p>
+ </div>
+ </section>
 
-  <section style="padding: 80px 0;">
-    <div class="container notice-page">
-      <ul class="notice-list">
-        <li class="notice-item">
-          <span class="notice-badge pin">&#9679; Notice</span>
-          <span class="notice-title">CelluloSil® OD Series Now Available ??Expanding Our Cellulose-Based CSP Portfolio</span>
-          <span class="notice-date">2024.03.15</span>
-        </li>
-        <li class="notice-item">
-          <span class="notice-badge">Product</span>
-          <span class="notice-title">New: CelluloSil® OD-3 (3 µm) for High-Throughput Chiral Screening by SFC</span>
-          <span class="notice-date">2024.02.28</span>
-        </li>
-        <li class="notice-item">
-          <span class="notice-badge">Service</span>
-          <span class="notice-title">Column Rental Program Expanded ??Now Includes CrownSil® and RegisShell® Lines</span>
-          <span class="notice-date">2024.01.10</span>
-        </li>
-        <li class="notice-item">
-          <span class="notice-badge">Product</span>
-          <span class="notice-title">CrownSil® Crown Acid Chiral Column ??Exclusive 18-Crown-6 CSP with Methyl Group Launched</span>
-          <span class="notice-date">2023.09.01</span>
-        </li>
-        <li class="notice-item">
-          <span class="notice-badge">Notice</span>
-          <span class="notice-title">CellaChrom® Authorized Distribution Agreement with Regis Technologies, USA</span>
-          <span class="notice-date">2023.06.20</span>
-        </li>
-        <li class="notice-item">
-          <span class="notice-badge">Product</span>
-          <span class="notice-title">CellaChrom® AD-3 (3 µm) Released ??Optimized for SFC and Fast HPLC Applications</span>
-          <span class="notice-date">2023.03.05</span>
-        </li>
-        <li class="notice-item">
-          <span class="notice-badge">Notice</span>
-          <span class="notice-title">CellaChrom® 3rd Generation Launch ??New Amylose-Based Chiral Column Brand</span>
-          <span class="notice-date">2022.07.01</span>
-        </li>
-        <li class="notice-item">
-          <span class="notice-badge">Service</span>
-          <span class="notice-title">Chiral Screening Service Now Includes SFC Conditions by Default</span>
-          <span class="notice-date">2022.04.12</span>
-        </li>
-      </ul>
-    </div>
-  </section>
+ <section style="padding: 80px 0;">
+ <div class="container notice-page">
+ <ul class="notice-list">
+ <li class="notice-item">
+ <span class="notice-badge pin">&#9679; Notice</span>
+ <span class="notice-title">CelluloSil® OD Series Now Available - Expanding Our Cellulose-Based CSP Portfolio</span>
+ <span class="notice-date">2024.03.15</span>
+ </li>
+ <li class="notice-item">
+ <span class="notice-badge">Product</span>
+ <span class="notice-title">New: CelluloSil® OD-3 (3 µm) for High-Throughput Chiral Screening by SFC</span>
+ <span class="notice-date">2024.02.28</span>
+ </li>
+ <li class="notice-item">
+ <span class="notice-badge">Service</span>
+ <span class="notice-title">Column Rental Program Expanded - Now Includes CrownSil® and RegisShell® Lines</span>
+ <span class="notice-date">2024.01.10</span>
+ </li>
+ <li class="notice-item">
+ <span class="notice-badge">Product</span>
+ <span class="notice-title">CrownSil® Crown Acid Chiral Column - Exclusive 18-Crown-6 CSP with Methyl Group Launched</span>
+ <span class="notice-date">2023.09.01</span>
+ </li>
+ <li class="notice-item">
+ <span class="notice-badge">Notice</span>
+ <span class="notice-title">CellaChrom® Authorized Distribution Agreement with Regis Technologies, USA</span>
+ <span class="notice-date">2023.06.20</span>
+ </li>
+ <li class="notice-item">
+ <span class="notice-badge">Product</span>
+ <span class="notice-title">CellaChrom® AD-3 (3 µm) Released - Optimized for SFC and Fast HPLC Applications</span>
+ <span class="notice-date">2023.03.05</span>
+ </li>
+ <li class="notice-item">
+ <span class="notice-badge">Notice</span>
+ <span class="notice-title">CellaChrom® 3rd Generation Launch - New Amylose-Based Chiral Column Brand</span>
+ <span class="notice-date">2022.07.01</span>
+ </li>
+ <li class="notice-item">
+ <span class="notice-badge">Service</span>
+ <span class="notice-title">Chiral Screening Service Now Includes SFC Conditions by Default</span>
+ <span class="notice-date">2022.04.12</span>
+ </li>
+ </ul>
+ </div>
+ </section>
 
-  <footer class="site-footer">
-    <div class="container footer-grid">
-      <div class="footer-brand">
-        <a class="logo footer-logo" href="index.html"><img src="images/Logo (CellaChrom).png" alt="CellaChrom"></a>
-        <p>Cellachrom India — official representative of<br><strong>Cellion Biomed Inc., Korea</strong></p>
-        <p class="footer-addr">P.NO.9, BUILDING NO.9, SY.NO.64,<br>MIND SPACE, JUBILEE HILLS,<br>HYDERABAD-500033</p>
-        <p style="margin-top:10px;"><a href="https://wa.me/918590960238" target="_blank" rel="noopener" style="color:var(--teal);">&#128172; WhatsApp: +91-8590960238</a></p>
-        <p style="margin-top:6px;"><a href="catalogue.pdf" style="color:var(--teal);">&#8681; Download Catalogue (PDF)</a></p>
-      </div>
-      <div class="footer-nav-group"><h4>Products</h4><ul><li><a href="chiral-columns.html">Chiral Columns</a></li><li><a href="general-columns.html">General Columns</a></li><li><a href="guard-columns.html">Guard Columns</a></li><li><a href="registech-products.html">Achiral Columns</a></li></ul></div>
-      <div class="footer-nav-group"><h4>Services</h4><ul><li><a href="screening-screening-services.html">Screening Services</a></li><li><a href="technical-support.html">Technical Support</a></li><li><a href="column-rental.html">Column Rental</a></li></ul></div>
-      <div class="footer-nav-group"><h4>Company</h4><ul><li><a href="company.html">About Us</a></li><li><a href="notice.html">News &amp; Events</a></li><li><a href="contact.html">Contact</a></li></ul></div>
-    </div>
-    <div class="footer-bottom"><p>&copy; 2025 Cellachrom India. All rights reserved.</p></div>
-  </footer>
-  <script src="main.js"></script>
+ <footer class="site-footer">
+ <div class="container footer-grid">
+ <div class="footer-brand">
+ <a class="logo footer-logo" href="index.html" aria-label="Cellachrom India home"><span class="logo-wordmark" aria-hidden="true"><span class="logo-main">CELLACHROM</span><sup class="logo-mark">TM</sup><span class="logo-region">INDIA</span></span></a>
+ <p>Cellachrom India - official representative of<br><strong>Cellion Biomed Inc., Korea</strong></p>
+ <p class="footer-addr">P.NO.9, BUILDING NO.9, SY.NO.64,<br>MIND SPACE, JUBILEE HILLS,<br>HYDERABAD-500033</p>
+ <p style="margin-top:10px;"><a href="https://wa.me/918590960238" target="_blank" rel="noopener" style="color:var(--teal);">&#128172; WhatsApp: +91-8590960238</a></p>
+ <p style="margin-top:6px;"><a href="catalogue.pdf" style="color:var(--teal);">&#8681; Download Catalogue (PDF)</a></p>
+ </div>
+ <div class="footer-nav-group"><h4>Products</h4><ul><li><a href="chiral-columns.html">Chiral Columns</a></li><li><a href="general-columns.html">General Columns</a></li><li><a href="guard-columns.html">Guard Columns</a></li><li><a href="registech-products.html">Achiral Columns</a></li></ul></div>
+ <div class="footer-nav-group"><h4>Services</h4><ul><li><a href="screening-screening-services.html">Screening Services</a></li><li><a href="technical-support.html">Technical Support</a></li><li><a href="column-rental.html">Column Rental</a></li></ul></div>
+ <div class="footer-nav-group"><h4>Company</h4><ul><li><a href="company.html">About Us</a></li><li><a href="notice.html">News &amp; Events</a></li><li><a href="contact.html">Contact</a></li></ul></div>
+ </div>
+ <div class="footer-bottom"><p>&copy; 2025 Cellachrom India. All rights reserved.</p></div>
+ </footer>
+ <script src="main.js"></script>
 
-  <a class="whatsapp-float" href="https://wa.me/918590960238" target="_blank" rel="noopener">
-    <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
-    WhatsApp
-  </a>
+ <a class="whatsapp-float" href="https://wa.me/918590960238" target="_blank" rel="noopener">
+ <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+ WhatsApp
+ </a>
 </body>
 </html>
+
+
+

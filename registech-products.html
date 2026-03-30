@@ -1,143 +1,148 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Registech Products ??CellaChrom</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@300;400;500;600;700&family=Orbitron:wght@700;900&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="style.css?v=4" />
-  <style>
-    .products-page { padding: 80px 0; }
-    .registech-intro { background: var(--dark); border-radius: 14px; padding: 48px; color: #fff; margin-bottom: 60px; display: grid; grid-template-columns: 1fr 1fr; gap: 48px; align-items: center; }
-    .registech-intro h2 { margin-bottom: 16px; }
-    .registech-intro p { color: rgba(255,255,255,0.7); font-size: 0.95rem; line-height: 1.75; margin-bottom: 12px; }
-    .registech-badge { display: inline-block; background: var(--blue-accent); color: #fff; font-size: 0.8rem; font-weight: 700; letter-spacing: 1px; padding: 5px 14px; border-radius: 100px; margin-bottom: 16px; }
-    .product-line { margin-bottom: 56px; }
-    .product-line-header { margin-bottom: 24px; padding-bottom: 16px; border-bottom: 2px solid var(--teal); }
-    .product-line-header h2 { margin-bottom: 6px; }
-    .product-line-header p { color: var(--text-light); font-size: 0.92rem; }
-    .spec-table { width: 100%; border-collapse: collapse; font-size: 0.88rem; }
-    .spec-table th { background: var(--dark); color: #fff; padding: 12px 16px; text-align: left; font-weight: 600; font-size: 0.82rem; }
-    .spec-table td { padding: 11px 16px; border-bottom: 1px solid var(--border); color: var(--text-light); }
-    .spec-table tr:hover td { background: var(--teal-light); }
-    .tag { display: inline-block; background: rgba(41,199,197,0.1); color: var(--teal-dark); border-radius: 4px; padding: 2px 8px; font-size: 0.78rem; font-weight: 600; margin: 2px; }
-    @media (max-width: 767px) { .registech-intro { grid-template-columns: 1fr; } }
-  </style>
+ <meta charset="UTF-8" />
+ <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+ <meta name="referrer" content="strict-origin-when-cross-origin" />
+ <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; img-src 'self' data: https:; font-src 'self' https://fonts.gstatic.com data:; connect-src 'self'; frame-src https://maps.google.com https://www.google.com https://maps.googleusercontent.com; object-src 'none'; base-uri 'self'; form-action 'self'; upgrade-insecure-requests" />
+ <title>Registech Products - CellaChrom</title>
+ <link rel="preconnect" href="https://fonts.googleapis.com" />
+ <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@300;400;500;600;700&family=Orbitron:wght@700;900&family=Oswald:wght@500;600;700&display=swap" rel="stylesheet" />
+ <link rel="stylesheet" href="style.css?v=4" />
+ <style>
+ .products-page { padding: 80px 0; }
+ .registech-intro { background: var(--dark); border-radius: 14px; padding: 48px; color: #fff; margin-bottom: 60px; display: grid; grid-template-columns: 1fr 1fr; gap: 48px; align-items: center; }
+ .registech-intro h2 { margin-bottom: 16px; }
+ .registech-intro p { color: rgba(255,255,255,0.7); font-size: 0.95rem; line-height: 1.75; margin-bottom: 12px; }
+ .registech-badge { display: inline-block; background: var(--blue-accent); color: #fff; font-size: 0.8rem; font-weight: 700; letter-spacing: 1px; padding: 5px 14px; border-radius: 100px; margin-bottom: 16px; }
+ .product-line { margin-bottom: 56px; }
+ .product-line-header { margin-bottom: 24px; padding-bottom: 16px; border-bottom: 2px solid var(--teal); }
+ .product-line-header h2 { margin-bottom: 6px; }
+ .product-line-header p { color: var(--text-light); font-size: 0.92rem; }
+ .spec-table { width: 100%; border-collapse: collapse; font-size: 0.88rem; }
+ .spec-table th { background: var(--dark); color: #fff; padding: 12px 16px; text-align: left; font-weight: 600; font-size: 0.82rem; }
+ .spec-table td { padding: 11px 16px; border-bottom: 1px solid var(--border); color: var(--text-light); }
+ .spec-table tr:hover td { background: var(--teal-light); }
+ .tag { display: inline-block; background: rgba(41,199,197,0.1); color: var(--teal-dark); border-radius: 4px; padding: 2px 8px; font-size: 0.78rem; font-weight: 600; margin: 2px; }
+ @media (max-width: 767px) { .registech-intro { grid-template-columns: 1fr; } }
+ </style>
 </head>
 <body>
-  <header id="site-header">
-    <div class="header-inner">
-      <a class="logo" href="index.html"><img src="images/Logo (CellaChrom).png" alt="CellaChrom"></a>
-      <nav class="main-nav">
-        <ul>
-          <li><a href="index.html">Home</a></li><li><a href="company.html">About Us</a></li>
-          <li class="has-dropdown"><a href="chiral-columns.html" class="active">Products <span class="arrow">&#9660;</span></a><ul class="dropdown"><li><a href="chiral-columns.html">Chiral Columns</a></li><li><a href="general-columns.html">General Columns</a></li><li><a href="guard-columns.html">Guard Columns</a></li><li><a href="registech-products.html">Registech Products</a></li></ul></li>
-          <li class="has-dropdown"><a href="screening-services.html">Services <span class="arrow">&#9660;</span></a><ul class="dropdown"><li><a href="screening-screening-services.html">Screening Services</a></li><li><a href="technical-support.html">Technical Support</a></li><li><a href="column-rental.html">Column Rental</a></li></ul></li>
-          <li><a href="notice.html">News &amp; Events</a></li><li><a href="contact.html">Contact</a></li>
-        </ul>
-      </nav>
-      <button class="hamburger" id="hamburger"><span></span><span></span><span></span></button>
-    </div>
-    <nav class="mobile-nav" id="mobile-nav">
-      <ul>
-        <li><a href="index.html">Home</a></li><li><a href="company.html">About Us</a></li>
-        <li class="mobile-dropdown"><button class="mobile-toggle">Products <span class="arrow">&#9660;</span></button><ul class="mobile-submenu"><li><a href="chiral-columns.html">Chiral Columns</a></li><li><a href="general-columns.html">General Columns</a></li><li><a href="guard-columns.html">Guard Columns</a></li><li><a href="registech-products.html">Registech Products</a></li></ul></li>
-        <li class="mobile-dropdown"><button class="mobile-toggle">Services <span class="arrow">&#9660;</span></button><ul class="mobile-submenu"><li><a href="screening-screening-services.html">Screening Services</a></li><li><a href="technical-support.html">Technical Support</a></li><li><a href="column-rental.html">Column Rental</a></li></ul></li>
-        <li><a href="notice.html">News &amp; Events</a></li><li><a href="contact.html">Contact</a></li>
-      </ul>
-    </nav>
-  </header>
+ <header id="site-header">
+ <div class="header-inner">
+ <a class="logo" href="index.html" aria-label="Cellachrom India home"><span class="logo-wordmark" aria-hidden="true"><span class="logo-main">CELLACHROM</span><sup class="logo-mark">TM</sup><span class="logo-region">INDIA</span></span></a>
+ <nav class="main-nav">
+ <ul>
+ <li><a href="index.html">Home</a></li><li><a href="company.html">About Us</a></li>
+ <li class="has-dropdown"><a href="chiral-columns.html" class="active">Products <span class="arrow">&#9660;</span></a><ul class="dropdown"><li><a href="chiral-columns.html">Chiral Columns</a></li><li><a href="general-columns.html">General Columns</a></li><li><a href="guard-columns.html">Guard Columns</a></li><li><a href="registech-products.html">Registech Products</a></li></ul></li>
+ <li class="has-dropdown"><a href="screening-services.html">Services <span class="arrow">&#9660;</span></a><ul class="dropdown"><li><a href="screening-screening-services.html">Screening Services</a></li><li><a href="technical-support.html">Technical Support</a></li><li><a href="column-rental.html">Column Rental</a></li></ul></li>
+ <li><a href="notice.html">News &amp; Events</a></li><li><a href="contact.html">Contact</a></li>
+ </ul>
+ </nav>
+ <button class="hamburger" id="hamburger"><span></span><span></span><span></span></button>
+ </div>
+ <nav class="mobile-nav" id="mobile-nav">
+ <ul>
+ <li><a href="index.html">Home</a></li><li><a href="company.html">About Us</a></li>
+ <li class="mobile-dropdown"><button class="mobile-toggle">Products <span class="arrow">&#9660;</span></button><ul class="mobile-submenu"><li><a href="chiral-columns.html">Chiral Columns</a></li><li><a href="general-columns.html">General Columns</a></li><li><a href="guard-columns.html">Guard Columns</a></li><li><a href="registech-products.html">Registech Products</a></li></ul></li>
+ <li class="mobile-dropdown"><button class="mobile-toggle">Services <span class="arrow">&#9660;</span></button><ul class="mobile-submenu"><li><a href="screening-screening-services.html">Screening Services</a></li><li><a href="technical-support.html">Technical Support</a></li><li><a href="column-rental.html">Column Rental</a></li></ul></li>
+ <li><a href="notice.html">News &amp; Events</a></li><li><a href="contact.html">Contact</a></li>
+ </ul>
+ </nav>
+ </header>
 
-  <section class="page-hero">
-    <div class="container">
-      <div class="breadcrumb"><a href="index.html">Home</a><span>/</span><a href="chiral-columns.html">Products</a><span>/</span><span class="current">Registech Products</span></div>
-      <h1>Registech Products</h1>
-      <p>Premium Pirkle-type and core-shell HPLC columns distributed exclusively through CellaChrom.</p>
-    </div>
-  </section>
+ <section class="page-hero">
+ <div class="container">
+ <div class="breadcrumb"><a href="index.html">Home</a><span>/</span><a href="chiral-columns.html">Products</a><span>/</span><span class="current">Registech Products</span></div>
+ <h1>Registech Products</h1>
+ <p>Premium Pirkle-type and core-shell HPLC columns distributed exclusively through CellaChrom.</p>
+ </div>
+ </section>
 
-  <section class="products-page">
-    <div class="container">
+ <section class="products-page">
+ <div class="container">
 
-      <div class="registech-intro">
-        <div>
-          <span class="registech-badge">Authorized Distributor</span>
-          <h2>Regis Technologies Products</h2>
-          <p>CellaChrom is proud to be an authorized distributor of Regis Technologies (Morton Grove, IL, USA) HPLC columns ??one of the pioneers of chiral HPLC column technology.</p>
-          <p>Regis Technologies invented the Pirkle-type (brush-type) chiral stationary phase, offering complementary selectivity to polysaccharide-based columns. Their RegisShell® core-shell particle technology provides superior efficiency for both chiral and achiral applications.</p>
-        </div>
-        <div>
-          <div style="background: rgba(255,255,255,0.05); border: 1px solid rgba(41,199,197,0.2); border-radius: 10px; padding: 28px;">
-            <h4 style="color: var(--teal); margin-bottom: 16px;">Available Product Lines</h4>
-            <ul style="list-style:none;">
-              <li style="color:rgba(255,255,255,0.75); font-size:0.9rem; padding: 8px 0; border-bottom:1px solid rgba(255,255,255,0.08);">Whelk-O® 1 &amp; 2 ??Pirkle-type chiral columns</li>
-              <li style="color:rgba(255,255,255,0.75); font-size:0.9rem; padding: 8px 0; border-bottom:1px solid rgba(255,255,255,0.08);">RegisPack® CLA-1 ??Polysaccharide CSP</li>
-              <li style="color:rgba(255,255,255,0.75); font-size:0.9rem; padding: 8px 0; border-bottom:1px solid rgba(255,255,255,0.08);">RegisShell® ??Core-shell particle columns</li>
-              <li style="color:rgba(255,255,255,0.75); font-size:0.9rem; padding: 8px 0;">DACH-DNB ??Diamine-based chiral CSP</li>
-            </ul>
-          </div>
-        </div>
-      </div>
+ <div class="registech-intro">
+ <div>
+ <span class="registech-badge">Authorized Distributor</span>
+ <h2>Regis Technologies Products</h2>
+ <p>CellaChrom is proud to be an authorized distributor of Regis Technologies (Morton Grove, IL, USA) HPLC columns - one of the pioneers of chiral HPLC column technology.</p>
+ <p>Regis Technologies invented the Pirkle-type (brush-type) chiral stationary phase, offering complementary selectivity to polysaccharide-based columns. Their RegisShell® core-shell particle technology provides superior efficiency for both chiral and achiral applications.</p>
+ </div>
+ <div>
+ <div style="background: rgba(255,255,255,0.05); border: 1px solid rgba(41,199,197,0.2); border-radius: 10px; padding: 28px;">
+ <h4 style="color: var(--teal); margin-bottom: 16px;">Available Product Lines</h4>
+ <ul style="list-style:none;">
+ <li style="color:rgba(255,255,255,0.75); font-size:0.9rem; padding: 8px 0; border-bottom:1px solid rgba(255,255,255,0.08);">Whelk-O® 1 &amp; 2 - Pirkle-type chiral columns</li>
+ <li style="color:rgba(255,255,255,0.75); font-size:0.9rem; padding: 8px 0; border-bottom:1px solid rgba(255,255,255,0.08);">RegisPack® CLA-1 - Polysaccharide CSP</li>
+ <li style="color:rgba(255,255,255,0.75); font-size:0.9rem; padding: 8px 0; border-bottom:1px solid rgba(255,255,255,0.08);">RegisShell® - Core-shell particle columns</li>
+ <li style="color:rgba(255,255,255,0.75); font-size:0.9rem; padding: 8px 0;">DACH-DNB - Diamine-based chiral CSP</li>
+ </ul>
+ </div>
+ </div>
+ </div>
 
-      <div class="product-line">
-        <div class="product-line-header">
-          <h2>Whelk-O<sup>®</sup> Chiral Columns</h2>
-          <p>Pirkle-type chiral stationary phase. Complementary selectivity to polysaccharide columns, especially for ?-acidic and ?-basic compounds.</p>
-        </div>
-        <table class="spec-table">
-          <thead><tr><th>Product Name</th><th>Particle Size</th><th>Dimensions (mm)</th><th>Mode</th><th>Application</th></tr></thead>
-          <tbody>
-            <tr><td>Whelk-O® 1 (S,S)</td><td>5 µm</td><td>4.6 × 250</td><td>NP / RP / SFC</td><td><span class="tag">?-acids</span><span class="tag">?-bases</span><span class="tag">Amides</span></td></tr>
-            <tr><td>Whelk-O® 1 (R,R)</td><td>5 µm</td><td>4.6 × 250</td><td>NP / RP / SFC</td><td><span class="tag">?-acids</span><span class="tag">?-bases</span></td></tr>
-            <tr><td>Whelk-O® 1 SS/RR</td><td>3.5 µm</td><td>4.6 × 150</td><td>NP / RP / SFC</td><td><span class="tag">High efficiency</span></td></tr>
-          </tbody>
-        </table>
-      </div>
+ <div class="product-line">
+ <div class="product-line-header">
+ <h2>Whelk-O<sup>®</sup> Chiral Columns</h2>
+ <p>Pirkle-type chiral stationary phase. Complementary selectivity to polysaccharide columns, especially for ?-acidic and ?-basic compounds.</p>
+ </div>
+ <table class="spec-table">
+ <thead><tr><th>Product Name</th><th>Particle Size</th><th>Dimensions (mm)</th><th>Mode</th><th>Application</th></tr></thead>
+ <tbody>
+ <tr><td>Whelk-O® 1 (S,S)</td><td>5 µm</td><td>4.6 × 250</td><td>NP / RP / SFC</td><td><span class="tag">?-acids</span><span class="tag">?-bases</span><span class="tag">Amides</span></td></tr>
+ <tr><td>Whelk-O® 1 (R,R)</td><td>5 µm</td><td>4.6 × 250</td><td>NP / RP / SFC</td><td><span class="tag">?-acids</span><span class="tag">?-bases</span></td></tr>
+ <tr><td>Whelk-O® 1 SS/RR</td><td>3.5 µm</td><td>4.6 × 150</td><td>NP / RP / SFC</td><td><span class="tag">High efficiency</span></td></tr>
+ </tbody>
+ </table>
+ </div>
 
-      <div class="product-line">
-        <div class="product-line-header">
-          <h2>RegisShell<sup>®</sup></h2>
-          <p>Core-shell (superficially porous) particle technology for ultra-high efficiency separations in both chiral and achiral modes.</p>
-        </div>
-        <table class="spec-table">
-          <thead><tr><th>Product Name</th><th>Particle Size</th><th>Dimensions (mm)</th><th>Mode</th><th>Application</th></tr></thead>
-          <tbody>
-            <tr><td>RegisShell® Whelk-O 1</td><td>2.7 µm</td><td>4.6 × 150</td><td>NP / RP / SFC</td><td><span class="tag">Fast chiral</span><span class="tag">High efficiency</span></td></tr>
-            <tr><td>RegisShell® C18</td><td>2.7 µm</td><td>4.6 × 150</td><td>RP</td><td><span class="tag">Ultra-fast RP</span></td></tr>
-            <tr><td>RegisShell® C18</td><td>2.7 µm</td><td>2.1 × 100</td><td>RP</td><td><span class="tag">LC-MS</span></td></tr>
-          </tbody>
-        </table>
-      </div>
+ <div class="product-line">
+ <div class="product-line-header">
+ <h2>RegisShell<sup>®</sup></h2>
+ <p>Core-shell (superficially porous) particle technology for ultra-high efficiency separations in both chiral and achiral modes.</p>
+ </div>
+ <table class="spec-table">
+ <thead><tr><th>Product Name</th><th>Particle Size</th><th>Dimensions (mm)</th><th>Mode</th><th>Application</th></tr></thead>
+ <tbody>
+ <tr><td>RegisShell® Whelk-O 1</td><td>2.7 µm</td><td>4.6 × 150</td><td>NP / RP / SFC</td><td><span class="tag">Fast chiral</span><span class="tag">High efficiency</span></td></tr>
+ <tr><td>RegisShell® C18</td><td>2.7 µm</td><td>4.6 × 150</td><td>RP</td><td><span class="tag">Ultra-fast RP</span></td></tr>
+ <tr><td>RegisShell® C18</td><td>2.7 µm</td><td>2.1 × 100</td><td>RP</td><td><span class="tag">LC-MS</span></td></tr>
+ </tbody>
+ </table>
+ </div>
 
-      <div style="text-align:center; margin-top: 16px;">
-        <p style="color:var(--text-light); margin-bottom:20px;">Contact us for pricing, availability, and custom dimensions.</p>
-        <a href="contact.html" class="btn btn-primary">Request a Quote</a>
-      </div>
+ <div style="text-align:center; margin-top: 16px;">
+ <p style="color:var(--text-light); margin-bottom:20px;">Contact us for pricing, availability, and custom dimensions.</p>
+ <a href="contact.html" class="btn btn-primary">Request a Quote</a>
+ </div>
 
-    </div>
-  </section>
+ </div>
+ </section>
 
-  <footer class="site-footer">
-    <div class="container footer-grid">
-      <div class="footer-brand">
-        <a class="logo footer-logo" href="index.html"><img src="images/Logo (CellaChrom).png" alt="CellaChrom"></a>
-        <p>Cellachrom India — official representative of<br><strong>Cellion Biomed Inc., Korea</strong></p>
-        <p class="footer-addr">P.NO.9, BUILDING NO.9, SY.NO.64,<br>MIND SPACE, JUBILEE HILLS,<br>HYDERABAD-500033</p>
-        <p style="margin-top:10px;"><a href="https://wa.me/918590960238" target="_blank" rel="noopener" style="color:var(--teal);">&#128172; WhatsApp: +91-8590960238</a></p>
-        <p style="margin-top:6px;"><a href="catalogue.pdf" style="color:var(--teal);">&#8681; Download Catalogue (PDF)</a></p>
-      </div>
-      <div class="footer-nav-group"><h4>Products</h4><ul><li><a href="chiral-columns.html">Chiral Columns</a></li><li><a href="general-columns.html">General Columns</a></li><li><a href="guard-columns.html">Guard Columns</a></li><li><a href="registech-products.html">Achiral Columns</a></li></ul></div>
-      <div class="footer-nav-group"><h4>Services</h4><ul><li><a href="screening-screening-services.html">Screening Services</a></li><li><a href="technical-support.html">Technical Support</a></li><li><a href="column-rental.html">Column Rental</a></li></ul></div>
-      <div class="footer-nav-group"><h4>Company</h4><ul><li><a href="company.html">About Us</a></li><li><a href="notice.html">News &amp; Events</a></li><li><a href="contact.html">Contact</a></li></ul></div>
-    </div>
-    <div class="footer-bottom"><p>&copy; 2025 Cellachrom India. All rights reserved.</p></div>
-  </footer>
-  <script src="main.js"></script>
+ <footer class="site-footer">
+ <div class="container footer-grid">
+ <div class="footer-brand">
+ <a class="logo footer-logo" href="index.html" aria-label="Cellachrom India home"><span class="logo-wordmark" aria-hidden="true"><span class="logo-main">CELLACHROM</span><sup class="logo-mark">TM</sup><span class="logo-region">INDIA</span></span></a>
+ <p>Cellachrom India - official representative of<br><strong>Cellion Biomed Inc., Korea</strong></p>
+ <p class="footer-addr">P.NO.9, BUILDING NO.9, SY.NO.64,<br>MIND SPACE, JUBILEE HILLS,<br>HYDERABAD-500033</p>
+ <p style="margin-top:10px;"><a href="https://wa.me/918590960238" target="_blank" rel="noopener" style="color:var(--teal);">&#128172; WhatsApp: +91-8590960238</a></p>
+ <p style="margin-top:6px;"><a href="catalogue.pdf" style="color:var(--teal);">&#8681; Download Catalogue (PDF)</a></p>
+ </div>
+ <div class="footer-nav-group"><h4>Products</h4><ul><li><a href="chiral-columns.html">Chiral Columns</a></li><li><a href="general-columns.html">General Columns</a></li><li><a href="guard-columns.html">Guard Columns</a></li><li><a href="registech-products.html">Achiral Columns</a></li></ul></div>
+ <div class="footer-nav-group"><h4>Services</h4><ul><li><a href="screening-screening-services.html">Screening Services</a></li><li><a href="technical-support.html">Technical Support</a></li><li><a href="column-rental.html">Column Rental</a></li></ul></div>
+ <div class="footer-nav-group"><h4>Company</h4><ul><li><a href="company.html">About Us</a></li><li><a href="notice.html">News &amp; Events</a></li><li><a href="contact.html">Contact</a></li></ul></div>
+ </div>
+ <div class="footer-bottom"><p>&copy; 2025 Cellachrom India. All rights reserved.</p></div>
+ </footer>
+ <script src="main.js"></script>
 
-  <a class="whatsapp-float" href="https://wa.me/918590960238" target="_blank" rel="noopener">
-    <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
-    WhatsApp
-  </a>
+ <a class="whatsapp-float" href="https://wa.me/918590960238" target="_blank" rel="noopener">
+ <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+ WhatsApp
+ </a>
 </body>
 </html>
+
+
+
