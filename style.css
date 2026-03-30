@@ -1079,8 +1079,11 @@ h4 { font-size: 1.05rem; font-weight: 600; }
 
 .home-reference-theme .hero h1 {
  color: #ffffff;
- max-width: 11ch;
+ max-width: 9.2ch;
  margin: 0 0 18px;
+ font-size: clamp(2.1rem, 4vw, 3.55rem);
+ line-height: 1.04;
+ text-wrap: balance;
 }
 
 .home-reference-theme .hero-sub {
