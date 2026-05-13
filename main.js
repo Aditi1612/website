@@ -152,6 +152,12 @@ tabBtns.forEach(btn => {
  panel.style.display = 'block';
  requestAnimationFrame(() => panel.classList.add('active'));
  }
+
+ // Scroll products section into view
+ const productsSection = document.getElementById('products');
+ if (productsSection) {
+ productsSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+ }
  });
 });
 
