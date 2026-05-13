@@ -5,129 +5,225 @@
  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
  <meta name="referrer" content="strict-origin-when-cross-origin" />
  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; img-src 'self' data: https:; font-src 'self' https://fonts.gstatic.com data:; connect-src 'self'; frame-src https://maps.google.com https://www.google.com https://maps.googleusercontent.com; object-src 'none'; base-uri 'self'; form-action 'self'; upgrade-insecure-requests" />
- <title>General Columns - CellaChrom</title>
+ <title>Achiral Columns - Cellachrom India</title>
  <link rel="preconnect" href="https://fonts.googleapis.com" />
  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@300;400;500;600;700&family=Orbitron:wght@700;900&family=Oswald:wght@500;600;700&display=swap" rel="stylesheet" />
  <link rel="stylesheet" href="style.css?v=4" />
  <style>
- .products-page { padding: 80px 0; }
- .product-line { margin-bottom: 64px; }
- .product-line-header { display: flex; align-items: flex-start; gap: 24px; margin-bottom: 28px; padding-bottom: 20px; border-bottom: 2px solid var(--teal); }
- .product-line-badge { background: var(--blue-accent); color: #fff; font-size: 0.75rem; font-weight: 700; letter-spacing: 1px; text-transform: uppercase; padding: 4px 12px; border-radius: 100px; white-space: nowrap; margin-top: 6px; }
- .product-line-header h2 { margin-bottom: 8px; }
- .product-line-header p { color: var(--text-light); font-size: 0.92rem; }
- .spec-table { width: 100%; border-collapse: collapse; font-size: 0.88rem; }
- .spec-table th { background: var(--dark); color: #fff; padding: 12px 16px; text-align: left; font-weight: 600; font-size: 0.82rem; }
- .spec-table td { padding: 11px 16px; border-bottom: 1px solid var(--border); color: var(--text-light); }
- .spec-table tr:hover td { background: var(--teal-light); }
- .tag { display: inline-block; background: rgba(0,184,255,0.1); color: #007aa8; border-radius: 4px; padding: 2px 8px; font-size: 0.78rem; font-weight: 600; margin: 2px; }
+  .products-page { padding: 80px 0; }
+  .product-line { margin-bottom: 64px; }
+  .product-line-header { display: flex; align-items: flex-start; gap: 24px; margin-bottom: 28px; padding-bottom: 20px; border-bottom: 2px solid var(--teal); }
+  .product-line-badge { background: var(--blue-accent); color: #fff; font-size: 0.75rem; font-weight: 700; letter-spacing: 1px; text-transform: uppercase; padding: 4px 12px; border-radius: 100px; white-space: nowrap; margin-top: 6px; }
+  .product-line-badge.np { background: #5a6e2a; }
+  .product-line-header h2 { margin-bottom: 8px; }
+  .product-line-header p { color: var(--text-light); font-size: 0.92rem; }
+  .spec-table { width: 100%; border-collapse: collapse; font-size: 0.88rem; }
+  .spec-table th { background: var(--dark); color: #fff; padding: 12px 16px; text-align: left; font-weight: 600; font-size: 0.82rem; }
+  .spec-table td { padding: 11px 16px; border-bottom: 1px solid var(--border); color: var(--text-light); }
+  .spec-table tr:hover td { background: var(--teal-light); }
+  .tag { display: inline-block; background: rgba(0,184,255,0.1); color: #007aa8; border-radius: 4px; padding: 2px 8px; font-size: 0.78rem; font-weight: 600; margin: 2px; }
+  .app-note { background: var(--light-bg); border-radius: 10px; padding: 20px 24px; margin-bottom: 20px; font-size: 0.9rem; }
+  .app-note strong { color: var(--teal-dark); }
+  .app-note p { color: var(--text-light); line-height: 1.7; margin-top: 6px; }
+  .highlights-row { display: grid; grid-template-columns: repeat(3,1fr); gap: 20px; margin-bottom: 56px; }
+  .highlight-item { background: var(--light-bg); border-radius: 10px; padding: 24px; border-top: 3px solid var(--teal); }
+  .highlight-item h4 { margin-bottom: 8px; font-size: 0.95rem; }
+  .highlight-item p { color: var(--text-light); font-size: 0.86rem; line-height: 1.6; margin: 0; }
+  .product-with-img { display: grid; grid-template-columns: 240px 1fr; gap: 32px; align-items: start; margin-bottom: 20px; }
+  @media (max-width: 900px) {
+   .highlights-row { grid-template-columns: 1fr; }
+   .product-with-img { grid-template-columns: 1fr; }
+  }
  </style>
 </head>
 <body>
+
  <header id="site-header">
- <div class="header-inner">
- <a class="logo" href="index.html" aria-label="Cellachrom India home"><span class="logo-wordmark" aria-hidden="true"><span class="logo-main">CELLACHROM</span><sup class="logo-mark">TM</sup><span class="logo-region">INDIA</span></span></a>
- <nav class="main-nav">
- <ul>
- <li><a href="index.html">Home</a></li>
- <li><a href="company.html">About Us</a></li>
- <li class="has-dropdown"><a href="chiral-columns.html" class="active">Products <span class="arrow">&#9660;</span></a><ul class="dropdown"><li><a href="chiral-columns.html">Chiral Columns</a></li><li><a href="general-columns.html">General Columns</a></li><li><a href="guard-columns.html">Guard Columns</a></li><li><a href="registech-products.html">Registech Products</a></li></ul></li>
- <li class="has-dropdown"><a href="screening-services.html">Services <span class="arrow">&#9660;</span></a><ul class="dropdown"><li><a href="screening-screening-services.html">Screening Services</a></li><li><a href="technical-support.html">Technical Support</a></li><li><a href="column-rental.html">Column Rental</a></li></ul></li>
- <li><a href="notice.html">News &amp; Events</a></li>
- <li><a href="contact.html">Contact</a></li>
- </ul>
- </nav>
- <button class="hamburger" id="hamburger"><span></span><span></span><span></span></button>
- </div>
- <nav class="mobile-nav" id="mobile-nav">
- <ul>
- <li><a href="index.html">Home</a></li><li><a href="company.html">About Us</a></li>
- <li class="mobile-dropdown"><button class="mobile-toggle">Products <span class="arrow">&#9660;</span></button><ul class="mobile-submenu"><li><a href="chiral-columns.html">Chiral Columns</a></li><li><a href="general-columns.html">General Columns</a></li><li><a href="guard-columns.html">Guard Columns</a></li><li><a href="registech-products.html">Registech Products</a></li></ul></li>
- <li class="mobile-dropdown"><button class="mobile-toggle">Services <span class="arrow">&#9660;</span></button><ul class="mobile-submenu"><li><a href="screening-screening-services.html">Screening Services</a></li><li><a href="technical-support.html">Technical Support</a></li><li><a href="column-rental.html">Column Rental</a></li></ul></li>
- <li><a href="notice.html">News &amp; Events</a></li><li><a href="contact.html">Contact</a></li>
- </ul>
- </nav>
+  <div class="header-inner">
+   <a class="logo" href="index.html" aria-label="Cellachrom India home"><span class="logo-wordmark" aria-hidden="true"><span class="logo-main">CELLACHROM</span><sup class="logo-mark">TM</sup><span class="logo-region">INDIA</span></span></a>
+   <nav class="main-nav">
+    <ul>
+     <li><a href="index.html">Home</a></li>
+     <li><a href="company.html">About Us</a></li>
+     <li class="has-dropdown">
+      <a href="chiral-columns.html" class="active">Products <span class="arrow">&#9660;</span></a>
+      <ul class="dropdown">
+       <li><a href="chiral-columns.html">Chiral Columns</a></li>
+       <li><a href="general-columns.html">Achiral Columns</a></li>
+       <li><a href="guard-columns.html">Guard Columns</a></li>
+      </ul>
+     </li>
+     <li><a href="technical-support.html">Technical Support</a></li>
+     <li><a href="notice.html">News &amp; Events</a></li>
+     <li><a href="contact.html">Contact Us</a></li>
+    </ul>
+   </nav>
+   <button class="hamburger" id="hamburger"><span></span><span></span><span></span></button>
+  </div>
+  <nav class="mobile-nav" id="mobile-nav">
+   <ul>
+    <li><a href="index.html">Home</a></li>
+    <li><a href="company.html">About Us</a></li>
+    <li class="mobile-dropdown"><button class="mobile-toggle">Products <span class="arrow">&#9660;</span></button>
+     <ul class="mobile-submenu">
+      <li><a href="chiral-columns.html">Chiral Columns</a></li>
+      <li><a href="general-columns.html">Achiral Columns</a></li>
+      <li><a href="guard-columns.html">Guard Columns</a></li>
+     </ul>
+    </li>
+    <li><a href="technical-support.html">Technical Support</a></li>
+    <li><a href="notice.html">News &amp; Events</a></li>
+    <li><a href="contact.html">Contact Us</a></li>
+   </ul>
+  </nav>
  </header>
 
  <section class="page-hero">
- <div class="container">
- <div class="breadcrumb"><a href="index.html">Home</a><span>/</span><a href="chiral-columns.html">Products</a><span>/</span><span class="current">General Columns</span></div>
- <h1>General (Achiral) HPLC Columns</h1>
- <p>High-purity silica-based reversed-phase and normal-phase columns for routine and demanding achiral separations.</p>
- </div>
+  <div class="container">
+   <div class="breadcrumb"><a href="index.html">Home</a><span>/</span><a href="chiral-columns.html">Products</a><span>/</span><span class="current">Achiral Columns</span></div>
+   <h1>Achiral HPLC Columns</h1>
+   <p>Various achiral columns with superior resolution for reverse-phase and normal-phase HPLC applications.</p>
+  </div>
  </section>
 
  <section class="products-page">
- <div class="container">
+  <div class="container">
 
- <div class="product-line">
- <div class="product-line-header">
- <div>
- <h2>Hector C18</h2>
- <p>High-performance reversed-phase C18 column. 2nd generation platform with enhanced peak shape and broad pH stability.</p>
- </div>
- <span class="product-line-badge">Reversed Phase</span>
- </div>
- <table class="spec-table">
- <thead><tr><th>Product Name</th><th>Particle Size</th><th>Dimensions (mm)</th><th>pH Range</th><th>Application</th></tr></thead>
- <tbody>
- <tr><td>Hector C18</td><td>5 µm</td><td>4.6 × 250</td><td>2-8</td><td><span class="tag">Pharma</span><span class="tag">General</span></td></tr>
- <tr><td>Hector C18</td><td>5 µm</td><td>4.6 × 150</td><td>2-8</td><td><span class="tag">Pharma</span><span class="tag">General</span></td></tr>
- <tr><td>Hector C18</td><td>3 µm</td><td>4.6 × 100</td><td>2-8</td><td><span class="tag">Fast analysis</span></td></tr>
- <tr><td>Hector C18</td><td>3 µm</td><td>2.1 × 100</td><td>2-8</td><td><span class="tag">LC-MS</span></td></tr>
- </tbody>
- </table>
- </div>
+   <!-- Key Features -->
+   <div class="section-header" style="margin-bottom:40px;">
+    <p class="section-eyebrow">CellaChrom&#8482; Achiral Columns</p>
+    <h2 class="section-title">Two Major Categories</h2>
+    <p class="section-sub">CellaChrom&#8482; is our achiral column brand name, offering a complete range of Normal Phase and Reverse Phase columns. We use high-quality filling material and unique packing technique to ensure world-level performance and high batch-to-batch reproducibility.</p>
+   </div>
 
- <div class="product-line">
- <div class="product-line-header">
- <div>
- <h2>Hector C8</h2>
- <p>Medium-polarity reversed-phase C8 column. Ideal for moderately polar analytes and compounds requiring less retention than C18.</p>
- </div>
- <span class="product-line-badge">Reversed Phase</span>
- </div>
- <table class="spec-table">
- <thead><tr><th>Product Name</th><th>Particle Size</th><th>Dimensions (mm)</th><th>pH Range</th><th>Application</th></tr></thead>
- <tbody>
- <tr><td>Hector C8</td><td>5 µm</td><td>4.6 × 250</td><td>2-8</td><td><span class="tag">Polar analytes</span></td></tr>
- <tr><td>Hector C8</td><td>5 µm</td><td>4.6 × 150</td><td>2-8</td><td><span class="tag">Polar analytes</span></td></tr>
- <tr><td>Hector C8</td><td>3 µm</td><td>4.6 × 100</td><td>2-8</td><td><span class="tag">Fast analysis</span></td></tr>
- </tbody>
- </table>
- </div>
+   <div class="highlights-row">
+    <div class="highlight-item">
+     <h4>High Resolution</h4>
+     <p>Superior separation performance in both reverse-phase and normal-phase applications. High plate number due to size/shape uniformity of filling material.</p>
+    </div>
+    <div class="highlight-item">
+     <h4>Excellent Reproducibility</h4>
+     <p>High batch-to-batch reproducibility ensures consistent results across different column lots. Rigorous QC/QA verification for every column.</p>
+    </div>
+    <div class="highlight-item">
+     <h4>Broad pH Stability</h4>
+     <p>CellaChrom reverse-phase columns offer broad pH stability (2&ndash;8) with high-purity silica base, ideal for demanding pharmaceutical applications.</p>
+    </div>
+   </div>
 
- <div style="text-align:center; margin-top:16px;">
- <p style="color:var(--text-light); margin-bottom:20px;">Contact us for the full product catalog, custom dimensions, or bulk pricing.</p>
- <a href="contact.html" class="btn btn-primary">Request a Quote</a>
- </div>
+   <!-- Reverse Phase -->
+   <div class="product-line" id="reverse-phase">
+    <div class="product-line-header">
+     <div>
+      <h2>Reverse Phase Columns &mdash; CellaChrom&#8482;</h2>
+      <p>High-performance C18, C18A, C8, and C4 reversed-phase columns for broad polarity range coverage in HPLC separations.</p>
+     </div>
+     <span class="product-line-badge">Reverse Phase</span>
+    </div>
 
- </div>
+    <div class="product-with-img">
+     <img src="images/achiral-c18.png" alt="CellaChrom C18 column" style="width:100%;border-radius:10px;">
+     <div>
+      <div class="app-note">
+       <strong>CellaChrom-C18 &amp; C18A</strong>
+       <p>High-performance reversed-phase C18 columns with superior peak shape and broad pH stability. The workhorse for routine and demanding RP-HPLC. C18A offers an alternative ligand density for different selectivity. Suitable for polar to non-polar compounds across a wide range of molecular weights.</p>
+      </div>
+      <div class="app-note">
+       <strong>CellaChrom-C8</strong>
+       <p>Medium-polarity reversed-phase column for polar analytes that are over-retained on C18. Ideal when shorter retention time is preferred. Excellent for basic compounds with better peak symmetry.</p>
+      </div>
+      <div class="app-note">
+       <strong>CellaChrom-C4</strong>
+       <p>Short-chain reversed-phase column for large biomolecules including proteins, peptides, and oligonucleotides that require gentle chromatographic conditions with minimal hydrophobic interaction.</p>
+      </div>
+     </div>
+    </div>
+
+    <table class="spec-table">
+     <thead>
+      <tr><th>Product Name</th><th>Stationary Phase</th><th>Particle Size</th><th>Dimensions (mm)</th><th>pH Range</th><th>Application</th></tr>
+     </thead>
+     <tbody>
+      <tr><td>CellaChrom-C18</td><td>C18 (Octadecylsilane)</td><td>5 &#181;m</td><td>4.6 &times; 250</td><td>2&ndash;8</td><td><span class="tag">Broad RP</span><span class="tag">Pharmaceuticals</span></td></tr>
+      <tr><td>CellaChrom-C18</td><td>C18 (Octadecylsilane)</td><td>5 &#181;m</td><td>4.6 &times; 150</td><td>2&ndash;8</td><td><span class="tag">Broad RP</span></td></tr>
+      <tr><td>CellaChrom-C18</td><td>C18 (Octadecylsilane)</td><td>3 &#181;m</td><td>4.6 &times; 150</td><td>2&ndash;8</td><td><span class="tag">High throughput</span></td></tr>
+      <tr><td>CellaChrom-C18A</td><td>C18 (Alternative density)</td><td>5 &#181;m</td><td>4.6 &times; 250</td><td>2&ndash;8</td><td><span class="tag">Alternate selectivity</span></td></tr>
+      <tr><td>CellaChrom-C8</td><td>C8 (Octylsilane)</td><td>5 &#181;m</td><td>4.6 &times; 250</td><td>2&ndash;8</td><td><span class="tag">Polar analytes</span><span class="tag">Basic compounds</span></td></tr>
+      <tr><td>CellaChrom-C8</td><td>C8 (Octylsilane)</td><td>5 &#181;m</td><td>4.6 &times; 150</td><td>2&ndash;8</td><td><span class="tag">Polar analytes</span></td></tr>
+      <tr><td>CellaChrom-C4</td><td>C4 (Butylsilane)</td><td>5 &#181;m</td><td>4.6 &times; 250</td><td>2&ndash;7</td><td><span class="tag">Proteins</span><span class="tag">Peptides</span></td></tr>
+     </tbody>
+    </table>
+   </div>
+
+   <!-- Normal Phase -->
+   <div class="product-line" id="normal-phase">
+    <div class="product-line-header">
+     <div>
+      <h2>Normal Phase Columns &mdash; CellaChrom&#8482;</h2>
+      <p>High-purity silica and aminopropyl columns for normal-phase HPLC separations, ideal for non-polar and moderately polar analytes.</p>
+     </div>
+     <span class="product-line-badge np">Normal Phase</span>
+    </div>
+
+    <div class="product-with-img">
+     <img src="images/achiral-normal.png" alt="CellaChrom Normal Phase" style="width:100%;border-radius:10px;">
+     <div>
+      <div class="app-note">
+       <strong>CellaChrom-Sil</strong>
+       <p>Bare silica normal-phase column for separation of non-polar compounds, geometric isomers, and lipid classes. Suitable for use with hexane-based mobile phases. High-purity silica base ensures low baseline noise and consistent retention behaviour.</p>
+      </div>
+      <div class="app-note">
+       <strong>CellaChrom-APS (Aminopropyl Silica)</strong>
+       <p>Aminopropyl functionalized silica column offering both normal-phase (with hexane) and weak anion-exchange (with aqueous phases) capability. Ideal for carbohydrates, nucleosides, nucleotides, and polar compounds. Also compatible with HILIC conditions.</p>
+      </div>
+     </div>
+    </div>
+
+    <table class="spec-table">
+     <thead>
+      <tr><th>Product Name</th><th>Stationary Phase</th><th>Particle Size</th><th>Dimensions (mm)</th><th>Mode</th><th>Application</th></tr>
+     </thead>
+     <tbody>
+      <tr><td>CellaChrom-Sil</td><td>Bare Silica</td><td>5 &#181;m</td><td>4.6 &times; 250</td><td>NP</td><td><span class="tag">Non-polar compounds</span><span class="tag">Isomers</span></td></tr>
+      <tr><td>CellaChrom-Sil</td><td>Bare Silica</td><td>5 &#181;m</td><td>4.6 &times; 150</td><td>NP</td><td><span class="tag">Non-polar compounds</span></td></tr>
+      <tr><td>CellaChrom-Sil</td><td>Bare Silica</td><td>3 &#181;m</td><td>4.6 &times; 150</td><td>NP</td><td><span class="tag">High throughput</span></td></tr>
+      <tr><td>CellaChrom-APS</td><td>Aminopropyl Silica</td><td>5 &#181;m</td><td>4.6 &times; 250</td><td>NP / HILIC</td><td><span class="tag">Carbohydrates</span><span class="tag">Nucleotides</span></td></tr>
+      <tr><td>CellaChrom-APS</td><td>Aminopropyl Silica</td><td>5 &#181;m</td><td>4.6 &times; 150</td><td>NP / HILIC</td><td><span class="tag">Polar compounds</span></td></tr>
+     </tbody>
+    </table>
+   </div>
+
+   <div style="text-align:center; margin-top:24px; padding: 40px; background: var(--light-bg); border-radius: 12px;">
+    <h3 style="margin-bottom:12px;">Need More Application Data?</h3>
+    <p style="color:var(--text-light);margin-bottom:24px;">Visit our Technical Support page for column selection guidelines and application notes. Our team can guide you to the best column for your separation.</p>
+    <a href="technical-support.html#selection" class="btn btn-primary">Column Selection Guide</a>
+    <a href="technical-support.html#appnotes" class="btn btn-outline" style="margin-left:12px;">Application Notes</a>
+    <p style="margin-top:20px;font-size:0.85rem;color:var(--text-light);">&#8681; <a href="catalogue.pdf" style="color:var(--teal);">Download Full Column Catalogue (PDF)</a></p>
+   </div>
+
+  </div>
  </section>
 
  <footer class="site-footer">
- <div class="container footer-grid">
- <div class="footer-brand">
- <a class="logo footer-logo" href="index.html" aria-label="Cellachrom India home"><span class="logo-wordmark" aria-hidden="true"><span class="logo-main">CELLACHROM</span><sup class="logo-mark">TM</sup><span class="logo-region">INDIA</span></span></a>
- <p>Cellachrom India - official representative of<br><strong>Cellion Biomed Inc., Korea</strong></p>
- <p class="footer-addr">P.NO.9, BUILDING NO.9, SY.NO.64,<br>MIND SPACE, JUBILEE HILLS,<br>HYDERABAD-500033</p>
- <p style="margin-top:10px;"><a href="https://wa.me/918590960238" target="_blank" rel="noopener" style="color:var(--teal);">&#128172; WhatsApp: +91-8590960238</a></p>
- <p style="margin-top:6px;"><a href="catalogue.pdf" style="color:var(--teal);">&#8681; Download Catalogue (PDF)</a></p>
- </div>
- <div class="footer-nav-group"><h4>Products</h4><ul><li><a href="chiral-columns.html">Chiral Columns</a></li><li><a href="general-columns.html">General Columns</a></li><li><a href="guard-columns.html">Guard Columns</a></li><li><a href="registech-products.html">Achiral Columns</a></li></ul></div>
- <div class="footer-nav-group"><h4>Services</h4><ul><li><a href="screening-screening-services.html">Screening Services</a></li><li><a href="technical-support.html">Technical Support</a></li><li><a href="column-rental.html">Column Rental</a></li></ul></div>
- <div class="footer-nav-group"><h4>Company</h4><ul><li><a href="company.html">About Us</a></li><li><a href="notice.html">News &amp; Events</a></li><li><a href="contact.html">Contact</a></li></ul></div>
- </div>
- <div class="footer-bottom"><p>&copy; 2025 Cellachrom India. All rights reserved.</p></div>
+  <div class="container footer-grid">
+   <div class="footer-brand">
+    <a class="logo footer-logo" href="index.html" aria-label="Cellachrom India home"><span class="logo-wordmark" aria-hidden="true"><span class="logo-main">CELLACHROM</span><sup class="logo-mark">TM</sup><span class="logo-region">INDIA</span></span></a>
+    <p>Cellachrom India &mdash; official representative of<br><strong>Cellion Biomed Inc., Korea</strong></p>
+    <p class="footer-addr">P.NO.9, BUILDING NO.9, SY.NO.64,<br>MIND SPACE, JUBILEE HILLS,<br>HYDERABAD-500033</p>
+    <p style="margin-top:10px;"><a href="https://wa.me/918590960238" target="_blank" rel="noopener" style="color:var(--teal);">&#128172; WhatsApp: +91-8590960238</a></p>
+    <p style="margin-top:6px;"><a href="mailto:support@cellachrom.in" style="color:var(--teal);">&#9993; support@cellachrom.in</a></p>
+    <p style="margin-top:6px;"><a href="catalogue.pdf" style="color:var(--teal);">&#8681; Download Catalogue (PDF)</a></p>
+   </div>
+   <div class="footer-nav-group"><h4>Products</h4><ul><li><a href="chiral-columns.html">Chiral Columns</a></li><li><a href="general-columns.html">Achiral Columns</a></li><li><a href="guard-columns.html">Guard Columns</a></li></ul></div>
+   <div class="footer-nav-group"><h4>Technical Support</h4><ul><li><a href="technical-support.html#method">Method Development</a></li><li><a href="technical-support.html#selection">Column Selection</a></li><li><a href="technical-support.html#screening">Screening Service</a></li><li><a href="technical-support.html#appnotes">Application Notes</a></li></ul></div>
+   <div class="footer-nav-group"><h4>Company</h4><ul><li><a href="company.html">About Us</a></li><li><a href="notice.html">News &amp; Events</a></li><li><a href="contact.html">Contact Us</a></li></ul></div>
+  </div>
+  <div class="footer-bottom"><p>&copy; 2025 Cellachrom India. All rights reserved. | Official representative of Cellion Biomed Inc., Korea</p></div>
  </footer>
  <script src="main.js"></script>
-
  <a class="whatsapp-float" href="https://wa.me/918590960238" target="_blank" rel="noopener">
- <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
- WhatsApp
+  <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+  WhatsApp
  </a>
 </body>
 </html>
-
-
-

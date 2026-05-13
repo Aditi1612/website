@@ -5,150 +5,281 @@
  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
  <meta name="referrer" content="strict-origin-when-cross-origin" />
  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; img-src 'self' data: https:; font-src 'self' https://fonts.gstatic.com data:; connect-src 'self'; frame-src https://maps.google.com https://www.google.com https://maps.googleusercontent.com; object-src 'none'; base-uri 'self'; form-action 'self'; upgrade-insecure-requests" />
- <title>Technical Support - CellaChrom</title>
+ <title>Technical Support - Cellachrom India</title>
  <link rel="preconnect" href="https://fonts.googleapis.com" />
  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@300;400;500;600;700&family=Orbitron:wght@700;900&family=Oswald:wght@500;600;700&display=swap" rel="stylesheet" />
  <link rel="stylesheet" href="style.css?v=4" />
  <style>
- .support-page { padding: 80px 0; }
- .support-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 28px; margin-bottom: 64px; }
- .support-card { border: 1px solid var(--border); border-radius: 12px; padding: 36px; transition: box-shadow 0.3s, border-color 0.3s; }
- .support-card:hover { box-shadow: 0 8px 28px rgba(41,199,197,0.1); border-color: rgba(41,199,197,0.4); }
- .support-card-num { font-size: 2.4rem; font-weight: 800; color: rgba(41,199,197,0.2); margin-bottom: 12px; line-height: 1; }
- .support-card h3 { margin-bottom: 10px; }
- .support-card p { color: var(--text-light); font-size: 0.91rem; line-height: 1.7; }
- .faq-section h2 { margin-bottom: 32px; }
- .faq-item { border-bottom: 1px solid var(--border); padding: 20px 0; }
- .faq-q { font-weight: 600; font-size: 0.97rem; color: var(--text); margin-bottom: 10px; }
- .faq-a { color: var(--text-light); font-size: 0.9rem; line-height: 1.7; }
- @media (max-width: 767px) { .support-grid { grid-template-columns: 1fr; } }
+  .support-page { padding: 80px 0; }
+  .support-section { margin-bottom: 72px; scroll-margin-top: 100px; }
+  .support-section-header { display: flex; align-items: center; gap: 16px; margin-bottom: 28px; padding-bottom: 20px; border-bottom: 2px solid var(--teal); }
+  .support-num { width: 44px; height: 44px; border-radius: 50%; background: var(--teal); color: #fff; font-weight: 800; font-size: 1rem; display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+  .support-section-header h2 { margin: 0; }
+  .support-section-desc { color: var(--text-light); font-size: 0.95rem; line-height: 1.8; margin-bottom: 24px; }
+  .support-steps { counter-reset: steps; list-style: none; padding: 0; }
+  .support-steps li { counter-increment: steps; display: flex; gap: 16px; margin-bottom: 16px; padding: 16px 20px; background: var(--light-bg); border-radius: 8px; }
+  .support-steps li::before { content: counter(steps); background: var(--teal); color: #fff; width: 28px; height: 28px; border-radius: 50%; font-weight: 700; font-size: 0.85rem; display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+  .support-steps li p { margin: 0; color: var(--text-light); font-size: 0.9rem; line-height: 1.6; }
+  .support-steps li strong { color: var(--text); display: block; margin-bottom: 4px; }
+  /* FAQ */
+  .faq-section h2 { margin-bottom: 32px; }
+  .faq-item { border-bottom: 1px solid var(--border); padding: 20px 0; }
+  .faq-q { font-weight: 600; font-size: 0.97rem; color: var(--text); margin-bottom: 10px; }
+  .faq-a { color: var(--text-light); font-size: 0.9rem; line-height: 1.7; }
+  /* Screening table */
+  .screening-table { width: 100%; border-collapse: collapse; font-size: 0.88rem; margin-top: 20px; }
+  .screening-table th { background: var(--dark); color: #fff; padding: 12px 16px; text-align: left; font-weight: 600; }
+  .screening-table td { padding: 12px 16px; border-bottom: 1px solid var(--border); color: var(--text-light); }
+  .screening-table tr:hover td { background: var(--teal-light); }
+  /* Application notes grid */
+  .appnotes-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 20px; margin-top: 20px; }
+  .appnote-card { background: var(--light-bg); border: 1px solid var(--border); border-radius: 10px; padding: 24px; transition: box-shadow 0.2s; }
+  .appnote-card:hover { box-shadow: 0 4px 16px rgba(41,199,197,0.12); }
+  .appnote-card h4 { color: var(--teal-dark); font-size: 0.9rem; margin-bottom: 8px; }
+  .appnote-card p { font-size: 0.83rem; color: var(--text-light); line-height: 1.6; margin: 0; }
+  .appnote-tag { display: inline-block; background: rgba(41,199,197,0.1); color: var(--teal-dark); border-radius: 4px; padding: 2px 8px; font-size: 0.75rem; font-weight: 600; margin-bottom: 10px; }
+  /* User manual box */
+  .manual-box { background: var(--dark); border-radius: 12px; padding: 32px; color: #fff; display: flex; gap: 32px; align-items: center; margin-top: 20px; }
+  .manual-box-icon { font-size: 2.5rem; flex-shrink: 0; }
+  .manual-box h4 { color: #fff; margin-bottom: 8px; }
+  .manual-box p { color: rgba(255,255,255,0.6); font-size: 0.9rem; margin: 0 0 16px; }
+  @media (max-width: 900px) { .appnotes-grid { grid-template-columns: 1fr; } .manual-box { flex-direction: column; gap: 16px; } }
  </style>
 </head>
 <body>
+
  <header id="site-header">
- <div class="header-inner">
- <a class="logo" href="index.html" aria-label="Cellachrom India home"><span class="logo-wordmark" aria-hidden="true"><span class="logo-main">CELLACHROM</span><sup class="logo-mark">TM</sup><span class="logo-region">INDIA</span></span></a>
- <nav class="main-nav">
- <ul>
- <li><a href="index.html">Home</a></li><li><a href="company.html">About Us</a></li>
- <li class="has-dropdown"><a href="chiral-columns.html">Products <span class="arrow">&#9660;</span></a><ul class="dropdown"><li><a href="chiral-columns.html">Chiral Columns</a></li><li><a href="general-columns.html">General Columns</a></li><li><a href="guard-columns.html">Guard Columns</a></li><li><a href="registech-products.html">Registech Products</a></li></ul></li>
- <li class="has-dropdown"><a href="screening-services.html" class="active">Services <span class="arrow">&#9660;</span></a><ul class="dropdown"><li><a href="screening-screening-services.html">Screening Services</a></li><li><a href="technical-support.html">Technical Support</a></li><li><a href="column-rental.html">Column Rental</a></li></ul></li>
- <li><a href="notice.html">News &amp; Events</a></li><li><a href="contact.html">Contact</a></li>
- </ul>
- </nav>
- <button class="hamburger" id="hamburger"><span></span><span></span><span></span></button>
- </div>
- <nav class="mobile-nav" id="mobile-nav">
- <ul>
- <li><a href="index.html">Home</a></li><li><a href="company.html">About Us</a></li>
- <li class="mobile-dropdown"><button class="mobile-toggle">Products <span class="arrow">&#9660;</span></button><ul class="mobile-submenu"><li><a href="chiral-columns.html">Chiral Columns</a></li><li><a href="general-columns.html">General Columns</a></li><li><a href="guard-columns.html">Guard Columns</a></li><li><a href="registech-products.html">Registech Products</a></li></ul></li>
- <li class="mobile-dropdown"><button class="mobile-toggle">Services <span class="arrow">&#9660;</span></button><ul class="mobile-submenu"><li><a href="screening-screening-services.html">Screening Services</a></li><li><a href="technical-support.html">Technical Support</a></li><li><a href="column-rental.html">Column Rental</a></li></ul></li>
- <li><a href="notice.html">News &amp; Events</a></li><li><a href="contact.html">Contact</a></li>
- </ul>
- </nav>
+  <div class="header-inner">
+   <a class="logo" href="index.html" aria-label="Cellachrom India home"><span class="logo-wordmark" aria-hidden="true"><span class="logo-main">CELLACHROM</span><sup class="logo-mark">TM</sup><span class="logo-region">INDIA</span></span></a>
+   <nav class="main-nav">
+    <ul>
+     <li><a href="index.html">Home</a></li>
+     <li><a href="company.html">About Us</a></li>
+     <li class="has-dropdown">
+      <a href="chiral-columns.html">Products <span class="arrow">&#9660;</span></a>
+      <ul class="dropdown">
+       <li><a href="chiral-columns.html">Chiral Columns</a></li>
+       <li><a href="general-columns.html">Achiral Columns</a></li>
+       <li><a href="guard-columns.html">Guard Columns</a></li>
+      </ul>
+     </li>
+     <li><a href="technical-support.html" class="active">Technical Support</a></li>
+     <li><a href="notice.html">News &amp; Events</a></li>
+     <li><a href="contact.html">Contact Us</a></li>
+    </ul>
+   </nav>
+   <button class="hamburger" id="hamburger"><span></span><span></span><span></span></button>
+  </div>
+  <nav class="mobile-nav" id="mobile-nav">
+   <ul>
+    <li><a href="index.html">Home</a></li>
+    <li><a href="company.html">About Us</a></li>
+    <li class="mobile-dropdown"><button class="mobile-toggle">Products <span class="arrow">&#9660;</span></button>
+     <ul class="mobile-submenu">
+      <li><a href="chiral-columns.html">Chiral Columns</a></li>
+      <li><a href="general-columns.html">Achiral Columns</a></li>
+      <li><a href="guard-columns.html">Guard Columns</a></li>
+     </ul>
+    </li>
+    <li><a href="technical-support.html">Technical Support</a></li>
+    <li><a href="notice.html">News &amp; Events</a></li>
+    <li><a href="contact.html">Contact Us</a></li>
+   </ul>
+  </nav>
  </header>
 
  <section class="page-hero">
- <div class="container">
- <div class="breadcrumb"><a href="index.html">Home</a><span>/</span><a href="screening-services.html">Services</a><span>/</span><span class="current">Technical Support</span></div>
- <h1>Technical Support</h1>
- <p>Expert chromatography guidance from our application scientists - from method development to troubleshooting.</p>
- </div>
+  <div class="container">
+   <div class="breadcrumb"><a href="index.html">Home</a><span>/</span><span class="current">Technical Support</span></div>
+   <h1>Technical Support</h1>
+   <p>Expert chromatography guidance from our application scientists &mdash; from method development to impurity isolation.</p>
+  </div>
  </section>
 
  <section class="support-page">
- <div class="container">
+  <div class="container">
 
- <div class="section-header" style="margin-bottom:48px;">
- <span class="section-eyebrow">How We Help</span>
- <h2 class="section-title">Comprehensive Technical Assistance</h2>
- <p class="section-sub">Our team of experienced chromatographers is available to help you get the most out of your CellaChrom columns - at every stage of your analytical workflow.</p>
- </div>
+   <!-- 01 Method Development -->
+   <div class="support-section" id="method">
+    <div class="support-section-header">
+     <div class="support-num">01</div>
+     <h2>Method Development</h2>
+    </div>
+    <p class="support-section-desc">Our application scientists provide expert guidance on column selection, mobile phase composition, gradient programming, temperature optimisation, and flow rate for your specific application, whether HPLC or SFC. We help you develop robust, validated methods efficiently.</p>
+    <ol class="support-steps">
+     <li><p><strong>Compound Class Assessment</strong>Determine the functional groups, polarity, and molecular weight of your target compound to narrow down the best column type.</p></li>
+     <li><p><strong>Column Selection</strong>Choose from AmyloSil&#8482;, CelluloSil&#174;, CrownSil&#174; (chiral) or CellaChrom&#8482; C18/C8/Sil (achiral) based on your compound requirements.</p></li>
+     <li><p><strong>Mobile Phase Screening</strong>Screen normal phase (hexane/IPA) or reverse phase (MeOH/water, MeCN/water) conditions. For CrownSil&#174;: use acidic aqueous mobile phase (HClO&#8324; or TFA, pH 1&ndash;2).</p></li>
+     <li><p><strong>Gradient Optimisation</strong>Optimise gradient programme, flow rate (typically 1 mL/min), column temperature, and injection volume for best resolution and throughput.</p></li>
+     <li><p><strong>Method Transfer &amp; Scale-up</strong>Transfer analytical method to preparative scale for purification and isolation as required.</p></li>
+    </ol>
+    <div class="manual-box">
+     <div class="manual-box-icon">&#128196;</div>
+     <div>
+      <h4>User Manual &mdash; Method Development Guide</h4>
+      <p>Detailed method development manual covering column selection, mobile phase selection, and troubleshooting guidelines for Cellachrom chiral and achiral columns.</p>
+      <a href="contact.html" class="btn btn-primary" style="font-size:0.85rem;">Request Manual &rarr;</a>
+     </div>
+    </div>
+   </div>
 
- <div class="support-grid">
- <div class="support-card">
- <div class="support-card-num">01</div>
- <h3>Method Development</h3>
- <p>Guidance on column selection, mobile phase composition, gradient programming, temperature optimization, and flow rate for your specific application, whether HPLC or SFC.</p>
- </div>
- <div class="support-card">
- <div class="support-card-num">02</div>
- <h3>Troubleshooting</h3>
- <p>Diagnosing issues such as peak tailing, loss of resolution, elevated baseline, pressure problems, or unexpected retention changes. We help identify the root cause quickly.</p>
- </div>
- <div class="support-card">
- <div class="support-card-num">03</div>
- <h3>Column Care &amp; Maintenance</h3>
- <p>Best practices for column storage, flushing protocols, compatible solvents, pressure limits, and regeneration procedures to maximize the lifetime of your columns.</p>
- </div>
- <div class="support-card">
- <div class="support-card-num">04</div>
- <h3>Application Notes</h3>
- <p>Access our growing library of validated application notes covering pharmaceutical, agrochemical, food, and natural product separations on CellaChrom columns.</p>
- </div>
- </div>
+   <!-- 02 Column Selection Guide -->
+   <div class="support-section" id="selection">
+    <div class="support-section-header">
+     <div class="support-num">02</div>
+     <h2>Column Selection Guide</h2>
+    </div>
+    <p class="support-section-desc">Not sure which column is right for your compound? Use our selection guide below to identify the best starting point. Our team is also available to provide personalised recommendations based on your specific application requirements.</p>
+    <table class="screening-table">
+     <thead>
+      <tr><th>Compound Class</th><th>Recommended Column</th><th>Mode</th><th>Starting Mobile Phase</th></tr>
+     </thead>
+     <tbody>
+      <tr><td>Primary amines, amino acids, aminoalcohols</td><td>CrownSil&#174; (+) or (-)</td><td>Reverse Phase</td><td>5 mM HClO&#8324; in water / MeCN</td></tr>
+      <tr><td>Amines, alcohols, esters, ketones</td><td>AmyloSil&#8482;-A01 or CelluloSil&#174;-A01</td><td>Normal Phase</td><td>Hexane / IPA (9:1)</td></tr>
+      <tr><td>Compounds requiring unusual solvents (THF, DCM)</td><td>AmyloSil&#8482;-B01 or CelluloSil&#174;-B01</td><td>Normal Phase</td><td>Hexane / THF</td></tr>
+      <tr><td>Compounds not resolved on A01</td><td>AmyloSil&#8482;-A02 or CelluloSil&#174;-A02</td><td>Normal Phase</td><td>Hexane / IPA (9:1)</td></tr>
+      <tr><td>Reversed-phase chiral separation</td><td>AmyloSil&#8482;-A01 (RP) or CelluloSil&#174;-A01 (RP)</td><td>Reverse Phase</td><td>MeOH/water or MeCN/water</td></tr>
+      <tr><td>SFC applications</td><td>AmyloSil&#8482;-A01 (3 &#181;m) or CelluloSil&#174;-A01 (3 &#181;m)</td><td>SFC</td><td>CO&#8322; / MeOH or IPA</td></tr>
+      <tr><td>General RP-HPLC (achiral)</td><td>CellaChrom-C18</td><td>Reverse Phase</td><td>MeCN/0.1% TFA water</td></tr>
+      <tr><td>Polar achiral compounds</td><td>CellaChrom-C8 or CellaChrom-APS</td><td>RP / NP / HILIC</td><td>MeOH/water or MeCN/water</td></tr>
+     </tbody>
+    </table>
+    <p style="margin-top:16px;font-size:0.85rem;color:var(--text-light);">Note: When no baseline separation is achieved with the first column, a screening service is recommended to evaluate all available columns in a single experiment.</p>
+   </div>
 
- <div class="faq-section">
- <h2>Frequently Asked Questions</h2>
+   <!-- 03 Screening & Isolation -->
+   <div class="support-section" id="screening">
+    <div class="support-section-header">
+     <div class="support-num">03</div>
+     <h2>Sample Analysis, Purification &amp; Isolation</h2>
+    </div>
+    <p class="support-section-desc">Our screening and isolation service evaluates multiple stationary phases and mobile phase conditions to identify the optimal separation system for your racemate or mixture. We also provide impurity isolation and supply services to support pharmaceutical research and development.</p>
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:24px;margin-bottom:24px;">
+     <div style="background:var(--light-bg);border-radius:10px;padding:24px;">
+      <h4 style="margin-bottom:12px;color:var(--teal-dark);">Chiral Screening Service</h4>
+      <ul style="list-style:none;padding:0;margin:0;">
+       <li style="padding:8px 0;border-bottom:1px solid var(--border);font-size:0.88rem;color:var(--text-light);">&#10003; Multi-column chiral screening panel (AmyloSil, CelluloSil, CrownSil)</li>
+       <li style="padding:8px 0;border-bottom:1px solid var(--border);font-size:0.88rem;color:var(--text-light);">&#10003; Normal phase &amp; reversed phase conditions evaluated</li>
+       <li style="padding:8px 0;border-bottom:1px solid var(--border);font-size:0.88rem;color:var(--text-light);">&#10003; SFC conditions included on request</li>
+       <li style="padding:8px 0;border-bottom:1px solid var(--border);font-size:0.88rem;color:var(--text-light);">&#10003; Detailed chromatographic report with all results</li>
+       <li style="padding:8px 0;font-size:0.88rem;color:var(--text-light);">&#10003; Expert method development consultation</li>
+      </ul>
+     </div>
+     <div style="background:var(--light-bg);border-radius:10px;padding:24px;">
+      <h4 style="margin-bottom:12px;color:var(--teal-dark);">Impurity Isolation &amp; Supply</h4>
+      <ul style="list-style:none;padding:0;margin:0;">
+       <li style="padding:8px 0;border-bottom:1px solid var(--border);font-size:0.88rem;color:var(--text-light);">&#10003; Isolation of trace impurities from pharmaceutical matrices</li>
+       <li style="padding:8px 0;border-bottom:1px solid var(--border);font-size:0.88rem;color:var(--text-light);">&#10003; Preparative HPLC and SFC scale-up</li>
+       <li style="padding:8px 0;border-bottom:1px solid var(--border);font-size:0.88rem;color:var(--text-light);">&#10003; Enantiomer supply for reference standards</li>
+       <li style="padding:8px 0;border-bottom:1px solid var(--border);font-size:0.88rem;color:var(--text-light);">&#10003; Custom purification services on request</li>
+       <li style="padding:8px 0;font-size:0.88rem;color:var(--text-light);">&#10003; CoA search: <a href="https://www.sepu.top/coa_form_overseas/" target="_blank" rel="noopener" style="color:var(--teal);">CoA Form</a></li>
+      </ul>
+     </div>
+    </div>
+    <a href="contact.html" class="btn btn-primary">Request Screening Service</a>
+   </div>
 
- <div class="faq-item">
- <p class="faq-q">What mobile phases are compatible with polysaccharide-based chiral columns?</p>
- <p class="faq-a">CellaChrom® and CelluloSil® columns are compatible with hexane/isopropanol, hexane/ethanol (normal phase), and methanol/water, acetonitrile/water (reversed phase) systems. Avoid chlorinated solvents (DCM, chloroform) and THF in high concentrations as these can dissolve the coating. Always consult the column data sheet for specific solvent compatibility.</p>
- </div>
+   <!-- 04 Application Notes -->
+   <div class="support-section" id="appnotes">
+    <div class="support-section-header">
+     <div class="support-num">04</div>
+     <h2>Application Notes</h2>
+    </div>
+    <p class="support-section-desc">Our growing library of validated application notes covers pharmaceutical, agrochemical, food, and natural product separations using Cellachrom chiral and achiral columns.</p>
+    <div class="appnotes-grid">
+     <div class="appnote-card">
+      <span class="appnote-tag">Pharmaceutical</span>
+      <h4>Chiral Separation of Propranolol</h4>
+      <p>Baseline resolution of propranolol enantiomers on AmyloSil&#8482;-A01. Hexane/IPA (95:5) mobile phase, 1 mL/min, UV 254 nm.</p>
+     </div>
+     <div class="appnote-card">
+      <span class="appnote-tag">API Analysis</span>
+      <h4>Amino Acid Separation by CrownSil&#174;</h4>
+      <p>Chiral separation of D/L-amino acids using CrownSil&#174; crown acid CSP. 5 mM HClO&#8324; in water/MeCN mobile phase.</p>
+     </div>
+     <div class="appnote-card">
+      <span class="appnote-tag">Method Screening</span>
+      <h4>Two-Column Screening Strategy</h4>
+      <p>Using AmyloSil&#8482;-A01 and CelluloSil&#174;-A01 as a complementary pair to resolve a broad range of racemates in a single screening run.</p>
+     </div>
+     <div class="appnote-card">
+      <span class="appnote-tag">SFC</span>
+      <h4>High-Throughput SFC Chiral Screening</h4>
+      <p>CelluloSil&#174;-A01 (3 &#181;m) for fast SFC chiral screening. CO&#8322;/MeOH gradient, 5 mL/min, BPR 150 bar.</p>
+     </div>
+     <div class="appnote-card">
+      <span class="appnote-tag">Achiral</span>
+      <h4>Pharmaceutical Impurity Profiling</h4>
+      <p>CellaChrom-C18 for impurity profiling of an API drug substance. MeCN/0.1% TFA gradient, 1 mL/min, UV 220 nm.</p>
+     </div>
+     <div class="appnote-card">
+      <span class="appnote-tag">More Available</span>
+      <h4>Contact Us for Full Library</h4>
+      <p>Additional application notes covering agrochemicals, natural products, and food analysis are available on request. Contact our technical team.</p>
+     </div>
+    </div>
+   </div>
 
- <div class="faq-item">
- <p class="faq-q">What mobile phase should I use with CrownSil® crown acid columns?</p>
- <p class="faq-a">CrownSil® columns require an acidic aqueous mobile phase - typically perchloric acid (HClO4) or trifluoroacetic acid (TFA) at pH 1-2. These columns are operated exclusively in reversed-phase mode. Organic modifiers such as acetonitrile or methanol can be used to adjust retention.</p>
- </div>
+   <!-- FAQ -->
+   <div class="faq-section">
+    <h2>Frequently Asked Questions</h2>
+    <div class="faq-item">
+     <p class="faq-q">What mobile phases are compatible with polysaccharide-based chiral columns?</p>
+     <p class="faq-a">Coated AmyloSil&#8482; and CelluloSil&#174; columns (A-series) are compatible with hexane/isopropanol, hexane/ethanol (normal phase), and methanol/water, acetonitrile/water (reversed phase) systems. Avoid chlorinated solvents and THF in high concentrations. Immobilised columns (B-series) are compatible with all solvents including THF and DCM.</p>
+    </div>
+    <div class="faq-item">
+     <p class="faq-q">What mobile phase should I use with CrownSil&#174; crown acid columns?</p>
+     <p class="faq-a">CrownSil&#174; columns require an acidic aqueous mobile phase &mdash; typically perchloric acid (HClO&#8324;) or trifluoroacetic acid (TFA) at pH 1&ndash;2. Operated exclusively in reversed-phase mode. Organic modifiers (MeCN or MeOH) can be used to adjust retention.</p>
+    </div>
+    <div class="faq-item">
+     <p class="faq-q">How do I store chiral columns when not in use?</p>
+     <p class="faq-a">Polysaccharide-based columns (AmyloSil&#8482;, CelluloSil&#174;): flush with pure isopropanol and store capped at room temperature away from UV light. For CrownSil&#174;: flush with water/methanol (50:50) and store capped. Never let columns dry out or freeze.</p>
+    </div>
+    <div class="faq-item">
+     <p class="faq-q">Can CellaChrom columns be used with SFC systems?</p>
+     <p class="faq-a">Yes. AmyloSil&#8482;-A01 and CelluloSil&#174;-A01 in 3 &#181;m particle size are specifically recommended for SFC applications. Standard 5 &#181;m columns can also be used for SFC with appropriate system back-pressure (100 bar BPR). Contact us for SFC method development guidance.</p>
+    </div>
+    <div class="faq-item">
+     <p class="faq-q">Are Cellachrom polysaccharide columns compatible with Daicel conditions?</p>
+     <p class="faq-a">Yes. AmyloSil&#8482; and CelluloSil&#174; amylose and cellulose-based columns are compatible with Daicel column conditions. You can typically use the same mobile phase conditions as CHIRALCEL or CHIRALPAK columns from Daicel as starting points.</p>
+    </div>
+    <div class="faq-item">
+     <p class="faq-q">What is the maximum operating pressure for Cellachrom columns?</p>
+     <p class="faq-a">Cellachrom analytical columns are rated for a maximum operating pressure of 300 bar (4350 psi) for 5 &#181;m columns and 400 bar (5800 psi) for 3 &#181;m columns. Always operate within the specified pressure range to maintain column packing integrity.</p>
+    </div>
+   </div>
 
- <div class="faq-item">
- <p class="faq-q">How do I store chiral columns when not in use?</p>
- <p class="faq-a">For polysaccharide-based columns (CellaChrom®, CelluloSil®): flush with pure isopropanol and store capped at room temperature away from UV light. For CrownSil®: flush with water/methanol (50:50) and store capped. Never let columns dry out or freeze.</p>
- </div>
+   <div style="text-align:center; margin-top:56px; padding-top:48px; border-top:1px solid var(--border);">
+    <h3 style="margin-bottom:10px;">Need Personalised Technical Support?</h3>
+    <p style="color:var(--text-light); margin-bottom:24px;">Contact our technical team directly. We typically respond within 1 business day.</p>
+    <a href="contact.html" class="btn btn-primary">Contact Technical Support</a>
+    <a href="https://wa.me/918590960238" target="_blank" rel="noopener" class="btn btn-outline" style="margin-left:12px;">&#128172; WhatsApp Us</a>
+   </div>
 
- <div class="faq-item">
- <p class="faq-q">Can CellaChrom columns be used with SFC systems?</p>
- <p class="faq-a">Yes. CellaChrom® AD-3 and CelluloSil® OD-3 (3 µm particle size) are specifically recommended for SFC applications. Standard 5 µm columns can also be used for SFC with appropriate system back-pressure (100 bar BPR). Contact us for SFC method development guidance.</p>
- </div>
-
- <div class="faq-item">
- <p class="faq-q">What is the maximum operating pressure for CellaChrom columns?</p>
- <p class="faq-a">CellaChrom® analytical columns are rated for a maximum operating pressure of 300 bar (4350 psi) for 5 µm columns and 400 bar (5800 psi) for 3 µm columns. Always operate within the specified pressure range to maintain column packing integrity.</p>
- </div>
- </div>
-
- <div style="text-align:center; margin-top:56px; padding-top:48px; border-top:1px solid var(--border);">
- <h3 style="margin-bottom:10px;">Didn't find your answer?</h3>
- <p style="color:var(--text-light); margin-bottom:24px;">Contact our technical team directly. We typically respond within 1 business day.</p>
- <a href="contact.html" class="btn btn-primary">Contact Technical Support</a>
- </div>
-
- </div>
+  </div>
  </section>
 
  <footer class="site-footer">
- <div class="container footer-grid">
- <div class="footer-brand">
- <a class="logo footer-logo" href="index.html" aria-label="Cellachrom India home"><span class="logo-wordmark" aria-hidden="true"><span class="logo-main">CELLACHROM</span><sup class="logo-mark">TM</sup><span class="logo-region">INDIA</span></span></a>
- <p>Cellachrom India - official representative of<br><strong>Cellion Biomed Inc., Korea</strong></p>
- <p class="footer-addr">P.NO.9, BUILDING NO.9, SY.NO.64,<br>MIND SPACE, JUBILEE HILLS,<br>HYDERABAD-500033</p>
- <p style="margin-top:10px;"><a href="https://wa.me/918590960238" target="_blank" rel="noopener" style="color:var(--teal);">&#128172; WhatsApp: +91-8590960238</a></p>
- <p style="margin-top:6px;"><a href="catalogue.pdf" style="color:var(--teal);">&#8681; Download Catalogue (PDF)</a></p>
- </div>
- <div class="footer-nav-group"><h4>Products</h4><ul><li><a href="chiral-columns.html">Chiral Columns</a></li><li><a href="general-columns.html">General Columns</a></li><li><a href="guard-columns.html">Guard Columns</a></li><li><a href="registech-products.html">Achiral Columns</a></li></ul></div>
- <div class="footer-nav-group"><h4>Services</h4><ul><li><a href="screening-screening-services.html">Screening Services</a></li><li><a href="technical-support.html">Technical Support</a></li><li><a href="column-rental.html">Column Rental</a></li></ul></div>
- <div class="footer-nav-group"><h4>Company</h4><ul><li><a href="company.html">About Us</a></li><li><a href="notice.html">News &amp; Events</a></li><li><a href="contact.html">Contact</a></li></ul></div>
- </div>
- <div class="footer-bottom"><p>&copy; 2025 Cellachrom India. All rights reserved.</p></div>
+  <div class="container footer-grid">
+   <div class="footer-brand">
+    <a class="logo footer-logo" href="index.html" aria-label="Cellachrom India home"><span class="logo-wordmark" aria-hidden="true"><span class="logo-main">CELLACHROM</span><sup class="logo-mark">TM</sup><span class="logo-region">INDIA</span></span></a>
+    <p>Cellachrom India &mdash; official representative of<br><strong>Cellion Biomed Inc., Korea</strong></p>
+    <p class="footer-addr">P.NO.9, BUILDING NO.9, SY.NO.64,<br>MIND SPACE, JUBILEE HILLS,<br>HYDERABAD-500033</p>
+    <p style="margin-top:10px;"><a href="https://wa.me/918590960238" target="_blank" rel="noopener" style="color:var(--teal);">&#128172; WhatsApp: +91-8590960238</a></p>
+    <p style="margin-top:6px;"><a href="mailto:support@cellachrom.in" style="color:var(--teal);">&#9993; support@cellachrom.in</a></p>
+    <p style="margin-top:6px;"><a href="catalogue.pdf" style="color:var(--teal);">&#8681; Download Catalogue (PDF)</a></p>
+   </div>
+   <div class="footer-nav-group"><h4>Products</h4><ul><li><a href="chiral-columns.html">Chiral Columns</a></li><li><a href="general-columns.html">Achiral Columns</a></li><li><a href="guard-columns.html">Guard Columns</a></li></ul></div>
+   <div class="footer-nav-group"><h4>Technical Support</h4><ul><li><a href="technical-support.html#method">Method Development</a></li><li><a href="technical-support.html#selection">Column Selection</a></li><li><a href="technical-support.html#screening">Screening Service</a></li><li><a href="technical-support.html#appnotes">Application Notes</a></li></ul></div>
+   <div class="footer-nav-group"><h4>Company</h4><ul><li><a href="company.html">About Us</a></li><li><a href="notice.html">News &amp; Events</a></li><li><a href="contact.html">Contact Us</a></li></ul></div>
+  </div>
+  <div class="footer-bottom"><p>&copy; 2025 Cellachrom India. All rights reserved. | Official representative of Cellion Biomed Inc., Korea</p></div>
  </footer>
  <script src="main.js"></script>
-
  <a class="whatsapp-float" href="https://wa.me/918590960238" target="_blank" rel="noopener">
- <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
- WhatsApp
+  <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+  WhatsApp
  </a>
 </body>
 </html>
-
-
-
