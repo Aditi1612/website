@@ -522,27 +522,83 @@
      </div>
     </div>
     <div>
-     <!-- SVG World map placeholder with office markers -->
-     <svg class="world-map-svg" viewBox="0 0 800 400" xmlns="http://www.w3.org/2000/svg" style="background:linear-gradient(135deg,#e8f4f8,#d0e8f0);border-radius:12px;">
-      <text x="400" y="200" text-anchor="middle" fill="#aaa" font-size="16" font-family="sans-serif">World Presence</text>
-      <!-- Korea -->
-      <circle cx="640" cy="160" r="10" fill="#29C7C5" opacity="0.9"/>
-      <text x="640" y="150" text-anchor="middle" fill="#1a6e6d" font-size="11" font-weight="bold">Korea</text>
-      <!-- India -->
-      <circle cx="580" cy="210" r="10" fill="#29C7C5" opacity="0.9"/>
-      <text x="580" y="230" text-anchor="middle" fill="#1a6e6d" font-size="11" font-weight="bold">India</text>
-      <!-- USA -->
-      <circle cx="180" cy="160" r="10" fill="#29C7C5" opacity="0.9"/>
-      <text x="180" y="150" text-anchor="middle" fill="#1a6e6d" font-size="11" font-weight="bold">USA</text>
-      <!-- China -->
-      <circle cx="620" cy="155" r="8" fill="#5eb8b6" opacity="0.8"/>
-      <text x="600" y="145" text-anchor="middle" fill="#1a6e6d" font-size="10">China</text>
-      <!-- Europe -->
-      <circle cx="430" cy="125" r="8" fill="#5eb8b6" opacity="0.8"/>
-      <text x="430" y="115" text-anchor="middle" fill="#1a6e6d" font-size="10">Europe</text>
-      <!-- UAE -->
-      <circle cx="530" cy="190" r="7" fill="#5eb8b6" opacity="0.8"/>
-      <text x="530" y="180" text-anchor="middle" fill="#1a6e6d" font-size="10">UAE</text>
+     <!-- SVG World map — light theme -->
+     <svg viewBox="0 0 800 400" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid meet" style="width:100%;height:auto;display:block;border-radius:14px;box-shadow:0 8px 32px rgba(41,130,160,0.12);">
+      <!-- Ocean -->
+      <rect width="800" height="400" fill="#d4eaf5"/>
+      <!-- Subtle grid -->
+      <g stroke="rgba(106,171,196,0.2)" stroke-width="0.5">
+       <line x1="0" y1="133" x2="800" y2="133"/><line x1="0" y1="200" x2="800" y2="200"/>
+       <line x1="0" y1="267" x2="800" y2="267"/><line x1="200" y1="0" x2="200" y2="400"/>
+       <line x1="400" y1="0" x2="400" y2="400"/><line x1="600" y1="0" x2="600" y2="400"/>
+      </g>
+      <!-- Continents (scaled 0.8 from 1000×500 master) -->
+      <g fill="#93c5d8" stroke="#6aabc4" stroke-width="0.7" stroke-linejoin="round">
+       <path d="M131,46 L142,35 L184,30 L232,34 L256,52 L270,80 L278,114 L275,140 L262,164 L246,184 L222,202 L203,210 L184,204 L168,192 L154,172 L142,156 L130,144 L106,118 L99,94 L101,72 Z"/><!-- N. America -->
+       <path d="M270,29 L299,22 L323,27 L333,42 L328,56 L307,62 L285,54 L274,43 Z"/><!-- Greenland -->
+       <path d="M182,214 L218,205 L248,210 L262,232 L267,264 L259,300 L243,328 L222,350 L202,342 L186,320 L174,294 L170,260 L171,232 Z"/><!-- S. America -->
+       <path d="M346,44 L376,38 L411,42 L437,50 L446,66 L438,82 L427,90 L413,88 L398,98 L382,94 L365,82 L352,68 Z"/><!-- Europe -->
+       <path d="M358,50 L368,46 L376,51 L373,62 L363,63 L357,58 Z"/><!-- UK -->
+       <path d="M387,37 L406,32 L424,38 L422,54 L413,59 L398,53 L387,45 Z"/><!-- Scandinavia -->
+       <path d="M363,94 L421,86 L461,93 L480,118 L485,158 L478,205 L461,245 L434,272 L400,274 L373,250 L358,216 L354,168 L357,128 Z"/><!-- Africa -->
+       <path d="M446,102 L482,94 L506,101 L515,130 L509,147 L488,154 L464,141 L446,122 Z"/><!-- Arabia -->
+       <path d="M437,42 L499,34 L584,37 L656,40 L704,48 L744,64 L757,88 L752,115 L733,132 L707,138 L682,141 L659,138 L637,142 L610,149 L586,157 L528,156 L510,124 L492,118 L456,66 L435,51 Z"/><!-- Asia main -->
+       <path d="M504,146 L536,139 L568,144 L584,162 L582,192 L572,206 L558,210 L542,203 L528,188 L518,168 Z"/><!-- India peninsula -->
+       <path d="M603,154 L634,146 L656,154 L661,173 L651,184 L637,184 L619,174 L605,165 Z"/><!-- SE Asia -->
+       <path d="M638,246 L690,238 L734,246 L746,277 L739,312 L717,328 L680,326 L646,309 L637,283 L634,258 Z"/><!-- Australia -->
+       <path d="M688,118 L698,115 L706,120 L703,131 L691,131 L686,125 Z"/><!-- Japan -->
+      </g>
+      <!-- Connection arcs -->
+      <g fill="none" stroke="#29c7c5" stroke-width="1.2" opacity="0.5">
+       <path stroke-dasharray="5 5" d="M235,110 Q394,22 552,172">
+        <animate attributeName="stroke-dashoffset" from="0" to="-40" dur="3s" repeatCount="indefinite"/>
+       </path>
+       <path stroke-dasharray="5 5" d="M552,172 Q617,85 682,118">
+        <animate attributeName="stroke-dashoffset" from="0" to="-40" dur="2s" repeatCount="indefinite"/>
+       </path>
+       <path stroke-dasharray="5 5" d="M682,118 Q459,6 235,110">
+        <animate attributeName="stroke-dashoffset" from="0" to="-40" dur="4s" repeatCount="indefinite"/>
+       </path>
+      </g>
+      <!-- Partner dots (China, Europe, UAE) -->
+      <g fill="#29c7c5" opacity="0.55">
+       <circle cx="657" cy="128" r="4"/><!-- China -->
+       <text x="666" y="124" fill="#0d3545" font-family="'Noto Sans',sans-serif" font-size="9" font-weight="600">China</text>
+       <circle cx="390" cy="72" r="4"/><!-- Europe -->
+       <text x="399" y="68" fill="#0d3545" font-family="'Noto Sans',sans-serif" font-size="9" font-weight="600">Europe</text>
+       <circle cx="510" cy="144" r="4"/><!-- UAE -->
+       <text x="518" y="140" fill="#0d3545" font-family="'Noto Sans',sans-serif" font-size="9" font-weight="600">UAE</text>
+      </g>
+      <!-- USA pin -->
+      <g>
+       <circle cx="235" cy="110" r="5" fill="none" stroke="#29c7c5" stroke-width="1.4">
+        <animate attributeName="r" values="5;20;5" dur="2.4s" repeatCount="indefinite"/>
+        <animate attributeName="opacity" values="0.7;0;0.7" dur="2.4s" repeatCount="indefinite"/>
+       </circle>
+       <circle cx="235" cy="110" r="5" fill="#29c7c5"/>
+       <circle cx="235" cy="110" r="2.5" fill="#d4eaf5"/>
+       <text x="246" y="106" fill="#0d3545" font-family="'Noto Sans',sans-serif" font-size="11" font-weight="700">USA</text>
+      </g>
+      <!-- India pin -->
+      <g>
+       <circle cx="552" cy="172" r="5" fill="none" stroke="#29c7c5" stroke-width="1.4">
+        <animate attributeName="r" values="5;20;5" dur="2.4s" begin="0.8s" repeatCount="indefinite"/>
+        <animate attributeName="opacity" values="0.7;0;0.7" dur="2.4s" begin="0.8s" repeatCount="indefinite"/>
+       </circle>
+       <circle cx="552" cy="172" r="5" fill="#29c7c5"/>
+       <circle cx="552" cy="172" r="2.5" fill="#d4eaf5"/>
+       <text x="563" y="168" fill="#0d3545" font-family="'Noto Sans',sans-serif" font-size="11" font-weight="700">India</text>
+      </g>
+      <!-- Korea pin -->
+      <g>
+       <circle cx="682" cy="118" r="5" fill="none" stroke="#29c7c5" stroke-width="1.4">
+        <animate attributeName="r" values="5;20;5" dur="2.4s" begin="1.6s" repeatCount="indefinite"/>
+        <animate attributeName="opacity" values="0.7;0;0.7" dur="2.4s" begin="1.6s" repeatCount="indefinite"/>
+       </circle>
+       <circle cx="682" cy="118" r="5" fill="#29c7c5"/>
+       <circle cx="682" cy="118" r="2.5" fill="#d4eaf5"/>
+       <text x="693" y="114" fill="#0d3545" font-family="'Noto Sans',sans-serif" font-size="11" font-weight="700">Korea</text>
+      </g>
      </svg>
     </div>
    </div>

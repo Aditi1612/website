@@ -586,6 +586,72 @@
     <h2 class="section-title">25 Years of Chromatography Innovation</h2>
     <p class="section-sub">Our chromatography technology has 25 years of experience &mdash; from Korea to the world.</p>
    </div>
+
+   <!-- Korea → India connection map -->
+   <div style="display:grid;grid-template-columns:1fr 1.4fr;gap:32px;align-items:center;margin-bottom:56px;background:rgba(255,255,255,0.04);border:1px solid rgba(41,199,197,0.12);border-radius:14px;overflow:hidden;">
+    <div style="padding:32px;">
+     <p style="color:var(--teal);font-size:0.75rem;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;margin-bottom:12px;">Official Partnership</p>
+     <h3 style="color:#fff;margin-bottom:12px;font-size:1.2rem;">Korea &#8594; India</h3>
+     <p style="color:rgba(255,255,255,0.6);font-size:0.9rem;line-height:1.7;margin-bottom:16px;">Cellachrom India is the exclusive official representative of <strong style="color:rgba(255,255,255,0.85);">Cellion Biomed Inc., Korea</strong> — bringing world-class chiral column technology directly to the Indian market.</p>
+     <div style="display:flex;gap:24px;">
+      <div style="text-align:center;">
+       <div style="font-size:1.4rem;">&#127472;&#127479;</div>
+       <div style="font-size:0.78rem;color:var(--teal);font-weight:600;margin-top:4px;">Korea HQ</div>
+       <div style="font-size:0.72rem;color:rgba(255,255,255,0.45);">Daejeon</div>
+      </div>
+      <div style="align-self:center;color:var(--teal);font-size:1.4rem;">&#10230;</div>
+      <div style="text-align:center;">
+       <div style="font-size:1.4rem;">&#127470;&#127475;</div>
+       <div style="font-size:0.78rem;color:var(--teal);font-weight:600;margin-top:4px;">India Rep.</div>
+       <div style="font-size:0.72rem;color:rgba(255,255,255,0.45);">Hyderabad</div>
+      </div>
+     </div>
+    </div>
+    <!-- Zoomed Asia SVG — same continent paths, viewBox zooms into Korea+India region -->
+    <svg viewBox="580 88 370 202" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid meet" style="width:100%;height:auto;display:block;">
+     <rect x="580" y="88" width="370" height="202" fill="#051c26"/>
+     <g stroke="rgba(41,199,197,0.06)" stroke-width="0.6">
+      <line x1="580" y1="167" x2="950" y2="167"/><line x1="580" y1="250" x2="950" y2="250"/>
+      <line x1="667" y1="88" x2="667" y2="290"/><line x1="750" y1="88" x2="750" y2="290"/>
+      <line x1="833" y1="88" x2="833" y2="290"/>
+     </g>
+     <!-- Continents (same paths from the master 1000×500 map) -->
+     <g fill="#0d3040" stroke="#1a506a" stroke-width="0.8" stroke-linejoin="round">
+      <path d="M558,128 L602,118 L632,126 L644,162 L636,184 L610,192 L580,176 L558,152 Z"/><!-- Arabia -->
+      <path d="M546,52 L624,42 L730,46 L820,50 L880,60 L930,80 L946,110 L940,144 L916,165 L884,172 L852,176 L824,172 L796,178 L762,186 L732,196 L702,196 L676,208 L660,195 L638,175 L616,162 L592,148 L570,130 L552,108 L544,82 L544,64 Z"/><!-- Asia main -->
+      <path d="M630,182 L670,174 L710,180 L730,202 L728,240 L715,258 L698,262 L678,254 L660,236 L648,210 L636,196 Z"/><!-- India peninsula -->
+      <path d="M754,192 L792,182 L820,192 L826,216 L814,230 L796,230 L774,218 L756,206 Z"/><!-- SE Asia -->
+      <path d="M860,148 L872,144 L882,150 L878,164 L864,164 L858,156 Z"/><!-- Japan -->
+     </g>
+     <!-- Connection arc Korea ↔ India -->
+     <g fill="none" stroke="#29c7c5" stroke-width="1.4" opacity="0.5">
+      <path stroke-dasharray="6 5" d="M690,215 Q771,106 852,148">
+       <animate attributeName="stroke-dashoffset" from="0" to="-44" dur="2s" repeatCount="indefinite"/>
+      </path>
+     </g>
+     <!-- India pin -->
+     <g>
+      <circle cx="690" cy="215" r="5" fill="none" stroke="#29c7c5" stroke-width="1.5">
+       <animate attributeName="r" values="5;20;5" dur="2.2s" repeatCount="indefinite"/>
+       <animate attributeName="opacity" values="0.7;0;0.7" dur="2.2s" repeatCount="indefinite"/>
+      </circle>
+      <circle cx="690" cy="215" r="5" fill="#29c7c5"/>
+      <circle cx="690" cy="215" r="2.5" fill="#051c26"/>
+      <text x="700" y="211" fill="rgba(255,255,255,0.88)" font-family="'Noto Sans',sans-serif" font-size="12" font-weight="700">India</text>
+     </g>
+     <!-- Korea pin -->
+     <g>
+      <circle cx="852" cy="148" r="5" fill="none" stroke="#29c7c5" stroke-width="1.5">
+       <animate attributeName="r" values="5;20;5" dur="2.2s" begin="1.1s" repeatCount="indefinite"/>
+       <animate attributeName="opacity" values="0.7;0;0.7" dur="2.2s" begin="1.1s" repeatCount="indefinite"/>
+      </circle>
+      <circle cx="852" cy="148" r="5" fill="#29c7c5"/>
+      <circle cx="852" cy="148" r="2.5" fill="#051c26"/>
+      <text x="862" y="144" fill="rgba(255,255,255,0.88)" font-family="'Noto Sans',sans-serif" font-size="12" font-weight="700">Korea</text>
+     </g>
+    </svg>
+   </div>
+
    <div class="timeline-track">
 
     <div class="tl-item left">
