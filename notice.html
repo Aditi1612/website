@@ -27,7 +27,25 @@
  <a class="logo" href="index.html" aria-label="Cellachrom India home"><span class="logo-wordmark" aria-hidden="true"><span class="logo-main">CELLACHROM</span><sup class="logo-mark">TM</sup><span class="logo-region">INDIA</span></span></a>
  <nav class="main-nav">
  <ul>
- <li><a href="index.html">Home</a></li><li><a href="company.html">About Us</a></li>
+     <li class="has-dropdown">
+      <a href="index.html">Home <span class="arrow">&#9660;</span></a>
+      <ul class="dropdown">
+       <li><a href="index.html#who-we-are">Who Are We</a></li>
+       <li><a href="index.html#products">Our Products</a></li>
+       <li><a href="index.html#accreditation">Accreditation</a></li>
+       <li><a href="index.html#global-presence">Global Presence</a></li>
+       <li><a href="index.html#product-list">Product List</a></li>
+      </ul>
+     </li>
+     <li class="has-dropdown">
+      <a href="company.html">About Us <span class="arrow">&#9660;</span></a>
+      <ul class="dropdown">
+       <li><a href="company.html#vision">Vision &amp; Mission</a></li>
+       <li><a href="company.html#core-values">Core Values</a></li>
+       <li><a href="company.html#director">Director Message</a></li>
+       <li><a href="company.html#korea-affiliation">CellaChrom Korea</a></li>
+      </ul>
+     </li>
      <li class="has-dropdown">
       <a href="chiral-columns.html">Products <span class="arrow">&#9660;</span></a>
       <ul class="dropdown mega-dropdown">
@@ -53,11 +71,45 @@
          <li><a href="guard-columns.html">Cartridge Holder</a></li>
         </ul>
        </li>
+       <li class="mega-col">
+        <a class="mega-col-title" href="technical-support.html#screening">SFC / Preparative</a>
+        <ul class="mega-sub">
+         <li><a href="technical-support.html#screening">Preparative SFC</a></li>
+         <li><a href="https://www.sepu.top/coa_form_overseas/" target="_blank" rel="noopener">CoA Search &#8599;</a></li>
+        </ul>
+       </li>
       </ul>
      </li>
-     <li><a href="technical-support.html">Technical Support</a></li>
-     <li><a href="notice.html" class="active">News &amp; Events</a></li>
-     <li><a href="contact.html">Contact Us</a></li>
+     <li class="has-dropdown">
+      <a href="technical-support.html">Technical Support <span class="arrow">&#9660;</span></a>
+      <ul class="dropdown">
+       <li><a href="technical-support.html#method">Method Development</a></li>
+       <li><a href="technical-support.html#selection">Column Selection</a></li>
+       <li><a href="technical-support.html#screening">Screening &amp; Isolation</a></li>
+       <li><a href="technical-support.html#user-manual">User Manual</a></li>
+       <li><a href="technical-support.html#impurities">Impurities Supply</a></li>
+       <li><a href="technical-support.html#appnotes">Application Notes</a></li>
+      </ul>
+     </li>
+     <li class="has-dropdown">
+      <a href="notice.html" class="active">News &amp; Events <span class="arrow">&#9660;</span></a>
+      <ul class="dropdown">
+       <li><a href="notice.html#india-opening">India Opening</a></li>
+       <li><a href="notice.html#international">International Events</a></li>
+       <li><a href="notice.html#local">Local Events</a></li>
+       <li><a href="notice.html#collaborations">Collaborations</a></li>
+       <li><a href="notice.html#partners">Partners</a></li>
+      </ul>
+     </li>
+     <li class="has-dropdown">
+      <a href="contact.html">Contact Us <span class="arrow">&#9660;</span></a>
+      <ul class="dropdown">
+       <li><a href="contact.html#india">India</a></li>
+       <li><a href="contact.html#korea">Korea (HQ)</a></li>
+       <li><a href="contact.html#us">United States</a></li>
+       <li><a href="contact.html#partners">Global Partners</a></li>
+      </ul>
+     </li>
     </ul>
    </nav>
    <button class="hamburger" id="hamburger"><span></span><span></span><span></span></button>
@@ -96,7 +148,7 @@
  <section style="padding: 80px 0;">
  <div class="container notice-page">
  <ul class="notice-list">
- <li class="notice-item">
+ <li id="international" class="notice-item">
  <span class="notice-badge pin">&#9679; Notice</span>
  <span class="notice-title">CelluloSil® OD Series Now Available - Expanding Our Cellulose-Based CSP Portfolio</span>
  <span class="notice-date">2024.03.15</span>
@@ -106,7 +158,7 @@
  <span class="notice-title">New: CelluloSil® OD-3 (3 µm) for High-Throughput Chiral Screening by SFC</span>
  <span class="notice-date">2024.02.28</span>
  </li>
- <li class="notice-item">
+ <li id="local" class="notice-item">
  <span class="notice-badge">Service</span>
  <span class="notice-title">Column Rental Program Expanded - Now Includes CrownSil® and RegisShell® Lines</span>
  <span class="notice-date">2024.01.10</span>
@@ -116,7 +168,8 @@
  <span class="notice-title">CrownSil® Crown Acid Chiral Column - Exclusive 18-Crown-6 CSP with Methyl Group Launched</span>
  <span class="notice-date">2023.09.01</span>
  </li>
- <li class="notice-item">
+ <span id="partners"></span>
+ <li id="collaborations" class="notice-item">
  <span class="notice-badge">Notice</span>
  <span class="notice-title">CellaChrom® Authorized Distribution Agreement with Regis Technologies, USA</span>
  <span class="notice-date">2023.06.20</span>
@@ -126,7 +179,7 @@
  <span class="notice-title">CellaChrom® AD-3 (3 µm) Released - Optimized for SFC and Fast HPLC Applications</span>
  <span class="notice-date">2023.03.05</span>
  </li>
- <li class="notice-item">
+ <li id="india-opening" class="notice-item">
  <span class="notice-badge">Notice</span>
  <span class="notice-title">CellaChrom® 3rd Generation Launch - New Amylose-Based Chiral Column Brand</span>
  <span class="notice-date">2022.07.01</span>
